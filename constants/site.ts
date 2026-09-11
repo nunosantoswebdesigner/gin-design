@@ -51,6 +51,7 @@ export const SITE = {
   NAME: "GIN Design",
   OG_IMAGE: `${baseUrl}/og`,
   REGISTRY: baseUrl,
+  SOCIAL_IMAGE: `${baseUrl}/seo.png`,
   URL: baseUrl,
 };
 

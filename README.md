@@ -1,5 +1,5 @@
 ﻿<p align="center">
-  <img src="https://gin-design.vercel.app/og" alt="GIN Design banner" />
+  <img src="https://gin-design.vercel.app/seo.png" alt="GIN Design banner" />
 </p>
 
 <h1 align="center">GIN Design</h1>

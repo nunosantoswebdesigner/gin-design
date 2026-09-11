@@ -21,7 +21,7 @@ export default function IndexPage() {
           <div className="container flex flex-col items-center gap-4 py-16 text-center md:py-20 lg:py-24">
             <Image
               alt="GIN Design"
-              className="mb-2 size-20"
+              className="mb-2 -ml-1 size-24"
               height={512}
               src="/logo.png"
               width={512}

@@ -125,9 +125,10 @@ export const baseMetadata: Metadata = {
     images: [
       {
         alt: SITE.NAME,
-        height: 630,
-        url: SITE.OG_IMAGE,
-        width: 1200,
+        height: 814,
+        type: "image/png",
+        url: SITE.SOCIAL_IMAGE,
+        width: 1081,
       },
     ],
     locale: "en_US",
@@ -145,7 +146,7 @@ export const baseMetadata: Metadata = {
     card: "summary_large_image",
     creator: SITE.AUTHOR.TWITTER,
     description: SITE.DESCRIPTION.LONG,
-    images: [SITE.OG_IMAGE],
+    images: [SITE.SOCIAL_IMAGE],
     site: SITE.AUTHOR.TWITTER,
     title: SITE.NAME,
   },
