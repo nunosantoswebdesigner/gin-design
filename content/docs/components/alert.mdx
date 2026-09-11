@@ -1,14 +1,14 @@
----
+﻿---
 title: Alert
 description: Displays a callout for user attention with support for icons, titles, and descriptions.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=73-3398&t=xlOiOH1D95EZZFea-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=73-3398&t=xlOiOH1D95EZZFea-1
 ---
 
-import { Alert, AlertDescription, AlertTitle } from "@/registry/new-york/alert";
+import { Alert, AlertDescription, AlertTitle } from "@/registry/mint/alert";
 import { Terminal, CircleAlert, Info, CircleCheck } from "lucide-react";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="alert">
       <Alert className="w-full max-w-sm">
         <Terminal className="size-4" />
@@ -18,7 +18,7 @@ import { Terminal, CircleAlert, Info, CircleCheck } from "lucide-react";
     </PreviewWithCode>
   </ThemeTab>
 
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="alert">
       <Alert className="w-full max-w-sm">
         <Terminal className="size-4" />
@@ -28,7 +28,7 @@ import { Terminal, CircleAlert, Info, CircleCheck } from "lucide-react";
     </PreviewWithCode>
   </ThemeTab>
 
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="alert">
       <Alert className="w-full max-w-sm">
         <Terminal className="size-4" />
@@ -38,7 +38,7 @@ import { Terminal, CircleAlert, Info, CircleCheck } from "lucide-react";
     </PreviewWithCode>
   </ThemeTab>
 
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="alert">
       <Alert className="w-full max-w-sm">
         <Terminal className="size-4" />
@@ -151,11 +151,11 @@ import { CircleAlert, Info } from "lucide-react";
 ## Specs
 
 ```md
-# New York — Alert Specs
+# Mint — Alert Specs
 
 ## Component
 - name: alert
-- file: registry/new-york/alert.tsx
+- file: registry/mint/alert.tsx
 - installs to: components/ui/alert.tsx
 - dependencies: class-variance-authority
 
@@ -166,24 +166,25 @@ confused with a Toast (transient) or Dialog (requires action) — Alert is
 persistent and inline within the page flow.
 
 ## Visual identity
-Minimal and contained. Rounded corners, a single border, and card background
-give it a subtle frame without visual weight. The icon anchors the content and
-communicates intent at a glance. Destructive variant uses --destructive for text
-and icon while keeping the same card background — restrained, not alarming.
+Minimal and contained. Generously rounded corners (Mint's 1.25rem radius), a
+soft glassy border, and card background give it a subtle frame without visual
+weight. The icon anchors the content and communicates intent at a glance.
+Destructive variant uses --destructive for text and icon while keeping the
+same card background — restrained, not alarming.
 
 ## Design tokens
 --card: oklch(1 0 0)                     — alert background
 --card-foreground: oklch(0.145 0 0)      — default text
---destructive: oklch(0.577 0.245 27.325) — destructive text and icon
---border: oklch(0.922 0 0)               — alert border
---muted-foreground: oklch(0.556 0 0)     — description text
---radius: 0.625rem                       — rounded-lg
+--destructive: oklch(0.55 0.25 15)       — destructive text and icon
+--border: oklch(0.88 0.04 155 / 60%)     — alert border
+--muted-foreground: oklch(0.52 0.06 155) — description text
+--radius: 1.25rem                        — rounded-lg
 
 ## Dark theme
 --card: oklch(0.205 0 0)
 --card-foreground: oklch(0.985 0 0)
---border: oklch(1 0 0 / 10%)
---muted-foreground: oklch(0.708 0 0)
+--border: oklch(0.32 0.05 155 / 40%)
+--muted-foreground: oklch(0.6 0.06 155)
 
 ## shadcn config (components.json)
 - style: new-york

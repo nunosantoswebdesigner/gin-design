@@ -1,7 +1,7 @@
----
+﻿---
 title: Date Picker
 description: A date input that combines a popover calendar with a trigger button for selecting single dates, ranges, and presets.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=73-5866&t=n9ZYudwlr9OrHUSJ-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=73-5866&t=n9ZYudwlr9OrHUSJ-1
 ---
 
 import { DatePickerDemo } from "@/examples/date-picker";
@@ -11,22 +11,22 @@ import { DatePickerDemo } from "@/examples/date-picker";
 </Callout>
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="date-picker">
       <DatePickerDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="date-picker">
       <DatePickerDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="date-picker">
       <DatePickerDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="date-picker">
       <DatePickerDemo />
     </PreviewWithCode>
@@ -272,7 +272,7 @@ export function DatePickerForm() {
 ## Specs
 
 ```md
-# New York — Date Picker Specs
+# Mint — Date Picker Specs
 
 ## Component
 - name: date-picker
@@ -285,18 +285,18 @@ export function DatePickerForm() {
 A trigger button that opens a floating calendar popover for selecting single dates, date ranges, or presets. The button doubles as the value display, showing the formatted date or a placeholder when empty. Use it whenever a date must be picked from a calendar view; prefer a plain text input only when users need to type arbitrary dates quickly.
 
 ## Visual identity
-The trigger uses the outline Button variant — transparent background with a grey border — giving it a form-field feel. The popover surfaces on --popover (white/dark-grey) with no padding, letting the Calendar fill it edge-to-edge. Selected days use the near-black --primary fill, creating a strong contrast anchor within the neutral palette.
+The trigger uses the outline Button variant — transparent background with a soft green-tinted border — giving it a form-field feel. The popover surfaces on --popover (white/dark surface) with no padding, letting the Calendar fill it edge-to-edge. Selected days use the medium-green --primary fill, creating a fresh, confident contrast anchor within the Mint palette.
 
 ## Design tokens
---muted-foreground: oklch(0.556 0 0) / oklch(0.708 0 0)   — placeholder text when no date selected
---primary: oklch(0.205 0 0) / oklch(0.922 0 0)             — selected day fill
---primary-foreground: oklch(0.985 0 0) / oklch(0.205 0 0)  — selected day text
---accent: oklch(0.97 0 0) / oklch(0.371 0 0)               — today highlight and range middle background
---accent-foreground: oklch(0.205 0 0) / oklch(0.985 0 0)   — today text
+--muted-foreground: oklch(0.52 0.06 155) / oklch(0.6 0.06 155)   — placeholder text when no date selected
+--primary: oklch(0.5 0.14 155) / oklch(0.62 0.15 155)             — selected day fill
+--primary-foreground: oklch(1 0 0) / oklch(0.1 0 0)  — selected day text
+--accent: oklch(0.92 0.05 155) / oklch(0.26 0.05 155)               — today highlight and range middle background
+--accent-foreground: oklch(0.32 0.1 155) / oklch(0.88 0.06 155)   — today text
 --popover: oklch(1 0 0) / oklch(0.269 0 0)                 — calendar popover surface
 --popover-foreground: oklch(0.145 0 0) / oklch(0.985 0 0)  — calendar text
---border: oklch(0.922 0 0) / oklch(1 0 0 / 10%)            — trigger button border
---ring: oklch(0.708 0 0) / oklch(0.556 0 0)                — focus ring on trigger and day buttons
+--border: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)            — trigger button border
+--ring: oklch(0.5 0.14 155) / oklch(0.62 0.15 155)                — focus ring on trigger and day buttons
 
 ## External dependencies
 - date-fns: date formatting (format, addDays) and locale support
@@ -332,6 +332,6 @@ The trigger uses the outline Button variant — transparent background with a gr
 Install the required components:
 
 ```bash
-npx shadcn@latest add https://ing-design.vercel.app/r/popover.json
-npx shadcn@latest add https://ing-design.vercel.app/r/calendar.json
+npx shadcn@latest add https://gin-design.vercel.app/r/popover.json
+npx shadcn@latest add https://gin-design.vercel.app/r/calendar.json
 ```

@@ -1,13 +1,13 @@
----
+﻿---
 title: Aspect Ratio
 description: Displays content within a desired ratio, preventing layout shift as media loads.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=1098-925&t=xlOiOH1D95EZZFea-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=1098-925&t=xlOiOH1D95EZZFea-1
 ---
 
-import { AspectRatio } from "@/registry/new-york/aspect-ratio";
+import { AspectRatio } from "@/registry/mint/aspect-ratio";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="aspect-ratio">
       <div className="w-full max-w-sm">
         <AspectRatio ratio={16 / 9}>
@@ -17,7 +17,7 @@ import { AspectRatio } from "@/registry/new-york/aspect-ratio";
     </PreviewWithCode>
   </ThemeTab>
 
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="aspect-ratio">
       <div className="w-full max-w-sm">
         <AspectRatio ratio={16 / 9}>
@@ -27,7 +27,7 @@ import { AspectRatio } from "@/registry/new-york/aspect-ratio";
     </PreviewWithCode>
   </ThemeTab>
 
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="aspect-ratio">
       <div className="w-full max-w-sm">
         <AspectRatio ratio={16 / 9}>
@@ -37,7 +37,7 @@ import { AspectRatio } from "@/registry/new-york/aspect-ratio";
     </PreviewWithCode>
   </ThemeTab>
 
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="aspect-ratio">
       <div className="w-full max-w-sm">
         <AspectRatio ratio={16 / 9}>
@@ -112,11 +112,11 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 ## Specs
 
 ```md
-# New York — Aspect Ratio Specs
+# Mint — Aspect Ratio Specs
 
 ## Component
 - name: aspect-ratio
-- file: registry/new-york/aspect-ratio.tsx
+- file: registry/mint/aspect-ratio.tsx
 - installs to: components/ui/aspect-ratio.tsx
 - dependencies: radix-ui
 - registryDependencies: none
@@ -135,8 +135,8 @@ passed to the wrapper (e.g. bg-muted, rounded-md).
 
 ## Design tokens
 No CSS variables consumed directly by the component. Callers typically apply:
---muted: oklch(0.97 0 0) / oklch(0.269 0 0)   — placeholder background (bg-muted)
---radius: 0.625rem                              — rounded corners (rounded-md on wrapper or child)
+--muted: oklch(0.96 0.02 155) / oklch(0.2 0.03 155)   — placeholder background (bg-muted)
+--radius: 1.25rem                              — rounded corners (rounded-md on wrapper or child)
 
 ## Conventions
 - Always set object-cover on img children — object-contain causes letterboxing

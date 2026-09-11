@@ -5,7 +5,7 @@ export const SeparatorDemo = () => (
       {/* Horizontal in text context */}
       <div className="w-full max-w-xs">
         <div className="space-y-1">
-          <h4 className="text-sm font-medium leading-none">ING Design</h4>
+          <h4 className="text-sm font-medium leading-none">GIN Design</h4>
           <p className="text-muted-foreground text-sm">A component registry built on shadcn/ui.</p>
         </div>
         <Separator className="my-4" />

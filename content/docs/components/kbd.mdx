@@ -1,28 +1,28 @@
----
+﻿---
 title: Kbd
 description: Renders keyboard keys and shortcuts with a consistent pressed-key appearance.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=1196-1098&t=n9ZYudwlr9OrHUSJ-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=1196-1098&t=n9ZYudwlr9OrHUSJ-1
 ---
 
 import { KbdDemo } from "@/examples/kbd";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="kbd">
       <KbdDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="kbd">
       <KbdDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="kbd">
       <KbdDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="kbd">
       <KbdDemo />
     </PreviewWithCode>
@@ -144,15 +144,15 @@ import { Kbd, KbdGroup } from "@/components/ui/kbd";
 ## Specs
 
 ```md
-# New York — Kbd Specs
+# Mint — Kbd Specs
 
 ## Component
 - name: kbd
-- file: registry/new-york/kbd.tsx
+- file: registry/mint/kbd.tsx
 - installs to: components/ui/kbd.tsx
 - dependencies: none (only @/lib/utils)
 - registryDependencies: none
-- ING Design exclusive (not in shadcn/ui)
+- GIN Design exclusive (not in shadcn/ui)
 
 ## What is it
 A styled `<kbd>` element for rendering individual keyboard keys and multi-key
@@ -167,7 +167,7 @@ translucent white tint. Rounded-sm corners and tight x-padding give a
 dense, inline feel that sits comfortably inside body text or tooltips.
 
 ## Design tokens
---muted-foreground: oklch(0.556 0 0) / oklch(0.708 0 0)  — key label text
+--muted-foreground: oklch(0.52 0.06 155) / oklch(0.6 0.06 155)  — key label text
 bg-black/5 (light) / bg-white/10 (dark)                  — keycap fill (raw alpha, not a CSS var)
 shadow-black/10 (light) / shadow-white/10 (dark)          — inset keycap shadow (raw alpha)
 

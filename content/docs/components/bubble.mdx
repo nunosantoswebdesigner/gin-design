@@ -6,22 +6,22 @@ description: A chat message bubble with 7 variants, alignment, grouping, and rea
 import { BubbleDemo } from "@/examples/bubble";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="bubble">
       <BubbleDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="bubble">
       <BubbleDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="bubble">
       <BubbleDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="bubble">
       <BubbleDemo />
     </PreviewWithCode>
@@ -127,11 +127,11 @@ import {
 ## Specs
 
 ```md
-# New York — Bubble Specs
+# Mint — Bubble Specs
 
 ## Component
 - name: bubble
-- file: registry/new-york/bubble.tsx
+- file: registry/mint/bubble.tsx
 - installs to: components/ui/bubble.tsx
 - dependencies: radix-ui, class-variance-authority
 - registryDependencies: none
@@ -144,22 +144,23 @@ reaction anchoring; avoid using it for non-conversational content.
 
 ## Visual identity
 Rounded pill-like content areas (rounded-xl) give a friendly chat feel.
-Colours stay neutral by default — near-black fill for outgoing, light-grey for
-incoming — and the tinted variant derives its hue from --primary for brand
-coherence without hard-coding a colour.
+Colours now carry Mint's fresh green identity by default — a medium green
+fill for outgoing, soft pale-green for incoming — and the tinted variant
+derives its hue from --primary for brand coherence without hard-coding a
+colour.
 
 ## Design tokens
---primary: oklch(0.205 0 0) / oklch(0.922 0 0)                        — default bubble fill
---primary-foreground: oklch(0.985 0 0) / oklch(0.205 0 0)             — default bubble text
---secondary: oklch(0.97 0 0) / oklch(0.269 0 0)                       — secondary bubble fill
---secondary-foreground: oklch(0.205 0 0) / oklch(0.985 0 0)           — secondary bubble text
---muted: oklch(0.97 0 0) / oklch(0.269 0 0)                           — muted bubble fill; reactions background
---muted-foreground: oklch(0.556 0 0) / oklch(0.708 0 0)               — muted bubble text
+--primary: oklch(0.5 0.14 155) / oklch(0.922 0 0)                     — default bubble fill
+--primary-foreground: oklch(1 0 0) / oklch(0.1 0 0)                   — default bubble text
+--secondary: oklch(0.95 0.04 155) / oklch(0.22 0.04 155)              — secondary bubble fill
+--secondary-foreground: oklch(0.32 0.1 155) / oklch(0.88 0.06 155)    — secondary bubble text
+--muted: oklch(0.96 0.02 155) / oklch(0.2 0.03 155)                   — muted bubble fill; reactions background
+--muted-foreground: oklch(0.52 0.06 155) / oklch(0.6 0.06 155)        — muted bubble text
 --background: oklch(1 0 0) / oklch(0.145 0 0)                         — outline bubble fill
---border: oklch(0.922 0 0) / oklch(1 0 0 / 10%)                       — outline bubble border
---destructive: oklch(0.577 0.245 27.325) / oklch(0.704 0.191 22.216)  — destructive text; 10–20% alpha fill
+--border: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)     — outline bubble border
+--destructive: oklch(0.55 0.25 15) / oklch(0.704 0.191 22.216)        — destructive text; 10–20% alpha fill
 --card: oklch(1 0 0) / oklch(0.205 0 0)                               — ring-card on BubbleReactions
---ring: oklch(0.708 0 0) / oklch(0.556 0 0)                           — focus ring on interactive content
+--ring: oklch(0.5 0.14 155) / oklch(0.62 0.15 155)                    — focus ring on interactive content
 
 ## Sub-components
 - BubbleGroup     → wraps consecutive same-sender bubbles; flex-col gap-2; reduces visual spacing

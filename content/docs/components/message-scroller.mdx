@@ -6,22 +6,22 @@ description: A chat transcript scroller with auto-scroll, scroll anchoring, and 
 import { MessageScrollerDemo } from "@/examples/message-scroller";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="message-scroller">
       <MessageScrollerDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="message-scroller">
       <MessageScrollerDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="message-scroller">
       <MessageScrollerDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="message-scroller">
       <MessageScrollerDemo />
     </PreviewWithCode>
@@ -191,11 +191,11 @@ import {
 ## Specs
 
 ```md
-# New York — Message Scroller Specs
+# Mint — Message Scroller Specs
 
 ## Component
 - name: message-scroller
-- file: registry/new-york/message-scroller.tsx
+- file: registry/mint/message-scroller.tsx
 - installs to: components/ui/message-scroller.tsx
 - dependencies: @shadcn/react, lucide-react
 - registryDependencies: button
@@ -208,17 +208,17 @@ off-screen items via `content-visibility: auto`. Prefer it over a plain
 overflow container whenever the list is live-updating or exceeds ~50 items.
 
 ## Visual identity
-Neutral surface tones with a thin styled scrollbar. The floating jump button
-uses the secondary Button variant — light grey fill, standard border-radius —
-keeping the chrome unobtrusive against any chat bubble palette. The button
-animates in/out with a scale-and-fade easing.
+Soft mint surface tones with a thin styled scrollbar. The floating jump
+button uses the secondary Button variant — a pale green-tinted fill, standard
+border-radius — keeping the chrome unobtrusive against any chat bubble
+palette. The button animates in/out with a scale-and-fade easing.
 
 ## Design tokens
---border: oklch(0.922 0 0) / oklch(1 0 0 / 10%)      — MessageScrollerButton border
+--border: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)      — MessageScrollerButton border
 --background: oklch(1 0 0) / oklch(0.145 0 0)         — MessageScrollerButton fill
 --foreground: oklch(0.145 0 0) / oklch(0.985 0 0)     — MessageScrollerButton icon colour
---muted: oklch(0.97 0 0) / oklch(0.269 0 0)           — MessageScrollerButton hover fill
---secondary: oklch(0.97 0 0) / oklch(0.269 0 0)       — default Button variant used by button
+--muted: oklch(0.96 0.02 155) / oklch(0.2 0.03 155)           — MessageScrollerButton hover fill
+--secondary: oklch(0.95 0.04 155) / oklch(0.22 0.04 155)       — default Button variant used by button
 
 ## Sub-components
 - MessageScrollerProvider   → React context root; owns autoScroll and defaultScrollPosition state

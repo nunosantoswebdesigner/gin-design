@@ -1,28 +1,28 @@
----
+﻿---
 title: Field
 description: A form field wrapper that connects a label, control, description, and error message — eliminating manual id wiring.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=1188-4206&t=n9ZYudwlr9OrHUSJ-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=1188-4206&t=n9ZYudwlr9OrHUSJ-1
 ---
 
 import { FieldDemo } from "@/examples/field";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="field">
       <FieldDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="field">
       <FieldDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="field">
       <FieldDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="field">
       <FieldDemo />
     </PreviewWithCode>
@@ -219,15 +219,15 @@ Use inside any component rendered within a `Field` to access the field state.
 ## Specs
 
 ```md
-# New York — Field Specs
+# Mint — Field Specs
 
 ## Component
 - name: field
-- file: registry/new-york/field.tsx
+- file: registry/mint/field.tsx
 - installs to: components/ui/field.tsx
 - dependencies: none
 - registryDependencies: none
-- ING Design exclusive (not in shadcn/ui)
+- GIN Design exclusive (not in shadcn/ui)
 
 ## What is it
 A context-based form field wrapper that eliminates manual id wiring between
@@ -243,8 +243,8 @@ token for error and required-indicator states. Vertical rhythm is controlled by
 gap-1.5 (6px) between children.
 
 ## Design tokens
---muted-foreground: oklch(0.556 0 0) / oklch(0.708 0 0)   — FieldDescription text
---destructive: oklch(0.577 0.245 27.325) / oklch(0.704 0.191 22.216)   — FieldLabel error state, required *, FieldError text
+--muted-foreground: oklch(0.52 0.06 155) / oklch(0.6 0.06 155)   — FieldDescription text
+--destructive: oklch(0.55 0.25 15) / oklch(0.704 0.191 22.216)   — FieldLabel error state, required *, FieldError text
 
 ## Sub-components
 - Field             → div; provides FieldContext (id, error, required); flex-col gap-1.5 layout

@@ -1,28 +1,28 @@
----
+﻿---
 title: Tooltip
 description: A floating label that appears on hover or focus, with directional slide animations and an arrow pointer.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=79-11350
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=79-11350
 ---
 
 import { TooltipDemo } from "@/examples/tooltip";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="tooltip">
       <TooltipDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="tooltip">
       <TooltipDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="tooltip">
       <TooltipDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="tooltip">
       <TooltipDemo />
     </PreviewWithCode>
@@ -125,11 +125,11 @@ import {
 ## Specs
 
 ```md
-# New York — Tooltip Specs
+# Mint — Tooltip Specs
 
 ## Component
 - name: tooltip
-- file: registry/new-york/tooltip.tsx
+- file: registry/mint/tooltip.tsx
 - installs to: components/ui/tooltip.tsx
 - dependencies: radix-ui
 - registryDependencies: none
@@ -141,14 +141,14 @@ non-obvious controls. Do not use it to convey information required to complete
 a task — that content belongs in the UI, not a tooltip.
 
 ## Visual identity
-Solid near-black fill (--primary) with near-white text gives a high-contrast,
-unambiguous callout. Slightly rounded corners (rounded-md) and compact padding
-(px-3 py-1.5) keep it dense and lightweight. A small rotated square arrow
-anchors the tooltip to its trigger.
+Solid medium-green fill (--primary) with white text gives a high-contrast,
+unambiguous callout with a fresh Mint accent. Slightly rounded corners
+(rounded-md) and compact padding (px-3 py-1.5) keep it dense and lightweight.
+A small rotated square arrow anchors the tooltip to its trigger.
 
 ## Design tokens
---primary: oklch(0.205 0 0) / oklch(0.922 0 0)           — tooltip background
---primary-foreground: oklch(0.985 0 0) / oklch(0.205 0 0) — tooltip text
+--primary: oklch(0.5 0.14 155) / oklch(0.62 0.15 155)           — tooltip background
+--primary-foreground: oklch(1 0 0) / oklch(0.1 0 0) — tooltip text
 
 ## Sub-components
 - TooltipProvider  → Radix Provider; sets delayDuration (default 0) for a group

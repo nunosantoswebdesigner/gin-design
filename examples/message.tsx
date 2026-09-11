@@ -10,7 +10,7 @@ export const MessageDemo = () => (
       {/* User message */}
       <Message align="end">
         <MessageContent>
-          <Bubble variant="default" align="end"><BubbleContent>Can you explain how the ING Design component system works?</BubbleContent></Bubble>
+          <Bubble variant="default" align="end"><BubbleContent>Can you explain how the GIN Design component system works?</BubbleContent></Bubble>
           <MessageFooter>Delivered · 14:30</MessageFooter>
         </MessageContent>
       </Message>
@@ -20,8 +20,8 @@ export const MessageDemo = () => (
           <MessageAvatar><div className="flex size-8 items-center justify-center rounded-full bg-primary text-primary-foreground"><BotIcon className="size-4" /></div></MessageAvatar>
           <MessageContent>
             <MessageHeader>Assistant · 14:31</MessageHeader>
-            <Bubble variant="secondary"><BubbleContent>ING Design is a shadcn-based registry. Each component lives in{" "}<code>registry/new-york/</code> and can be installed via the CLI.</BubbleContent></Bubble>
-            <Bubble variant="secondary"><BubbleContent>It supports multiple themes — new-york, force8, myswissski, and myicehockey — each with its own token overrides.</BubbleContent></Bubble>
+            <Bubble variant="secondary"><BubbleContent>GIN Design is a shadcn-based registry. Each component lives in{" "}<code>registry/mint/</code> and can be installed via the CLI.</BubbleContent></Bubble>
+            <Bubble variant="secondary"><BubbleContent>It supports multiple themes — mint, berries, citrine, and cinnamon — each with its own token overrides.</BubbleContent></Bubble>
             <MessageFooter>
               <Button variant="ghost" size="icon-xs" aria-label="Copy"><CopyIcon /></Button>
               <Button variant="ghost" size="icon-xs" aria-label="Helpful"><ThumbsUpIcon /></Button>

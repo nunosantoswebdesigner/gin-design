@@ -2,8 +2,8 @@
 
 import {
   AlertTriangleIcon,
-  ClockAlertIcon,
   GitCompareArrows,
+  Link2Icon,
   Loader2Icon,
 } from "lucide-react";
 import { useCallback, useState } from "react";
@@ -31,15 +31,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-import {
-  formatRetryEta,
-  useFigmaRateLimit,
-} from "@/hooks/use-figma-rate-limit";
+import { useFigmaRateLimit } from "@/hooks/use-figma-rate-limit";
 import { useIsMobile } from "@/hooks/use-mobile";
 import type { DiffResult } from "@/lib/figma-diff";
 import { DEFAULT_REGISTRY_THEME_ID } from "@/lib/themes";
@@ -53,20 +45,29 @@ type FetchState =
   | { status: "success"; data: DiffResult }
   | { status: "error"; message: string; hint?: string; noToken?: boolean };
 
-// ─── Rate limit badge ─────────────────────────────────────────────────────────
+// Provisional: the live Figma diff needs a FIGMA_ACCESS_TOKEN this project
+// doesn't have configured yet. Rather than hitting the API and always
+// failing, short-circuit to a "ask the project owner" message. None of the
+// fetch/rate-limit logic below is removed — just not invoked while this is
+// true. Flip back to false once the Figma connection is set up.
+const FIGMA_DIFF_PROVISIONALLY_DISABLED = true;
 
-const RateLimitBadge = ({ retryAt }: { retryAt: number }) => (
-  <Tooltip>
-    <TooltipTrigger asChild>
-      <span className="inline-flex items-center text-amber-500">
-        <ClockAlertIcon className="size-3.5" />
-      </span>
-    </TooltipTrigger>
-    <TooltipContent>
-      Figma API rate limited — {formatRetryEta(retryAt)}
-    </TooltipContent>
-  </Tooltip>
-);
+// ─── Rate limit badge ─────────────────────────────────────────────────────────
+// Currently unused — hidden alongside the live diff fetch above. Kept here,
+// commented out, so it's easy to bring back once both are re-enabled.
+
+// const RateLimitBadge = ({ retryAt }: { retryAt: number }) => (
+//   <Tooltip>
+//     <TooltipTrigger asChild>
+//       <span className="inline-flex items-center text-amber-500">
+//         <ClockAlertIcon className="size-3.5" />
+//       </span>
+//     </TooltipTrigger>
+//     <TooltipContent>
+//       Figma API rate limited — {formatRetryEta(retryAt)}
+//     </TooltipContent>
+//   </Tooltip>
+// );
 
 // ─── Inner content ────────────────────────────────────────────────────────────
 
@@ -77,6 +78,20 @@ const DiffContent = ({
   state: FetchState;
   componentName?: string;
 }) => {
+  if (FIGMA_DIFF_PROVISIONALLY_DISABLED) {
+    return (
+      <div className="flex flex-col items-center gap-3 px-4 py-6 text-center">
+        <Link2Icon className="size-5 text-muted-foreground" />
+        <p className="text-sm text-muted-foreground">
+          The Figma connection for this project isn&apos;t set up yet.
+        </p>
+        <p className="max-w-xs text-[12px] text-muted-foreground/70">
+          Contact the project owner to request the Figma connection.
+        </p>
+      </div>
+    );
+  }
+
   if (state.status === "idle" || state.status === "loading") {
     return (
       <div className="flex h-32 items-center justify-center text-muted-foreground">
@@ -147,7 +162,11 @@ export const FigmaDiffButton = ({
   const [isOpen, setIsOpen] = useState(false);
   const [fetchState, setFetchState] = useState<FetchState>({ status: "idle" });
   const isMobile = useIsMobile();
-  const { isRateLimited, markRateLimited, retryAt } = useFigmaRateLimit();
+  const {
+    isRateLimited: _isRateLimited,
+    markRateLimited,
+    retryAt: _retryAt,
+  } = useFigmaRateLimit();
 
   const runFetch = useCallback(async () => {
     if (!componentName) {
@@ -201,7 +220,13 @@ export const FigmaDiffButton = ({
   const handleOpenChange = useCallback(
     (open: boolean) => {
       setIsOpen(open);
-      if (open && fetchState.status === "idle") {
+      // See FIGMA_DIFF_PROVISIONALLY_DISABLED above — skip the real request
+      // for now instead of hitting an API we know has no token configured.
+      if (
+        !FIGMA_DIFF_PROVISIONALLY_DISABLED &&
+        open &&
+        fetchState.status === "idle"
+      ) {
         runFetch();
       }
     },
@@ -227,7 +252,7 @@ export const FigmaDiffButton = ({
 
   return (
     <span className="inline-flex items-center gap-1.5">
-      {isRateLimited && retryAt && <RateLimitBadge retryAt={retryAt} />}
+      {/* {isRateLimited && retryAt && <RateLimitBadge retryAt={retryAt} />} */}
       {isMobile ? (
         <Drawer open={isOpen} onOpenChange={handleOpenChange} sounds>
           <DrawerTrigger asChild>{trigger}</DrawerTrigger>

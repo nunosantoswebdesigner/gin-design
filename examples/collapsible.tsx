@@ -9,7 +9,7 @@ export const CollapsibleDemo = () => {
   return (
     <Collapsible open={isOpen} onOpenChange={setIsOpen} className="w-full max-w-sm space-y-2">
       <div className="flex items-center justify-between gap-4">
-        <h4 className="text-sm font-semibold">@ing-design/ui</h4>
+        <h4 className="text-sm font-semibold">@gin-design/ui</h4>
         <CollapsibleTrigger asChild><Button variant="ghost" size="icon" className="size-8">
           <ChevronsUpDown className="size-4" />
           <span className="sr-only">Toggle</span>

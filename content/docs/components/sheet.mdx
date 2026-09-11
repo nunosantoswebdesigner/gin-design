@@ -1,28 +1,28 @@
----
+﻿---
 title: Sheet
 description: A modal panel that slides in from any edge of the screen — for navigation, settings, and focused tasks.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=76-10203&t=n9ZYudwlr9OrHUSJ-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=76-10203&t=n9ZYudwlr9OrHUSJ-1
 ---
 
 import { SheetDemo } from "@/examples/sheet";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="sheet">
       <SheetDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="sheet">
       <SheetDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="sheet">
       <SheetDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="sheet">
       <SheetDemo />
     </PreviewWithCode>
@@ -156,11 +156,11 @@ import {
 ## Specs
 
 ```md
-# New York — Sheet Specs
+# Mint — Sheet Specs
 
 ## Component
 - name: sheet
-- file: registry/new-york/sheet.tsx
+- file: registry/mint/sheet.tsx
 - installs to: components/ui/sheet.tsx
 - dependencies: radix-ui, lucide-react
 - registryDependencies: none
@@ -173,18 +173,19 @@ centred modal. Do not use it for non-modal flows; reach for a Drawer for
 mobile-style swipe-to-dismiss patterns.
 
 ## Visual identity
-Flat white (light) / near-black (dark) panel surface with a single border on
-the attached edge. Shadow-lg gives depth. Transitions are asymmetric:
+Flat white (light) / near-black (dark) panel surface with a soft, translucent
+green border along the attached edge — a hint of Mint at the edge of an
+otherwise minimal surface. Shadow-lg gives depth. Transitions are asymmetric:
 500 ms ease-in on open, 300 ms ease-in-out on close, giving a confident entry
 and a quick exit.
 
 ## Design tokens
 --background: oklch(1 0 0) / oklch(0.145 0 0)     — panel surface (bg-background)
 --foreground: oklch(0.145 0 0) / oklch(0.985 0 0)  — SheetTitle text (text-foreground)
---muted-foreground: oklch(0.556 0 0) / oklch(0.708 0 0) — SheetDescription text
---secondary: oklch(0.97 0 0) / oklch(0.269 0 0)    — close button hover bg (data-[state=open]:bg-secondary)
---ring: oklch(0.708 0 0) / oklch(0.556 0 0)        — close button focus ring
---border: oklch(0.922 0 0) / oklch(1 0 0 / 10%)    — panel edge border (border-l, border-r, border-b, border-t)
+--muted-foreground: oklch(0.52 0.06 155) / oklch(0.6 0.06 155) — SheetDescription text
+--secondary: oklch(0.95 0.04 155) / oklch(0.22 0.04 155)    — close button hover bg (data-[state=open]:bg-secondary)
+--ring: oklch(0.5 0.14 155) / oklch(0.62 0.15 155)        — close button focus ring
+--border: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)    — panel edge border (border-l, border-r, border-b, border-t)
 
 ## Sub-components
 - Sheet            → Radix Dialog.Root; accepts sounds prop (drawerOpen / drawerClose)
@@ -214,7 +215,7 @@ and a quick exit.
 - Use SheetClose asChild with Button variant="outline" for a Cancel action in SheetFooter
 - Place primary actions last in SheetFooter (visual left-to-right: Cancel → Save)
 - side defaults to "right"; use "left" for navigation drawers, "bottom" for mobile-style panels
-- sounds / haptic: ING Design exclusive — pass sounds to Sheet to play drawerOpen / drawerClose audio on open and close
+- sounds / haptic: GIN Design exclusive — pass sounds to Sheet to play drawerOpen / drawerClose audio on open and close
 - Sub-components expose data-slot attributes for CSS targeting:
   sheet, sheet-trigger, sheet-close, sheet-portal, sheet-overlay,
   sheet-content, sheet-header, sheet-footer, sheet-title, sheet-description

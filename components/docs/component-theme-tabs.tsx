@@ -1,9 +1,10 @@
 "use client";
 
-import React from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import React from "react";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { THEME_ACCENT, THEME_ICONS } from "@/lib/theme-visuals";
 import { DEFAULT_REGISTRY_THEME_ID, REGISTRY_THEMES } from "@/lib/themes";
 import { cn } from "@/lib/utils";
 
@@ -25,7 +26,10 @@ export const ComponentThemeTabs = ({
     const map = new Map<string, React.ReactNode>();
     React.Children.forEach(children, (child) => {
       if (React.isValidElement(child)) {
-        const props = child.props as { name?: string; children?: React.ReactNode };
+        const props = child.props as {
+          name?: string;
+          children?: React.ReactNode;
+        };
         if (props.name) {
           map.set(props.name, props.children);
         }
@@ -62,21 +66,34 @@ export const ComponentThemeTabs = ({
   };
 
   return (
-    <Tabs value={activeTab} onValueChange={handleTabChange} className={cn("mt-6", className)}>
+    <Tabs
+      value={activeTab}
+      onValueChange={handleTabChange}
+      className={cn("mt-6", className)}
+    >
       <TabsList className="justify-start gap-4 rounded-none bg-transparent px-0 border-b border-border w-full pb-0 h-auto">
-        {tabs.map((tab) => (
-          <TabsTrigger
-            key={tab.id}
-            value={tab.id}
-            sound="tabSwitch"
-            className="text-muted-foreground data-[state=active]:text-foreground data-[state=active]:border-primary rounded-none border-0 border-b-2 border-transparent bg-transparent px-0 pb-3 text-sm data-[state=active]:bg-transparent data-[state=active]:shadow-none dark:data-[state=active]:bg-transparent h-auto"
-          >
-            {tab.label}
-            {tab.inherits && (
-              <span className="ml-1.5 text-[10px] text-muted-foreground/50">base</span>
-            )}
-          </TabsTrigger>
-        ))}
+        {tabs.map((tab) => {
+          const Icon = THEME_ICONS[tab.id];
+          return (
+            <TabsTrigger
+              key={tab.id}
+              value={tab.id}
+              sound="tabSwitch"
+              className={cn(
+                "rounded-none border-0 border-b-2 border-transparent bg-transparent px-0 pb-3 text-sm data-[state=active]:bg-transparent data-[state=active]:shadow-none dark:data-[state=active]:bg-transparent data-[state=active]:border-b-[3px] h-auto gap-1.5 opacity-60 transition-all data-[state=active]:opacity-100 data-[state=active]:font-semibold",
+                THEME_ACCENT[tab.id]
+              )}
+            >
+              {Icon && <Icon className="size-3.5" />}
+              {tab.label}
+              {tab.inherits && (
+                <span className="ml-1.5 text-[10px] text-muted-foreground/50">
+                  base
+                </span>
+              )}
+            </TabsTrigger>
+          );
+        })}
       </TabsList>
       {tabs.map((tab) => (
         <TabsContent key={tab.id} value={tab.id} className="mt-0">

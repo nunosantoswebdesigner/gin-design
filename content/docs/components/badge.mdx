@@ -1,14 +1,14 @@
----
+﻿---
 title: Badge
 description: Small status indicators and labels for categorizing, tagging, or highlighting content.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=73-3479&t=PC39eDJ4DRaws5UP-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=73-3479&t=PC39eDJ4DRaws5UP-1
 ---
 
-import { Badge } from "@/registry/new-york/badge";
+import { Badge } from "@/registry/mint/badge";
 import { Clock, Check, X } from "lucide-react";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="badge">
       <div className="flex flex-wrap items-center gap-2">
         <Badge>Default</Badge>
@@ -19,7 +19,7 @@ import { Clock, Check, X } from "lucide-react";
     </PreviewWithCode>
   </ThemeTab>
 
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="badge">
       <div className="flex flex-wrap items-center gap-2">
         <Badge>Default</Badge>
@@ -30,7 +30,7 @@ import { Clock, Check, X } from "lucide-react";
     </PreviewWithCode>
   </ThemeTab>
 
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="badge">
       <div className="flex flex-wrap items-center gap-2">
         <Badge>Default</Badge>
@@ -41,7 +41,7 @@ import { Clock, Check, X } from "lucide-react";
     </PreviewWithCode>
   </ThemeTab>
 
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="badge">
       <div className="flex flex-wrap items-center gap-2">
         <Badge>Default</Badge>
@@ -138,11 +138,11 @@ import { Badge } from "@/components/ui/badge";
 ## Specs
 
 ```md
-# New York — Badge Specs
+# Mint — Badge Specs
 
 ## Component
 - name: badge
-- file: registry/new-york/badge.tsx
+- file: registry/mint/badge.tsx
 - installs to: components/ui/badge.tsx
 - dependencies: class-variance-authority, radix-ui
 
@@ -153,25 +153,26 @@ default — use asChild with an anchor for clickable badges.
 
 ## Visual identity
 Compact and typographic. Rounded-md (not pill-shaped), px-2 py-0.5, text-xs
-font-medium. Four variants cover the full range of semantic weight from neutral
-to urgent. Low visual footprint — designed to inform, not distract.
+font-medium. Default variant fills with Mint's green primary; the four variants
+still cover the full range of semantic weight from neutral to urgent. Low
+visual footprint — designed to inform, not distract.
 
 ## Design tokens
---primary: oklch(0.205 0 0)              — default background
---primary-foreground: oklch(0.985 0 0)   — default text
---secondary: oklch(0.97 0 0)             — secondary background
---secondary-foreground: oklch(0.205 0 0) — secondary text
---destructive: oklch(0.577 0.245 27.325) — destructive background
---accent: oklch(0.97 0 0)                — outline hover background
---border: oklch(0.922 0 0)               — outline border
---ring: oklch(0.708 0 0)                 — focus ring
+--primary: oklch(0.5 0.14 155)            — default background
+--primary-foreground: oklch(1 0 0)        — default text
+--secondary: oklch(0.95 0.04 155)         — secondary background
+--secondary-foreground: oklch(0.32 0.1 155) — secondary text
+--destructive: oklch(0.55 0.25 15)        — destructive background
+--accent: oklch(0.92 0.05 155)            — outline hover background
+--border: oklch(0.88 0.04 155 / 60%)      — outline border
+--ring: oklch(0.5 0.14 155)               — focus ring
 
 ## Dark theme
---primary: oklch(0.985 0 0)
---primary-foreground: oklch(0.205 0 0)
---secondary: oklch(0.269 0 0)
---secondary-foreground: oklch(0.985 0 0)
---border: oklch(1 0 0 / 10%)
+--primary: oklch(0.62 0.15 155)
+--primary-foreground: oklch(0.1 0 0)
+--secondary: oklch(0.22 0.04 155)
+--secondary-foreground: oklch(0.88 0.06 155)
+--border: oklch(0.32 0.05 155 / 40%)
 
 ## Variants
 - default     → solid primary. Main categories, active states, version tags.

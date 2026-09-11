@@ -46,9 +46,9 @@ export const CommandBox = ({
     >
       <div className="border-border/50 flex items-center gap-2 border-b px-3 py-1">
         <div className="flex items-center gap-2 py-1.5">
-          <img alt="" className="size-4" src="/favicon.svg" />
+          <img alt="" className="size-4" src="/favicon-96x96.png" />
           <span className="text-muted-foreground text-sm font-medium">
-            ING Design Plugin
+            GIN Design Plugin
           </span>
         </div>
 

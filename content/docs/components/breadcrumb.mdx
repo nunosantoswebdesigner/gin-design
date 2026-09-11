@@ -1,7 +1,7 @@
----
+﻿---
 title: Breadcrumb
 description: Shows the user's current location within a site hierarchy and provides navigation links to parent pages.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=101-424&t=PC39eDJ4DRaws5UP-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=101-424&t=PC39eDJ4DRaws5UP-1
 ---
 
 import {
@@ -12,11 +12,11 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/new-york/breadcrumb";
+} from "@/registry/mint/breadcrumb";
 import { Slash } from "lucide-react";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="breadcrumb">
       <Breadcrumb>
         <BreadcrumbList>
@@ -36,7 +36,7 @@ import { Slash } from "lucide-react";
     </PreviewWithCode>
   </ThemeTab>
 
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="breadcrumb">
       <Breadcrumb>
         <BreadcrumbList>
@@ -56,7 +56,7 @@ import { Slash } from "lucide-react";
     </PreviewWithCode>
   </ThemeTab>
 
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="breadcrumb">
       <Breadcrumb>
         <BreadcrumbList>
@@ -76,7 +76,7 @@ import { Slash } from "lucide-react";
     </PreviewWithCode>
   </ThemeTab>
 
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="breadcrumb">
       <Breadcrumb>
         <BreadcrumbList>
@@ -259,11 +259,11 @@ import {
 ## Specs
 
 ```md
-# New York — Breadcrumb Specs
+# Mint — Breadcrumb Specs
 
 ## Component
 - name: breadcrumb
-- file: registry/new-york/breadcrumb.tsx
+- file: registry/mint/breadcrumb.tsx
 - installs to: components/ui/breadcrumb.tsx
 - dependencies: radix-ui, lucide-react
 
@@ -279,11 +279,11 @@ current page. ChevronRight (size-3.5) as the default separator — clean and
 directional. No borders, no background — the trail disappears into the layout.
 
 ## Design tokens
---muted-foreground: oklch(0.556 0 0)     — link text
+--muted-foreground: oklch(0.52 0.06 155) — link text
 --foreground: oklch(0.145 0 0)           — current page text
 
 ## Dark theme
---muted-foreground: oklch(0.708 0 0)
+--muted-foreground: oklch(0.6 0.06 155)
 --foreground: oklch(0.985 0 0)
 
 ## Anatomy

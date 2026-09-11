@@ -8,13 +8,13 @@ export const SITE_AGENT_SKILL_MD = `# ${SITE.NAME}
 
 ## What This Is
 
-${SITE.NAME} is a custom component library and public shadcn registry built by ING Infinitive. Components are distributed via the shadcn registry model — you copy the source code directly into your project, own it fully, and customize it without constraints.
+${SITE.NAME} is a custom component library and public shadcn registry built by Nuno Santos. Components are distributed via the shadcn registry model — you copy the source code directly into your project, own it fully, and customize it without constraints.
 
-Components are built on Radix UI primitives, styled with Tailwind CSS 4, and documented with live previews, code toggles, and structured AI-ready specs. Brand themes (Force8, My Swiss Ski, My Ice Hockey) are applied via CSS variable overrides — no code duplication between themes.
+Components are built on Radix UI primitives, styled with Tailwind CSS 4, and documented with live previews, code toggles, and structured AI-ready specs. Brand themes (Berries, Citrine, Cinnamon) are applied via CSS variable overrides — no code duplication between themes.
 
 ## Who This Is For
 
-- Developers building projects under the ING Infinitive umbrella
+- Developers building projects under the Nuno Santos umbrella
 - Anyone looking for accessible, production-ready React components in a copy-owned model
 - AI tools that need component context for generation, theming, or integration tasks
 
@@ -63,13 +63,15 @@ This site is a shadcn-compatible registry. For MCP workflows, use the maintained
 
 ## Themes
 
-Brand themes are CSS variable overrides, not separate component implementations. The base component (New York) is the source of truth. Themes change visual identity — colour, radius, typography weight — without touching component logic.
+Brand themes are CSS variable overrides, not separate component implementations. The base component (Mint) is the source of truth. Themes change visual identity — colour, radius, typography weight — without touching component logic.
 
-Available themes: \`new-york\` (base), \`force8\`, \`myswissski\`, \`myicehockey\`
+Available themes: \`mint\` (base), \`berries\`, \`citrine\`, \`cinnamon\`
 `;
 
 export const siteAgentSkillDigest = (): string => {
-  const hex = createHash("sha256").update(SITE_AGENT_SKILL_MD, "utf-8").digest("hex");
+  const hex = createHash("sha256")
+    .update(SITE_AGENT_SKILL_MD, "utf-8")
+    .digest("hex");
 
   return `sha256:${hex}`;
 };

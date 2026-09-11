@@ -1,28 +1,28 @@
----
+﻿---
 title: Slider
 description: A draggable input for selecting a numeric value or range, with support for steps, vertical orientation, and audio feedback.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=76-10513
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=76-10513
 ---
 
 import { SliderDemo } from "@/examples/slider";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="slider">
       <SliderDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="slider">
       <SliderDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="slider">
       <SliderDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="slider">
       <SliderDemo />
     </PreviewWithCode>
@@ -91,11 +91,11 @@ import { Slider } from "@/components/ui/slider";
 ## Specs
 
 ```md
-# New York — Slider Specs
+# Mint — Slider Specs
 
 ## Component
 - name: slider
-- file: registry/new-york/slider.tsx
+- file: registry/mint/slider.tsx
 - installs to: components/ui/slider.tsx
 - dependencies: radix-ui
 - registryDependencies: none
@@ -110,15 +110,15 @@ snapping, vertical orientation, or audio feedback.
 ## Visual identity
 Minimal and tactile. A muted track with a primary-coloured fill and a
 circular thumb with a subtle shadow creates clear affordance without visual
-noise. The rounded-full geometry is consistent with the new-york radius
+noise. The rounded-full geometry is consistent with Mint's radius
 language. In dark mode the thumb's background inverts to the dark surface
 colour, keeping contrast clean.
 
 ## Design tokens
---muted: oklch(0.97 0 0) / oklch(0.269 0 0)         — track background
---primary: oklch(0.205 0 0) / oklch(0.922 0 0)       — range fill and thumb border
+--muted: oklch(0.96 0.02 155) / oklch(0.2 0.03 155)         — track background
+--primary: oklch(0.5 0.14 155) / oklch(0.62 0.15 155)       — range fill and thumb border
 --background: oklch(1 0 0) / oklch(0.145 0 0)        — thumb fill
---ring: oklch(0.708 0 0) / oklch(0.556 0 0)          — focus ring on thumb (ring-ring/50)
+--ring: oklch(0.5 0.14 155) / oklch(0.62 0.15 155)          — focus ring on thumb (ring-ring/50)
 
 ## Sub-components
 - Slider (Root)   → outer positioning container; owns orientation, disabled, and data-slot="slider"
@@ -134,7 +134,7 @@ colour, keeping contrast clean.
 ## Conventions
 - Range slider: pass two values to defaultValue/value (e.g. defaultValue={[20, 70]})
 - Vertical sliders require an explicit height on the Slider element (e.g. className="h-32")
-- sounds / haptic: ING Design exclusive — plays a "tick" audio via useFeedback on every onValueChange
+- sounds / haptic: GIN Design exclusive — plays a "tick" audio via useFeedback on every onValueChange
 - Sub-components expose data-slot="slider", data-slot="slider-track", data-slot="slider-range", and data-slot="slider-thumb" for CSS targeting
 - Thumbs are rendered dynamically from the value array length — do not render SliderThumb manually
 - Always provide an accessible label via aria-label or an associated <label> element

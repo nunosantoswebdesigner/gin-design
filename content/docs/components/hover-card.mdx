@@ -1,28 +1,28 @@
----
+﻿---
 title: Hover Card
 description: A floating card that appears when hovering over a trigger — for previewing content without navigating away.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=76-8466&t=n9ZYudwlr9OrHUSJ-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=76-8466&t=n9ZYudwlr9OrHUSJ-1
 ---
 
 import { HoverCardDemo } from "@/examples/hover-card";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="hover-card">
       <HoverCardDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="hover-card">
       <HoverCardDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="hover-card">
       <HoverCardDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="hover-card">
       <HoverCardDemo />
     </PreviewWithCode>
@@ -63,21 +63,21 @@ import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/h
 <HoverCard>
   <HoverCardTrigger asChild>
     <a href="#" className="text-sm font-medium underline underline-offset-4">
-      ING Design
+      GIN Design
     </a>
   </HoverCardTrigger>
   <HoverCardContent side="top" className="w-72">
     <div className="space-y-2">
       <div className="h-32 rounded-md bg-muted" />
       <div className="space-y-1">
-        <p className="text-sm font-semibold">ING Design System</p>
+        <p className="text-sm font-semibold">GIN Design System</p>
         <p className="text-xs text-muted-foreground">
           A custom component registry built on shadcn/ui.
         </p>
       </div>
       <div className="flex items-center gap-1 text-xs text-muted-foreground">
         <ExternalLink className="size-3" />
-        ing-design.vercel.app
+        gin-design.vercel.app
       </div>
     </div>
   </HoverCardContent>
@@ -127,11 +127,11 @@ import {
 ## Specs
 
 ```md
-# New York — Hover Card Specs
+# Mint — Hover Card Specs
 
 ## Component
 - name: hover-card
-- file: registry/new-york/hover-card.tsx
+- file: registry/mint/hover-card.tsx
 - installs to: components/ui/hover-card.tsx
 - dependencies: radix-ui
 - registryDependencies: none
@@ -151,7 +151,7 @@ fade + zoom + directional slide keyed to the open side.
 ## Design tokens
 --popover: oklch(1 0 0) / oklch(0.269 0 0)             — card surface (light/dark)
 --popover-foreground: oklch(0.145 0 0) / oklch(0.985 0 0) — text on card
---border: oklch(0.922 0 0) / oklch(1 0 0 / 10%)        — card border
+--border: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)        — card border
 
 ## Sub-components
 - HoverCard         → root provider; accepts openDelay (default 700ms) and closeDelay (default 300ms)

@@ -6,22 +6,22 @@ description: A layout wrapper for a chat message row with avatar, header, conten
 import { MessageDemo } from "@/examples/message";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="message">
       <MessageDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="message">
       <MessageDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="message">
       <MessageDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="message">
       <MessageDemo />
     </PreviewWithCode>
@@ -190,11 +190,11 @@ import { Bubble, BubbleContent } from "@/components/ui/bubble";
 ## Specs
 
 ```md
-# New York — Message Specs
+# Mint — Message Specs
 
 ## Component
 - name: message
-- file: registry/new-york/message.tsx
+- file: registry/mint/message.tsx
 - installs to: components/ui/message.tsx
 - dependencies: none
 - registryDependencies: none
@@ -212,8 +212,8 @@ entirely delegated to the Bubble component placed inside MessageContent. The
 avatar slot uses --muted as a fallback background for the rounded container.
 
 ## Design tokens
---muted: oklch(0.97 0 0) / oklch(0.269 0 0)           — MessageAvatar fallback background
---muted-foreground: oklch(0.556 0 0) / oklch(0.708 0 0) — MessageHeader and MessageFooter text colour
+--muted: oklch(0.96 0.02 155) / oklch(0.2 0.03 155)           — MessageAvatar fallback background
+--muted-foreground: oklch(0.52 0.06 155) / oklch(0.6 0.06 155) — MessageHeader and MessageFooter text colour
 
 ## Sub-components
 - MessageGroup    → flex flex-col gap-2; wraps consecutive same-sender messages to reduce spacing

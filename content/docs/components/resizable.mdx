@@ -6,22 +6,22 @@ description: Draggable split panels for horizontal and vertical layouts, built o
 import { ResizableDemo } from "@/examples/resizable";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="resizable">
       <ResizableDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="resizable">
       <ResizableDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="resizable">
       <ResizableDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="resizable">
       <ResizableDemo />
     </PreviewWithCode>
@@ -155,11 +155,11 @@ import {
 ## Specs
 
 ```md
-# New York — Resizable Specs
+# Mint — Resizable Specs
 
 ## Component
 - name: resizable
-- file: registry/new-york/resizable.tsx
+- file: registry/mint/resizable.tsx
 - installs to: components/ui/resizable.tsx
 - dependencies: react-resizable-panels, lucide-react
 - registryDependencies: none
@@ -171,13 +171,14 @@ sidebar/content splits, and multi-pane dashboards. Do not use when panels have
 fixed sizes — a simple CSS grid or flex layout is more appropriate.
 
 ## Visual identity
-Minimal and unobtrusive: the separator is a 1px --border line that expands its
-hit area via a pseudo-element without visual noise. The optional grip pill (border
-+ --border fill, rounded-xs) signals draggability while staying compact and neutral.
+Minimal and unobtrusive: the separator is a 1px --border line, a soft,
+translucent green line at 60% opacity, that expands its hit area via a
+pseudo-element without visual noise. The optional grip pill (border
++ --border fill, rounded-xs) signals draggability while staying compact and light.
 
 ## Design tokens
---border: oklch(0.922 0 0) / oklch(1 0 0 / 10%)   — separator line and grip pill fill/border
---ring: oklch(0.708 0 0) / oklch(0.556 0 0)         — focus ring on the handle
+--border: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)   — separator line and grip pill fill/border
+--ring: oklch(0.5 0.14 155) / oklch(0.62 0.15 155)         — green focus ring on the handle
 
 ## Sub-components
 - ResizablePanelGroup  → flex container that wraps all panels; sets orientation via aria-[orientation]

@@ -4,17 +4,18 @@ import Link from "next/link";
 
 import { Callout } from "@/components/docs/callout";
 import { CodeBlockCommand } from "@/components/docs/code-block-command";
+import { CodeTabs } from "@/components/docs/code-tabs";
 import { CommandBox } from "@/components/docs/command-box";
+import { ComponentPreview } from "@/components/docs/component-preview";
+import { ComponentSource } from "@/components/docs/component-source";
 import {
   ComponentThemeTabs,
   ThemeTab,
 } from "@/components/docs/component-theme-tabs";
-import { PreviewWithCode } from "@/components/docs/preview-with-code";
-import { CodeTabs } from "@/components/docs/code-tabs";
-import { ComponentPreview } from "@/components/docs/component-preview";
-import { ComponentSource } from "@/components/docs/component-source";
 import { ComponentsList } from "@/components/docs/components-list";
+import { PreviewWithCode } from "@/components/docs/preview-with-code";
 import { RegistryThemesList } from "@/components/docs/registry-themes-list";
+import { ThemeCards } from "@/components/docs/theme-cards";
 import { CopyButton } from "@/components/features/copy-button";
 import { getIconForLanguageExtension } from "@/components/icons/icons";
 import {
@@ -32,10 +33,6 @@ import { cn } from "@/lib/utils";
 
 export const mdxComponents = {
   Accordion,
-  CommandBox,
-  ComponentThemeTabs,
-  ThemeTab,
-  PreviewWithCode,
   AccordionContent,
   AccordionItem,
   AccordionTrigger: (
@@ -48,10 +45,11 @@ export const mdxComponents = {
   Button,
   Callout,
   CodeTabs,
+  CommandBox,
   ComponentPreview,
   ComponentSource,
+  ComponentThemeTabs,
   ComponentsList,
-  RegistryThemesList,
   FeatureCard: ({
     icon: Icon,
     title,
@@ -111,6 +109,8 @@ export const mdxComponents = {
       {...props}
     />
   ),
+  PreviewWithCode,
+  RegistryThemesList,
   Step: ({ className, children, ...props }: React.ComponentProps<"h3">) => (
     <h3
       className={cn(
@@ -171,6 +171,8 @@ export const mdxComponents = {
       {...props}
     />
   ),
+  ThemeCards,
+  ThemeTab,
   a: ({ className, children, ...props }: React.ComponentProps<"a">) => (
     <a
       className={cn("font-medium underline underline-offset-4", className)}

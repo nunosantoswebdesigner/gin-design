@@ -1,15 +1,15 @@
-<p align="center">
-  <img src="https://ing-design.vercel.app/og" alt="ING Design banner" />
+﻿<p align="center">
+  <img src="https://gin-design.vercel.app/og" alt="GIN Design banner" />
 </p>
 
-<h1 align="center">ING Design</h1>
+<h1 align="center">GIN Design</h1>
 
 <p align="center">
-  Components, elements, blocks, charts, and icons registry by ING Infinitive. Install directly into your project with <code>npx shadcn add</code>, own the code fully, and apply brand themes via CSS variables.
+  Components, elements, blocks, charts, and icons registry by Nuno Santos. Install directly into your project with <code>npx shadcn add</code>, own the code fully, and apply brand themes via CSS variables.
   <br />
   <br />
-  <a href="https://github.com/nunosantoswebdesigner/ing-design"><img src="https://www.shieldcn.dev/github/stars/nunosantoswebdesigner/ing-design.svg?variant=secondary&size=xs&theme=zinc" alt="GitHub Stars" /></a>
-  <a href="https://github.com/nunosantoswebdesigner/ing-design/actions"><img src="https://www.shieldcn.dev/github/ci/nunosantoswebdesigner/ing-design.svg?variant=secondary&size=xs&theme=zinc" alt="CI" /></a>
+  <a href="https://github.com/nunosantoswebdesigner/gin-design"><img src="https://www.shieldcn.dev/github/stars/nunosantoswebdesigner/gin-design.svg?variant=secondary&size=xs&theme=zinc" alt="GitHub Stars" /></a>
+  <a href="https://github.com/nunosantoswebdesigner/gin-design/actions"><img src="https://www.shieldcn.dev/github/ci/nunosantoswebdesigner/gin-design.svg?variant=secondary&size=xs&theme=zinc" alt="CI" /></a>
 </p>
 
 ## What's in the registry
@@ -25,9 +25,9 @@
 Install any piece directly into your project:
 
 ```bash
-npx shadcn@latest add https://ing-design.vercel.app/r/button.json
-npx shadcn@latest add https://ing-design.vercel.app/r/e-data-table.json
-npx shadcn@latest add https://ing-design.vercel.app/r/b-login.json
+npx shadcn@latest add https://gin-design.vercel.app/r/button.json
+npx shadcn@latest add https://gin-design.vercel.app/r/e-data-table.json
+npx shadcn@latest add https://gin-design.vercel.app/r/b-login.json
 ```
 
 You own the source code. No runtime dependency, no version lock-in.
@@ -38,10 +38,10 @@ Every component ships in four brand themes. Themes are applied through CSS varia
 
 | Theme | Description |
 |-------|-------------|
-| **New York** | Base theme |
-| **Force8** | Force8 brand |
-| **My Swiss Ski** | My Swiss Ski brand |
-| **My Ice Hockey** | My Ice Hockey brand |
+| **Mint** | Base theme |
+| **Berries** | Bold, high-contrast red |
+| **Citrine** | Flat, zesty yellow-gold |
+| **Cinnamon** | Warm, soft brown |
 
 ## Features
 
@@ -69,7 +69,7 @@ Every component ships in four brand themes. Themes are applied through CSS varia
 1. **Clone**:
 
 ```bash
-git clone https://github.com/nunosantoswebdesigner/ing-design
+git clone https://github.com/nunosantoswebdesigner/gin-design
 ```
 
 2. **Install dependencies**:
@@ -86,7 +86,7 @@ FIGMA_ACCESS_TOKEN=your_figma_token               # for Figma diff
 DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/...  # for Discord sharing
 ```
 
-4. **Add your components** to `registry/new-york/` and update `registry.json`.
+4. **Add your components** to `registry/mint/` and update `registry.json`.
 
 5. **Build the registry**:
 
@@ -104,7 +104,7 @@ pnpm dev
 
 ```
 ├── registry/
-│   └── new-york/           # Components, elements (e-), and blocks (b-)
+│   └── mint/               # Components, elements (e-), and blocks (b-)
 ├── registry.json           # Registry manifest
 ├── content/docs/           # Documentation (MDX)
 ├── app/

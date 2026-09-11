@@ -1,28 +1,28 @@
----
+﻿---
 title: Sidebar
 description: A collapsible app sidebar with navigation groups, search, badges, tooltips, and mobile sheet support.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=269-47
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=269-47
 ---
 
 import { SidebarDemo } from "@/examples/sidebar";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="sidebar">
       <SidebarDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="sidebar">
       <SidebarDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="sidebar">
       <SidebarDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="sidebar">
       <SidebarDemo />
     </PreviewWithCode>
@@ -223,11 +223,11 @@ import {
 ## Specs
 
 ```md
-# New York — Sidebar Specs
+# Mint — Sidebar Specs
 
 ## Component
 - name: sidebar
-- file: registry/new-york/sidebar.tsx
+- file: registry/mint/sidebar.tsx
 - installs to: components/ui/sidebar.tsx
 - dependencies: radix-ui, lucide-react, class-variance-authority
 - registryDependencies: button, input, separator, sheet, skeleton, tooltip
@@ -243,8 +243,8 @@ not use for simple dropdowns or transient menus.
 Off-white sidebar surface (--sidebar) sits slightly apart from the page
 background, giving it a calm, structural presence. Active items and hover
 states use --sidebar-accent, a subtle tinted fill that avoids heavy contrast.
-The new-york 0.625rem radius carries through every interactive element for a
-consistently rounded, professional look.
+Mint's 1.25rem radius carries through every interactive element for a
+consistently rounded, airy look.
 
 ## Design tokens
 --sidebar: oklch(0.985 0 0) / oklch(0.205 0 0)                        — sidebar background surface
@@ -255,7 +255,7 @@ consistently rounded, professional look.
 --sidebar-border: oklch(0.922 0 0) / oklch(1 0 0 / 10%)               — internal dividers, rail, sub-menu border-l
 --sidebar-ring: oklch(0.708 0 0) / oklch(0.439 0 0)                   — focus ring on sidebar interactive elements
 --background: oklch(1 0 0) / oklch(0.145 0 0)                         — SidebarInset and SidebarInput surface
---ring: oklch(0.708 0 0) / oklch(0.556 0 0)                           — focus ring (non-sidebar elements)
+--ring: oklch(0.5 0.14 155) / oklch(0.62 0.15 155)                           — focus ring (non-sidebar elements)
 
 ## Sub-components
 - SidebarProvider       → context root; sets --sidebar-width CSS vars, wraps TooltipProvider, persists state to cookie
@@ -320,7 +320,7 @@ consistently rounded, professional look.
 - SidebarMenuAction showOnHover: pair with SidebarMenuButton in the same SidebarMenuItem — the peer selector drives visibility
 - SidebarMenuSkeleton: render inside SidebarMenuItem list items to preserve consistent list structure during loading
 - Sub-components expose data-slot="[name]" for CSS targeting (e.g. data-slot="sidebar-menu-button")
-- sounds / haptic: SidebarMenuButton accepts sound (FeedbackType) and haptic (boolean) — ING Design exclusives that play audio or trigger haptic feedback on click
+- sounds / haptic: SidebarMenuButton accepts sound (FeedbackType) and haptic (boolean) — GIN Design exclusives that play audio or trigger haptic feedback on click
 - Do not nest SidebarMenuSub more than one level deep — the layout and icon-collapse logic is not designed for deeper nesting
 - SidebarRail is optional but recommended for collapsible sidebars — it provides a drag-target affordance without visible UI chrome
 

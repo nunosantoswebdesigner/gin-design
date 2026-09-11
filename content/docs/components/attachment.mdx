@@ -6,22 +6,22 @@ description: A file or image attachment card with media, metadata, upload states
 import { AttachmentDemo } from "@/examples/attachment";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="attachment">
       <AttachmentDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="attachment">
       <AttachmentDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="attachment">
       <AttachmentDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="attachment">
       <AttachmentDemo />
     </PreviewWithCode>
@@ -151,11 +151,11 @@ import {
 ## Specs
 
 ```md
-# New York — Attachment Specs
+# Mint — Attachment Specs
 
 ## Component
 - name: attachment
-- file: registry/new-york/attachment.tsx
+- file: registry/mint/attachment.tsx
 - installs to: components/ui/attachment.tsx
 - dependencies: radix-ui, class-variance-authority
 - registryDependencies: button
@@ -173,11 +173,11 @@ Dashed border signals idle/pending state; destructive tint signals error — bot
 ## Design tokens
 --card: oklch(1 0 0) / oklch(0.205 0 0)                              — card surface
 --card-foreground: oklch(0.145 0 0) / oklch(0.985 0 0)               — default text on card
---muted: oklch(0.97 0 0) / oklch(0.269 0 0)                          — media slot background; hover tint
---muted-foreground: oklch(0.556 0 0) / oklch(0.708 0 0)              — description text
---destructive: oklch(0.577 0.245 27.325) / oklch(0.704 0.191 22.216) — error border, media tint, description text
---border: oklch(0.922 0 0) / oklch(1 0 0 / 10%)                      — card border (solid done/error; dashed idle)
---ring: oklch(0.708 0 0) / oklch(0.556 0 0)                          — focus-within ring (ring/50 opacity)
+--muted: oklch(0.96 0.02 155) / oklch(0.2 0.03 155)                  — media slot background; hover tint
+--muted-foreground: oklch(0.52 0.06 155) / oklch(0.6 0.06 155)       — description text
+--destructive: oklch(0.55 0.25 15) / oklch(0.704 0.191 22.216)       — error border, media tint, description text
+--border: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)    — card border (solid done/error; dashed idle)
+--ring: oklch(0.5 0.14 155) / oklch(0.62 0.15 155)                   — focus-within ring (ring/50 opacity)
 
 ## Sub-components
 - Attachment            → root card div; drives all group-data-* context via data-state, data-size, data-orientation

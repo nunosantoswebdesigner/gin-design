@@ -24,8 +24,7 @@ export const SiteFooter = () => {
               className="font-medium underline underline-offset-4"
               onClick={playClick}
             >
-              ing Infinitive
-              {/* {SITE.AUTHOR.NAME} */}
+              Nuno Santos
             </a>
             {/* . The source code is available on{" "}
             <a

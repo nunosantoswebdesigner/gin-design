@@ -1,28 +1,28 @@
----
+﻿---
 title: Switch
 description: A binary toggle control with smooth thumb animation and distinct on/off audio feedback.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=76-10548
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=76-10548
 ---
 
 import { SwitchDemo } from "@/examples/switch";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="switch">
       <SwitchDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="switch">
       <SwitchDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="switch">
       <SwitchDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="switch">
       <SwitchDemo />
     </PreviewWithCode>
@@ -89,11 +89,11 @@ import { Switch } from "@/components/ui/switch";
 ## Specs
 
 ```md
-# New York — Switch Specs
+# Mint — Switch Specs
 
 ## Component
 - name: switch
-- file: registry/new-york/switch.tsx
+- file: registry/mint/switch.tsx
 - installs to: components/ui/switch.tsx
 - dependencies: radix-ui
 - registryDependencies: none
@@ -108,21 +108,21 @@ the user must confirm the change before it applies.
 Pill-shaped track (rounded-full) transitions from a muted input colour when
 unchecked to the theme primary when checked. A small circular thumb slides
 across with a smooth CSS transition, giving clear directional feedback.
-New-york's 0.625rem radius base keeps the track corners proportionate.
+Mint's 1.25rem radius base keeps the track corners proportionate.
 
 ## Design tokens
---input: oklch(0.922 0 0) / oklch(1 0 0 / 15%)    — track colour when unchecked
---primary: oklch(0.205 0 0) / oklch(0.922 0 0)     — track colour when checked
+--input: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)    — track colour when unchecked
+--primary: oklch(0.5 0.14 155) / oklch(0.62 0.15 155)     — track colour when checked
 --background: oklch(1 0 0) / oklch(0.145 0 0)      — thumb fill
---ring: oklch(0.708 0 0) / oklch(0.556 0 0)        — focus ring colour
---destructive: oklch(0.577 0.245 27.325) / oklch(0.704 0.191 22.216) — invalid border
+--ring: oklch(0.5 0.14 155) / oklch(0.62 0.15 155)        — focus ring colour
+--destructive: oklch(0.55 0.25 15) / oklch(0.704 0.191 22.216) — invalid border
 
 ## Sub-components
 - Switch        → root toggle (SwitchPrimitive.Root); renders track, handles interaction
 - Switch.Thumb  → sliding circle (SwitchPrimitive.Thumb); moves on state change
 
 ## States
-- unchecked:      track is --input (muted grey)
+- unchecked:      track is --input (soft translucent green)
 - checked:        track becomes --primary; thumb translates 1rem (translate-x-4)
 - focus-visible:  3px ring in --ring/50, border switches to --ring
 - disabled:       opacity-50, cursor-not-allowed, pointer-events blocked
@@ -132,7 +132,7 @@ New-york's 0.625rem radius base keeps the track corners proportionate.
 - Always pair with a Label via matching id / htmlFor for accessible click target
 - Place label after the switch in DOM order (switch left, label right) to match natural reading flow
 - In settings-row layouts use justify-between with the switch on the trailing side
-- sounds / haptic: ING Design exclusive — plays toggleOn audio when switched on and toggleOff when switched off; pass sounds prop to enable
+- sounds / haptic: GIN Design exclusive — plays toggleOn audio when switched on and toggleOff when switched off; pass sounds prop to enable
 - Sub-components expose data-slot="switch" and data-slot="switch-thumb" for CSS targeting
 - No variants defined — visual appearance is controlled entirely by theme tokens
 ```

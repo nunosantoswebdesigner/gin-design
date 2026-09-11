@@ -1,28 +1,28 @@
----
+﻿---
 title: Signup
 description: A full-page signup block with split, card, and centered layout variants.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=1196-1300&t=SGuloiMFD7r5jFI6-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=1196-1300&t=SGuloiMFD7r5jFI6-1
 ---
 
 import { BSignupDemo } from "@/examples/b-signup";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="b-signup">
       <BSignupDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="b-signup">
       <BSignupDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="b-signup">
       <BSignupDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="b-signup">
       <BSignupDemo />
     </PreviewWithCode>
@@ -115,11 +115,11 @@ Fields include default helper texts matching the design. Override as needed:
 ## Specs
 
 ```md
-# New York — Signup Block Specs
+# Mint — Signup Block Specs
 
 ## Component
 - name: b-signup
-- file: registry/new-york/b-signup.tsx
+- file: registry/mint/b-signup.tsx
 - installs to: components/ui/b-signup.tsx
 - dependencies: none
 - registryDependencies: button, input, label, e-auth
@@ -131,16 +131,16 @@ fields with accessible helper texts. Use b-signup for account creation screens;
 pair with b-login for a complete authentication flow.
 
 ## Visual identity
-Neutral new-york palette. Split layout uses --muted for the image panel. Form
+Mint's fresh green palette. Split layout uses --muted for the image panel. Form
 is centred within the left column with a maximum width of max-w-sm. Helper texts
 render in --muted-foreground at text-xs for clear visual hierarchy below inputs.
 
 ## Design tokens
 --background: oklch(1 0 0) / oklch(0.145 0 0)    — page background
---muted: oklch(0.97 0 0) / oklch(0.269 0 0)       — image panel (split layout)
---muted-foreground: oklch(0.556 0 0) / oklch(0.708 0 0) — helper text, footer text
+--muted: oklch(0.96 0.02 155) / oklch(0.2 0.03 155)       — image panel (split layout)
+--muted-foreground: oklch(0.52 0.06 155) / oklch(0.6 0.06 155) — helper text, footer text
 --card: oklch(1 0 0) / oklch(0.205 0 0)           — card surface (card layout)
---border: oklch(0.922 0 0) / oklch(1 0 0 / 10%)   — card border
+--border: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)   — card border
 
 ## Sub-components
 - SignupBlock  → root; drives layout; data-slot="signup-block" data-layout="[layout]"

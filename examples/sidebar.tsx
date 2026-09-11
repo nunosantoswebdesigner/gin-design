@@ -16,9 +16,9 @@ export const SidebarDemo = () => (
         <SidebarHeader>
           <SidebarMenu>
             <SidebarMenuItem>
-              <SidebarMenuButton size="lg" tooltip="ING Design">
-                <div className="bg-primary text-primary-foreground flex size-8 shrink-0 items-center justify-center rounded-md text-xs font-bold">ING</div>
-                <span className="font-semibold">ING Design</span>
+              <SidebarMenuButton size="lg" tooltip="GIN Design">
+                <div className="bg-primary text-primary-foreground flex size-8 shrink-0 items-center justify-center rounded-md text-xs font-bold">GIN</div>
+                <span className="font-semibold">GIN Design</span>
               </SidebarMenuButton>
             </SidebarMenuItem>
           </SidebarMenu>
@@ -50,7 +50,7 @@ export const SidebarDemo = () => (
                 <div className="bg-muted size-8 shrink-0 rounded-full" />
                 <div className="flex flex-col text-left text-xs leading-tight">
                   <span className="font-medium">Nuno Santos</span>
-                  <span className="text-muted-foreground truncate">nunosantos@inginfinitive.pt</span>
+                  <span className="text-muted-foreground truncate">nunosantos@nunosantos.pt</span>
                 </div>
               </SidebarMenuButton>
             </SidebarMenuItem>

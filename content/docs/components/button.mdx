@@ -1,36 +1,39 @@
----
+﻿---
 title: Button
 description: Triggers an action or navigates. Supports multiple visual variants and sizes.
 figma:
-  new-york: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=402-654&t=oHRH1EwF6y1gtDtO-1
-  force8: https://www.figma.com/design/DNTdmU8BBvIfQX34FJbQcm/Force8-Design-System?node-id=3226-7522&m=dev
+  mint: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=402-654&t=oHRH1EwF6y1gtDtO-1
+  berries: https://www.figma.com/design/DNTdmU8BBvIfQX34FJbQcm/GIN-design?node-id=3226-7522&m=dev
 ---
 
-import { Button } from "@/registry/new-york/button";
+import { Button } from "@/registry/mint/button";
+import { Button as BerriesButton } from "@/registry/berries/button";
+import { Button as CitrineButton } from "@/registry/citrine/button";
+import { Button as CinnamonButton } from "@/registry/cinnamon/button";
 import { ArrowRightIcon, MailIcon, Loader2Icon } from "lucide-react";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
-    <PreviewWithCode name="button">
+  <ThemeTab name="mint">
+    <PreviewWithCode src="registry/mint/button.tsx">
       <Button>Button</Button>
     </PreviewWithCode>
   </ThemeTab>
 
-<ThemeTab name="force8">
-  <PreviewWithCode name="button">
-    <Button>Button</Button>
+<ThemeTab name="berries">
+  <PreviewWithCode src="registry/berries/button.tsx">
+    <BerriesButton>Button</BerriesButton>
   </PreviewWithCode>
 </ThemeTab>
 
-<ThemeTab name="myswissski">
-  <PreviewWithCode name="button">
-    <Button>Button</Button>
+<ThemeTab name="citrine">
+  <PreviewWithCode src="registry/citrine/button.tsx">
+    <CitrineButton>Button</CitrineButton>
   </PreviewWithCode>
 </ThemeTab>
 
-  <ThemeTab name="myicehockey">
-    <PreviewWithCode name="button">
-      <Button>Button</Button>
+  <ThemeTab name="cinnamon">
+    <PreviewWithCode src="registry/cinnamon/button.tsx">
+      <CinnamonButton>Button</CinnamonButton>
     </PreviewWithCode>
   </ThemeTab>
 </ComponentThemeTabs>
@@ -137,12 +140,12 @@ import { MailIcon } from "lucide-react";
 ## Specs
 
 ```md
-# New York — Button Specs
+# Mint — Button Specs
 
 ## Component
 
 - name: button
-- file: registry/new-york/button.tsx
+- file: registry/mint/button.tsx
 - installs to: components/ui/button.tsx
 - dependencies: class-variance-authority, radix-ui
 
@@ -154,24 +157,25 @@ a process. Avoid using more than one "default" variant in the same visual area.
 
 ## Visual identity
 
-Neutral dark palette. Near-black primary conveys seriousness and clarity.
-Standard border radius (0.625rem) gives a balanced, professional feel.
-No colour bias — works across any content type or brand context.
+Mint's fresh green palette. A medium green primary conveys energy and clarity.
+Generous border radius (1.25rem) gives a light, airy, rounded feel, with soft
+glassy borders throughout. A confident but approachable green found across
+every accent.
 
 ## Design tokens
 
---primary: oklch(0.205 0 0) — near-black
---primary-foreground: oklch(0.985 0 0) — near-white
---secondary: oklch(0.97 0 0) — very light grey
---secondary-foreground: oklch(0.205 0 0)
---accent: oklch(0.97 0 0)
---accent-foreground: oklch(0.205 0 0)
---muted: oklch(0.97 0 0)
---muted-foreground: oklch(0.556 0 0) — mid grey
---destructive: oklch(0.577 0.245 27.325) — red
---border: oklch(0.922 0 0) — light grey
---ring: oklch(0.708 0 0) — medium grey focus ring
---radius: 0.625rem — balanced, slightly rounded
+--primary: oklch(0.5 0.14 155) — medium green
+--primary-foreground: oklch(1 0 0) — white
+--secondary: oklch(0.95 0.04 155) — pale mint
+--secondary-foreground: oklch(0.32 0.1 155)
+--accent: oklch(0.92 0.05 155)
+--accent-foreground: oklch(0.32 0.1 155)
+--muted: oklch(0.96 0.02 155)
+--muted-foreground: oklch(0.52 0.06 155) — soft green-grey
+--destructive: oklch(0.55 0.25 15) — red
+--border: oklch(0.88 0.04 155 / 60%) — soft glassy green-tinted border
+--ring: oklch(0.5 0.14 155) — green focus ring
+--radius: 1.25rem — generous, airy rounded
 
 ## Variants
 

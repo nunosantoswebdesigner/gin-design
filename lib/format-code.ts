@@ -44,16 +44,20 @@ type DisplayTransformer = (opts: {
 export const formatCode = async (code: string) => {
   let formattedCode = code;
 
-  formattedCode = formattedCode.replaceAll("@/registry/new-york/", "@/components/");
+  formattedCode = formattedCode.replaceAll("@/registry/mint/", "@/components/");
 
   formattedCode = formattedCode.replaceAll("export default", "export");
 
   try {
     const config = buildDisplayConfig();
     const project = new Project({ compilerOptions: {} });
-    const sourceFile = project.createSourceFile("component.tsx", formattedCode, {
-      scriptKind: ScriptKind.TSX,
-    });
+    const sourceFile = project.createSourceFile(
+      "component.tsx",
+      formattedCode,
+      {
+        scriptKind: ScriptKind.TSX,
+      }
+    );
 
     const transformers: DisplayTransformer[] = [
       transformIcons as DisplayTransformer,
@@ -68,8 +72,8 @@ export const formatCode = async (code: string) => {
           filename: "component.tsx",
           raw: formattedCode,
           sourceFile,
-        }),
-      ),
+        })
+      )
     );
 
     return sourceFile.getText().trim();

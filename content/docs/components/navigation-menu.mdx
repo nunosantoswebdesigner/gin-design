@@ -1,28 +1,28 @@
----
+﻿---
 title: Navigation Menu
 description: A horizontal navigation bar with animated flyout panels, link groups, and a shared viewport.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=665-1728&t=n9ZYudwlr9OrHUSJ-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=665-1728&t=n9ZYudwlr9OrHUSJ-1
 ---
 
 import { NavigationMenuDemo } from "@/examples/navigation-menu";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="navigation-menu">
       <NavigationMenuDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="navigation-menu">
       <NavigationMenuDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="navigation-menu">
       <NavigationMenuDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="navigation-menu">
       <NavigationMenuDemo />
     </PreviewWithCode>
@@ -80,7 +80,7 @@ Combine a full-height `NavigationMenuLink` with a grid of list items for a featu
           className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-gradient-to-b p-6 no-underline outline-none focus:shadow-md"
           href="/"
         >
-          <div className="mt-4 mb-2 text-lg font-semibold">ING Design</div>
+          <div className="mt-4 mb-2 text-lg font-semibold">GIN Design</div>
           <p className="text-muted-foreground text-sm leading-tight">
             A custom component registry built on shadcn/ui.
           </p>
@@ -88,7 +88,7 @@ Combine a full-height `NavigationMenuLink` with a grid of list items for a featu
       </NavigationMenuLink>
     </li>
     <ListItem href="/docs/installation" title="Installation">
-      How to install and configure ING Design.
+      How to install and configure GIN Design.
     </ListItem>
   </ul>
 </NavigationMenuContent>
@@ -179,11 +179,11 @@ import {
 ## Specs
 
 ```md
-# New York — Navigation Menu Specs
+# Mint — Navigation Menu Specs
 
 ## Component
 - name: navigation-menu
-- file: registry/new-york/navigation-menu.tsx
+- file: registry/mint/navigation-menu.tsx
 - installs to: components/ui/navigation-menu.tsx
 - dependencies: radix-ui, class-variance-authority, lucide-react
 - registryDependencies: none
@@ -195,20 +195,20 @@ container so transitions between items are smooth and directional. Use it for
 site-level navigation; do not use it for in-page tab switching — prefer Tabs for that.
 
 ## Visual identity
-Clean, borderless trigger buttons sit flush on --background; accent tint on hover
-and open state gives subtle feedback without heavy chrome. The shared viewport
-floats on --popover with a thin --border and shadow-lg, creating clear elevation
-without strong colour bias.
+Clean, borderless trigger buttons sit flush on --background; a soft mint
+accent tint on hover and open state gives subtle feedback without heavy
+chrome. The shared viewport floats on --popover with a thin --border and
+shadow-lg, creating clear elevation with Mint's signature green warmth.
 
 ## Design tokens
 --background: oklch(1 0 0) / oklch(0.145 0 0)         — trigger resting surface
---accent: oklch(0.97 0 0) / oklch(0.371 0 0)           — hover / focus / open tint on triggers and links
---accent-foreground: oklch(0.205 0 0) / oklch(0.985 0 0) — text on accent tint
+--accent: oklch(0.92 0.05 155) / oklch(0.26 0.05 155)           — hover / focus / open tint on triggers and links
+--accent-foreground: oklch(0.32 0.1 155) / oklch(0.88 0.06 155) — text on accent tint
 --popover: oklch(1 0 0) / oklch(0.269 0 0)             — viewport panel background
 --popover-foreground: oklch(0.145 0 0) / oklch(0.985 0 0) — text inside viewport
---border: oklch(0.922 0 0) / oklch(1 0 0 / 10%)        — viewport border + indicator diamond border
---ring: oklch(0.708 0 0) / oklch(0.556 0 0)            — focus-visible ring on triggers and links
---muted-foreground: oklch(0.556 0 0) / oklch(0.708 0 0) — SVG icons inside links (non-text class)
+--border: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)        — viewport border + indicator diamond border
+--ring: oklch(0.5 0.14 155) / oklch(0.62 0.15 155)            — focus-visible ring on triggers and links
+--muted-foreground: oklch(0.52 0.06 155) / oklch(0.6 0.06 155) — SVG icons inside links (non-text class)
 
 ## Sub-components
 - NavigationMenu            → Root wrapper; max-w-max flex; conditionally appends NavigationMenuViewport; accepts viewport prop

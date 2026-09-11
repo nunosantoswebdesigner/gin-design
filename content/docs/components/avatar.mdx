@@ -1,13 +1,13 @@
----
+﻿---
 title: Avatar
 description: An image element with a fallback for representing a user.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=73-3473&t=PC39eDJ4DRaws5UP-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=73-3473&t=PC39eDJ4DRaws5UP-1
 ---
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/new-york/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/registry/mint/avatar";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="avatar">
       <div className="flex items-center gap-4">
         <Avatar>
@@ -25,7 +25,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/registry/new-york/avatar"
     </PreviewWithCode>
   </ThemeTab>
 
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="avatar">
       <div className="flex items-center gap-4">
         <Avatar>
@@ -43,7 +43,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/registry/new-york/avatar"
     </PreviewWithCode>
   </ThemeTab>
 
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="avatar">
       <div className="flex items-center gap-4">
         <Avatar>
@@ -61,7 +61,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/registry/new-york/avatar"
     </PreviewWithCode>
   </ThemeTab>
 
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="avatar">
       <div className="flex items-center gap-4">
         <Avatar>
@@ -202,11 +202,11 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 ## Specs
 
 ```md
-# New York — Avatar Specs
+# Mint — Avatar Specs
 
 ## Component
 - name: avatar
-- file: registry/new-york/avatar.tsx
+- file: registry/mint/avatar.tsx
 - installs to: components/ui/avatar.tsx
 - dependencies: radix-ui
 
@@ -222,12 +222,12 @@ focus on the image or initials. The fallback uses bg-muted with centered
 text in a small font-medium weight.
 
 ## Design tokens
---muted: oklch(0.97 0 0)                 — fallback background
---muted-foreground: oklch(0.556 0 0)     — fallback text color
+--muted: oklch(0.96 0.02 155)             — fallback background
+--muted-foreground: oklch(0.52 0.06 155) — fallback text color
 
 ## Dark theme
---muted: oklch(0.269 0 0)
---muted-foreground: oklch(0.708 0 0)
+--muted: oklch(0.2 0.03 155)
+--muted-foreground: oklch(0.6 0.06 155)
 
 ## Anatomy
 <Avatar>                  ← Root: rounded-full container, size-8 by default

@@ -1,28 +1,28 @@
----
+﻿---
 title: Toggle Group
 description: A set of toggle buttons with shared variant and size, supporting single or multiple selection.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=79-11264
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=79-11264
 ---
 
 import { ToggleGroupDemo } from "@/examples/toggle-group";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="toggle-group">
       <ToggleGroupDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="toggle-group">
       <ToggleGroupDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="toggle-group">
       <ToggleGroupDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="toggle-group">
       <ToggleGroupDemo />
     </PreviewWithCode>
@@ -115,11 +115,11 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 ## Specs
 
 ```md
-# New York — Toggle Group Specs
+# Mint — Toggle Group Specs
 
 ## Component
 - name: toggle-group
-- file: registry/new-york/toggle-group.tsx
+- file: registry/mint/toggle-group.tsx
 - installs to: components/ui/toggle-group.tsx
 - dependencies: radix-ui, class-variance-authority
 - registryDependencies: toggle
@@ -133,19 +133,19 @@ single logical choice set.
 
 ## Visual identity
 Items sit flush in a horizontal flex row with a 4px gap. Each item inherits
-the new-york rounded-md radius and matches the Toggle's neutral, low-chrome
-look — transparent by default, accented only when pressed.
+Mint's rounded-md radius and the Toggle's soft, low-chrome look — transparent
+by default, tinted mint-green only when pressed.
 
 ## Design tokens
---muted: oklch(0.97 0 0) / oklch(0.269 0 0)               — hover background (default variant)
---muted-foreground: oklch(0.556 0 0) / oklch(0.708 0 0)   — hover text (default variant)
---accent: oklch(0.97 0 0) / oklch(0.371 0 0)               — pressed background
---accent-foreground: oklch(0.205 0 0) / oklch(0.985 0 0)   — pressed text
---secondary: oklch(0.97 0 0) / oklch(0.269 0 0)            — secondary variant fill
---secondary-foreground: oklch(0.205 0 0) / oklch(0.985 0 0)
---input: oklch(0.922 0 0) / oklch(1 0 0 / 15%)             — outline variant border
---ring: oklch(0.708 0 0) / oklch(0.556 0 0)                — focus ring
---destructive: oklch(0.577 0.245 27.325) / oklch(0.704 0.191 22.216) — aria-invalid ring
+--muted: oklch(0.96 0.02 155) / oklch(0.2 0.03 155)               — hover background (default variant)
+--muted-foreground: oklch(0.52 0.06 155) / oklch(0.6 0.06 155)   — hover text (default variant)
+--accent: oklch(0.92 0.05 155) / oklch(0.26 0.05 155)               — pressed background
+--accent-foreground: oklch(0.32 0.1 155) / oklch(0.88 0.06 155)   — pressed text
+--secondary: oklch(0.95 0.04 155) / oklch(0.22 0.04 155)            — secondary variant fill
+--secondary-foreground: oklch(0.32 0.1 155) / oklch(0.88 0.06 155)
+--input: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)             — outline variant border
+--ring: oklch(0.5 0.14 155) / oklch(0.62 0.15 155)                — focus ring
+--destructive: oklch(0.55 0.25 15) / oklch(0.704 0.191 22.216) — aria-invalid ring
 
 ## Sub-components
 - ToggleGroup     → Radix ToggleGroup.Root; renders flex items-center gap-1; publishes ToggleGroupContext with { variant, size }

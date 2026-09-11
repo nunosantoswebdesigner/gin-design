@@ -1,9 +1,9 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>ING Design — Adoption Proposal</title>
+<title>GIN Design — Adoption Proposal</title>
 <style>
   :root{
     --bg: oklch(0.16 0.01 264);
@@ -483,7 +483,7 @@
 
 
 <div class="chrome">
-  <div class="wordmark"><b>ING Design</b> — Proposal</div>
+  <div class="wordmark"><b>GIN Design</b> — Proposal</div>
   <div class="counter"><span class="counter-current">01</span> / 18</div>
   <div class="rail" role="tablist" aria-label="Sections"></div>
   <button class="notes-toggle" type="button" id="notesToggle">Notes <kbd>N</kbd></button>
@@ -493,8 +493,8 @@
 
   <section id="cover" data-title="Cover">
     <div class="tag">Adoption proposal · Internal</div>
-    <h1>ING Design</h1>
-    <p class="lede">A multi-brand component registry — from proof of concept to the foundation of ING's design system.</p>
+    <h1>GIN Design</h1>
+    <p class="lede">A multi-brand component registry — from proof of concept to the foundation of GIN's design system.</p>
     <div class="meta">
       <div><b>Presented by</b>Nuno Santos</div>
       <div><b>For</b>Engineering team &amp; leadership</div>
@@ -524,8 +524,8 @@
     <div class="col">
       <p class="eyebrow"><span>Entry 02 —</span> What it is</p>
       <h2>One registry, one source of truth, many brands.</h2>
-      <p class="lede">ING Design is a <span class="mono">shadcn/ui</span> component registry: installable via CLI, with the code living inside the consumer's project — not in a runtime dependency that updates from under you.</p>
-      <div class="cli">$ npx shadcn add <span class="hl">https://ing-design.vercel.app/r/button.json</span></div>
+      <p class="lede">GIN Design is a <span class="mono">shadcn/ui</span> component registry: installable via CLI, with the code living inside the consumer's project — not in a runtime dependency that updates from under you.</p>
+      <div class="cli">$ npx shadcn add <span class="hl">https://gin-design.vercel.app/r/button.json</span></div>
       <ul class="bullets plain" style="margin-top:2rem">
         <li><b>Registry</b> — versioned source of truth, with prefixes by type (component / element / block)</li>
         <li><b>Theming</b> — a neutral base, with brand layers on top; already proven to work across different brands</li>
@@ -548,7 +548,7 @@
         <div class="d-row">
           <div class="d-box"><span class="k">Design</span><span class="v">Tokens in Figma</span></div>
           <div class="d-arrow">→</div>
-          <div class="d-box accent"><span class="k">Source</span><span class="v">registry/new-york (66 components)</span></div>
+          <div class="d-box accent"><span class="k">Source</span><span class="v">registry/mint (66 components)</span></div>
           <div class="d-arrow">→</div>
           <div class="d-box"><span class="k">Manifest</span><span class="v">registry.json</span></div>
           <div class="d-arrow">→</div>
@@ -706,14 +706,14 @@
           </ul>
         </div>
         <div class="d-box">
-          <span class="k">ing-design · no AI</span>
+          <span class="k">gin-design · no AI</span>
           <ul class="mini-steps">
             <li>Create / duplicate</li>
             <li>Build in React</li>
           </ul>
         </div>
         <div class="d-box">
-          <span class="k">ing-design · with AI</span>
+          <span class="k">gin-design · with AI</span>
           <ul class="mini-steps">
             <li>Create / duplicate</li>
             <li>v0 / Claude / ChatGPT</li>
@@ -741,7 +741,7 @@
       </div>
       <div class="notes">
         <span class="notes-label">Notes</span>
-        <p>In the two workflows that start from ing-design (without going through Figma first), the Diff only has value if the component reuses tokens that already exist in Figma. If it's a genuinely new visual pattern, a feedback step is missing — replicating the component in Figma before the Diff — so design doesn't end up trailing behind code. Worth deciding as a team rule.</p>
+        <p>In the two workflows that start from gin-design (without going through Figma first), the Diff only has value if the component reuses tokens that already exist in Figma. If it's a genuinely new visual pattern, a feedback step is missing — replicating the component in Figma before the Diff — so design doesn't end up trailing behind code. Worth deciding as a team rule.</p>
       </div>
     </div>
   </section>
@@ -756,7 +756,7 @@
         <div class="check"><div><div class="c-title">Create, use, or duplicate an existing component</div><div class="c-desc">In Figma.</div></div></div>
         <div class="check"><div><div class="c-title">Apply modes / variables</div><div class="c-desc">Wire the component to the design system's tokens.</div></div></div>
         <div class="check"><div><div class="c-title">Publish the component in Figma</div><div class="c-desc">Make it part of the shared library.</div></div></div>
-        <div class="check"><div><div class="c-title">Move to ing-design</div><div class="c-desc">Open the repository, create the component file.</div></div></div>
+        <div class="check"><div><div class="c-title">Move to gin-design</div><div class="c-desc">Open the repository, create the component file.</div></div></div>
         <div class="check"><div><div class="c-title">Build in React</div><div class="c-desc">Translate the Figma component into code.</div></div></div>
         <div class="check"><div><div class="c-title">Document</div><div class="c-desc">Specs, usage examples, variants.</div></div></div>
         <div class="trunk-divider">from here on — the spine shared by all 4 workflows</div>
@@ -780,7 +780,7 @@
         <div class="check"><div><div class="c-title">Create a layout/component with an AI plugin</div><div class="c-desc">In Figma.</div></div></div>
         <div class="check"><div><div class="c-title">Review and adjust tokens/variants by hand</div><div class="c-desc">Align with the existing design system.</div></div></div>
         <div class="check"><div><div class="c-title">Publish the component in Figma</div><div class="c-desc">Make it part of the shared library.</div></div></div>
-        <div class="check"><div><div class="c-title">Move to ing-design</div><div class="c-desc">Open the repository, create the component file.</div></div></div>
+        <div class="check"><div><div class="c-title">Move to gin-design</div><div class="c-desc">Open the repository, create the component file.</div></div></div>
         <div class="check"><div><div class="c-title">Build in React</div><div class="c-desc">Translate the Figma component into code.</div></div></div>
         <div class="check"><div><div class="c-title">Document</div><div class="c-desc">Specs, usage examples, variants.</div></div></div>
         <div class="trunk-divider">from here on — the spine shared by all 4 workflows</div>
@@ -794,10 +794,10 @@
     </div>
   </section>
 
-  <section id="s-flow-3" data-title="Workflow: ing-design, no AI">
+  <section id="s-flow-3" data-title="Workflow: gin-design, no AI">
     <div class="col">
       <p class="eyebrow"><span>Entry 10 —</span> Workflow 3</p>
-      <div class="flow-tags"><span class="flow-tag">Origin <b>ing-design</b></span><span class="flow-tag">Method <b>No AI</b></span></div>
+      <div class="flow-tags"><span class="flow-tag">Origin <b>gin-design</b></span><span class="flow-tag">Method <b>No AI</b></span></div>
       <h2>Straight to code, skipping Figma.</h2>
       <p class="lede">The shortest path — right for components that reuse visual patterns that already exist.</p>
       <div class="checklist">
@@ -815,10 +815,10 @@
     </div>
   </section>
 
-  <section id="s-flow-4" data-title="Workflow: ing-design, with AI">
+  <section id="s-flow-4" data-title="Workflow: gin-design, with AI">
     <div class="col">
       <p class="eyebrow"><span>Entry 11 —</span> Workflow 4</p>
-      <div class="flow-tags"><span class="flow-tag">Origin <b>ing-design</b></span><span class="flow-tag">Method <b>With AI</b></span></div>
+      <div class="flow-tags"><span class="flow-tag">Origin <b>gin-design</b></span><span class="flow-tag">Method <b>With AI</b></span></div>
       <h2>The fastest path, with human review at the end.</h2>
       <p class="lede">AI writes the first version of the component — a person confirms it's correct before moving on.</p>
       <div class="checklist">
@@ -891,7 +891,7 @@
       <p class="lede" style="margin-top:2rem">Build and deploy verified — locally and in production (Vercel) — before every change is shipped.</p>
       <div class="notes">
         <span class="notes-label">Notes</span>
-        <p>Double-check these numbers before presenting — the registry grows with every work session. Worth running <span class="mono">git log --oneline | wc -l</span> and counting the files in <span class="mono">registry/new-york</span> on the day of the presentation.</p>
+        <p>Double-check these numbers before presenting — the registry grows with every work session. Worth running <span class="mono">git log --oneline | wc -l</span> and counting the files in <span class="mono">registry/mint</span> on the day of the presentation.</p>
       </div>
     </div>
   </section>
@@ -912,7 +912,7 @@
           <span class="s-num">02</span>
           <div class="status-body">
             <div class="s-title">The per-brand preview promises more than it shows</div>
-            <div class="s-desc">The docs fake multi-brand support by swapping CSS variables over the New York component. Three of the four brands have hand-written components with real structural differences that never render, because the preview always shows the New York file. 38 of these files already exist — just disconnected from the theme switcher.</div>
+            <div class="s-desc">The docs fake multi-brand support by swapping CSS variables over the Mint component. Three of the four brands have hand-written components with real structural differences that never render, because the preview always shows the Mint file. 38 of these files already exist — just disconnected from the theme switcher.</div>
           </div>
         </div>
         <div class="status-row">
@@ -926,7 +926,7 @@
 
       <p class="lede" style="margin-top:2rem">How the Figma Diff actually works now.</p>
       <div class="checklist">
-        <div class="check"><div><div class="c-title">Resolve the URL</div><div class="c-desc">For a given component + theme, resolve the figma: frontmatter field into a file key and a node id — it can be a single URL, or a map keyed by theme id for brands that live in their own Figma file (New York and Force8 already do).</div></div></div>
+        <div class="check"><div><div class="c-title">Resolve the URL</div><div class="c-desc">For a given component + theme, resolve the figma: frontmatter field into a file key and a node id — it can be a single URL, or a map keyed by theme id for brands that live in their own Figma file (Mint and Berries already do).</div></div></div>
         <div class="check"><div><div class="c-title">Fetch that exact node</div><div class="c-desc">GET /v1/files/:key/nodes for that node id — the literal frame linked in the component's frontmatter, not every style in the file.</div></div></div>
         <div class="check"><div><div class="c-title">Walk it for fills and radius</div><div class="c-desc">Every solid fill color on that node and its children, plus the first non-zero corner-radius found.</div></div></div>
         <div class="check"><div><div class="c-title">Name each color</div><div class="c-desc">A published Color Style on the layer wins first; failing that, an exact hex match against the theme's own CSS variables; failing that, it's still shown as an unnamed color instead of being dropped.</div></div></div>
@@ -1034,7 +1034,7 @@
               <li>Install real components in the pilot project</li>
               <li>Validate the registry on every PR (CI)</li>
             </ul>
-            <div class="t-done"><b>Done when</b>at least 1 component is in production outside ing-design</div>
+            <div class="t-done"><b>Done when</b>at least 1 component is in production outside gin-design</div>
           </div>
         </div>
         <div class="t-item">

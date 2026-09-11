@@ -1,28 +1,28 @@
----
+﻿---
 title: Table
 description: Semantic HTML table with styled rows, headers, and footer — the primitive for data-heavy layouts.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=73-5727&t=n9ZYudwlr9OrHUSJ-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=73-5727&t=n9ZYudwlr9OrHUSJ-1
 ---
 
 import { TableDemo } from "@/examples/table";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="table">
       <TableDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="table">
       <TableDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="table">
       <TableDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="table">
       <TableDemo />
     </PreviewWithCode>
@@ -94,11 +94,11 @@ import {
 ## Specs
 
 ```md
-# New York — Table Specs
+# Mint — Table Specs
 
 ## Component
 - name: table
-- file: registry/new-york/table.tsx
+- file: registry/mint/table.tsx
 - installs to: components/ui/table.tsx
 - dependencies: none
 - registryDependencies: none
@@ -115,9 +115,9 @@ muted backgrounds provide subtle hover and selection feedback without competing
 with cell content. Text is set at sm (14px), keeping dense data legible.
 
 ## Design tokens
---muted: oklch(0.97 0 0) / oklch(0.269 0 0)          — row hover + footer bg + selected row bg
---muted-foreground: oklch(0.556 0 0) / oklch(0.708 0 0) — TableHead label colour + TableCaption colour
---border: oklch(0.922 0 0) / oklch(1 0 0 / 10%)       — row dividers, header border-b, footer border-t
+--muted: oklch(0.96 0.02 155) / oklch(0.2 0.03 155)          — row hover + footer bg + selected row bg
+--muted-foreground: oklch(0.52 0.06 155) / oklch(0.6 0.06 155) — TableHead label colour + TableCaption colour
+--border: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)       — row dividers, header border-b, footer border-t
 
 ## Sub-components
 - Table          → scrollable container (div overflow-x-auto) wrapping <table w-full caption-bottom text-sm>

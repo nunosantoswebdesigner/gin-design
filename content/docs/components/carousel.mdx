@@ -1,7 +1,7 @@
----
+﻿---
 title: Carousel
 description: A swipeable slideshow for cycling through content — images, cards, or any elements.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=73-4464&t=n9ZYudwlr9OrHUSJ-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=73-4464&t=n9ZYudwlr9OrHUSJ-1
 ---
 
 import { CarouselDemo } from "@/examples/carousel";
@@ -15,22 +15,22 @@ import { CarouselDemo } from "@/examples/carousel";
 </Callout>
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="carousel">
       <CarouselDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="carousel">
       <CarouselDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="carousel">
       <CarouselDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="carousel">
       <CarouselDemo />
     </PreviewWithCode>
@@ -189,11 +189,11 @@ import {
 ## Specs
 
 ```md
-# New York — Carousel Specs
+# Mint — Carousel Specs
 
 ## Component
 - name: carousel
-- file: registry/new-york/carousel.tsx
+- file: registry/mint/carousel.tsx
 - installs to: components/ui/carousel.tsx
 - dependencies: embla-carousel-react, embla-carousel, lucide-react
 - registryDependencies: button
@@ -207,17 +207,18 @@ simultaneously visible and compared — prefer a grid or table instead.
 
 ## Visual identity
 Navigation buttons inherit the outline variant from Button: transparent fill,
-grey border, rounded-full shape. The slide track itself is unstyled, leaving
-visual character entirely to the content placed inside each CarouselItem.
+a soft glassy green-tinted border, rounded-full shape. The slide track itself
+is unstyled, leaving visual character entirely to the content placed inside
+each CarouselItem.
 
 ## Design tokens
---border: oklch(0.922 0 0) / oklch(1 0 0 / 10%)    — nav button border (outline variant)
---input: oklch(0.922 0 0) / oklch(1 0 0 / 15%)      — nav button border on hover (outline variant)
+--border: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)    — nav button border (outline variant)
+--input: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)      — nav button border on hover (outline variant)
 --background: oklch(1 0 0) / oklch(0.145 0 0)        — nav button fill (outline variant)
 --foreground: oklch(0.145 0 0) / oklch(0.985 0 0)    — nav button icon colour
---accent: oklch(0.97 0 0) / oklch(0.371 0 0)         — nav button hover background
---accent-foreground: oklch(0.205 0 0) / oklch(0.985 0 0) — nav button hover icon colour
---ring: oklch(0.708 0 0) / oklch(0.556 0 0)          — nav button focus ring
+--accent: oklch(0.92 0.05 155) / oklch(0.26 0.05 155)         — nav button hover background
+--accent-foreground: oklch(0.32 0.1 155) / oklch(0.88 0.06 155) — nav button hover icon colour
+--ring: oklch(0.5 0.14 155) / oklch(0.62 0.15 155)          — nav button focus ring
 
 ## Sub-components
 - Carousel          → root context provider; sets role="region" aria-roledescription="carousel"; handles keyboard and Embla init

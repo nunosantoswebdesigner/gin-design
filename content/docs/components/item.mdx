@@ -1,28 +1,28 @@
----
+﻿---
 title: Item
 description: A composable row for lists, settings, and navigation — combines an icon, label, description, and trailing action slot.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=1196-924&t=n9ZYudwlr9OrHUSJ-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=1196-924&t=n9ZYudwlr9OrHUSJ-1
 ---
 
 import { ItemDemo } from "@/examples/item";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="item">
       <ItemDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="item">
       <ItemDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="item">
       <ItemDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="item">
       <ItemDemo />
     </PreviewWithCode>
@@ -199,11 +199,11 @@ import {
 ## Specs
 
 ```md
-# New York — Item Specs
+# Mint — Item Specs
 
 ## Component
 - name: item
-- file: registry/new-york/item.tsx
+- file: registry/mint/item.tsx
 - installs to: components/ui/item.tsx
 - dependencies: radix-ui
 - registryDependencies: none
@@ -217,13 +217,14 @@ icon, label, description, and trailing slot. Do not use it as a standalone
 interactive element — apply interactivity via asChild.
 
 ## Visual identity
-Neutral, low-profile layout. The icon slot uses --muted as a tinted square
-container, keeping emphasis on the label. No border or shadow by default —
-density and containment are added by the surrounding list wrapper.
+Calm, low-profile layout with a soft mint tint. The icon slot uses --muted as
+a green-tinted square container, keeping emphasis on the label. No border or
+shadow by default — density and containment are added by the surrounding
+list wrapper.
 
 ## Design tokens
---muted: oklch(0.97 0 0) / oklch(0.269 0 0)         — ItemIcon background
---muted-foreground: oklch(0.556 0 0) / oklch(0.708 0 0) — ItemIcon icon colour, ItemDescription text
+--muted: oklch(0.96 0.02 155) / oklch(0.2 0.03 155)         — ItemIcon background
+--muted-foreground: oklch(0.52 0.06 155) / oklch(0.6 0.06 155) — ItemIcon icon colour, ItemDescription text
 
 ## Sub-components
 - Item            → root flex row (flex items-center gap-3 py-2.5); supports asChild

@@ -45,7 +45,7 @@ export const NavigationMenuDemo = () => (
                     className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-gradient-to-b p-6 no-underline outline-none select-none focus:shadow-md"
                     href="/"
                   >
-                    <div className="mt-4 mb-2 text-lg font-semibold">ING Design</div>
+                    <div className="mt-4 mb-2 text-lg font-semibold">GIN Design</div>
                     <p className="text-muted-foreground text-sm leading-tight">A custom component registry built on shadcn/ui.</p>
                   </a>
                 </NavigationMenuLink>

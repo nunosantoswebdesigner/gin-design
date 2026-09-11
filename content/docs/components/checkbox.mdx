@@ -1,13 +1,13 @@
----
+﻿---
 title: Checkbox
 description: A control that allows users to toggle between checked, unchecked, and indeterminate states.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=73-4564&t=n9ZYudwlr9OrHUSJ-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=73-4564&t=n9ZYudwlr9OrHUSJ-1
 ---
 
-import { Checkbox } from "@/registry/new-york/checkbox";
+import { Checkbox } from "@/registry/mint/checkbox";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="checkbox">
       <div className="flex items-center gap-2">
         <Checkbox id="demo-ny" />
@@ -17,7 +17,7 @@ import { Checkbox } from "@/registry/new-york/checkbox";
       </div>
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="checkbox">
       <div className="flex items-center gap-2">
         <Checkbox id="demo-f8" />
@@ -27,7 +27,7 @@ import { Checkbox } from "@/registry/new-york/checkbox";
       </div>
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="checkbox">
       <div className="flex items-center gap-2">
         <Checkbox id="demo-ski" />
@@ -37,7 +37,7 @@ import { Checkbox } from "@/registry/new-york/checkbox";
       </div>
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="checkbox">
       <div className="flex items-center gap-2">
         <Checkbox id="demo-ice" />
@@ -165,11 +165,11 @@ const [checked, setChecked] = useState(false);
 ## Specs
 
 ```md
-# New York — Checkbox Specs
+# Mint — Checkbox Specs
 
 ## Component
 - name: checkbox
-- file: registry/new-york/checkbox.tsx
+- file: registry/mint/checkbox.tsx
 - installs to: components/ui/checkbox.tsx
 - dependencies: radix-ui, lucide-react
 
@@ -186,16 +186,16 @@ checked. Clean and dense — designed to sit in lists and forms without
 visual weight.
 
 ## Design tokens
---input: oklch(0.922 0 0)                — unchecked border
---primary: oklch(0.205 0 0)              — checked background + border
---primary-foreground: oklch(0.985 0 0)   — check icon color
---ring: oklch(0.708 0 0)                 — focus ring
---destructive: oklch(0.577 0.245 27.325) — aria-invalid border
+--input: oklch(0.88 0.04 155 / 60%)      — unchecked border
+--primary: oklch(0.5 0.14 155)           — checked background + border
+--primary-foreground: oklch(1 0 0)       — check icon color
+--ring: oklch(0.5 0.14 155)              — focus ring
+--destructive: oklch(0.55 0.25 15)       — aria-invalid border
 
 ## Dark theme
---input: oklch(1 0 0 / 15%)
---primary: oklch(0.985 0 0)
---primary-foreground: oklch(0.205 0 0)
+--input: oklch(0.32 0.05 155 / 40%)
+--primary: oklch(0.62 0.15 155)
+--primary-foreground: oklch(0.1 0 0)
 
 ## States
 - unchecked:      border-input, transparent background

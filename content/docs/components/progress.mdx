@@ -1,28 +1,28 @@
----
+﻿---
 title: Progress
 description: A horizontal bar that visualises completion of a task or process.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=76-8886&t=n9ZYudwlr9OrHUSJ-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=76-8886&t=n9ZYudwlr9OrHUSJ-1
 ---
 
 import { ProgressDemo } from "@/examples/progress";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="progress">
       <ProgressDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="progress">
       <ProgressDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="progress">
       <ProgressDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="progress">
       <ProgressDemo />
     </PreviewWithCode>
@@ -112,11 +112,11 @@ import { Progress } from "@/components/ui/progress";
 ## Specs
 
 ```md
-# New York — Progress Specs
+# Mint — Progress Specs
 
 ## Component
 - name: progress
-- file: registry/new-york/progress.tsx
+- file: registry/mint/progress.tsx
 - installs to: components/ui/progress.tsx
 - dependencies: radix-ui
 - registryDependencies: none
@@ -129,11 +129,11 @@ omit `value` for indeterminate states where progress cannot be measured.
 
 ## Visual identity
 Full-width, pill-shaped track (rounded-full) with a thin 8 px default height.
-The track uses a 20 % opacity tint of --primary, giving a soft contrast
-against the solid --primary indicator — neutral and unobtrusive in new-york.
+The track uses a 20 % opacity tint of --primary, giving a soft mint-green
+contrast against the solid --primary indicator — fresh and vivid in Mint.
 
 ## Design tokens
---primary: oklch(0.205 0 0) / oklch(0.922 0 0)   — indicator fill and track tint base
+--primary: oklch(0.5 0.14 155) / oklch(0.62 0.15 155)   — indicator fill and track tint base
 
 ## Sub-components
 - Progress    → root track element (h-2, rounded-full, bg-primary/20, overflow-hidden)

@@ -1,28 +1,28 @@
----
+﻿---
 title: Select
 description: A custom dropdown for selecting a single value — with groups, labels, separators, and keyboard navigation.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=76-9053&t=n9ZYudwlr9OrHUSJ-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=76-9053&t=n9ZYudwlr9OrHUSJ-1
 ---
 
 import { SelectDemo } from "@/examples/select";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="select">
       <SelectDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="select">
       <SelectDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="select">
       <SelectDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="select">
       <SelectDemo />
     </PreviewWithCode>
@@ -167,11 +167,11 @@ import {
 ## Specs
 
 ```md
-# New York — Select Specs
+# Mint — Select Specs
 
 ## Component
 - name: select
-- file: registry/new-york/select.tsx
+- file: registry/mint/select.tsx
 - installs to: components/ui/select.tsx
 - dependencies: radix-ui, lucide-react
 - registryDependencies: none
@@ -190,15 +190,15 @@ shadow. Selected state is marked by a CheckIcon rather than background
 highlight, keeping the list visually light.
 
 ## Design tokens
---input: oklch(0.922 0 0) / oklch(1 0 0 / 15%)          — trigger border (border-input)
---ring: oklch(0.708 0 0) / oklch(0.556 0 0)              — focus ring (focus-visible:ring-ring/50)
---muted-foreground: oklch(0.556 0 0) / oklch(0.708 0 0)  — placeholder text, chevron icon, label text
---destructive: oklch(0.577 0.245 27.325) / oklch(0.704 0.191 22.216) — aria-invalid border and ring
+--input: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)          — trigger border (border-input)
+--ring: oklch(0.5 0.14 155) / oklch(0.62 0.15 155)              — focus ring (focus-visible:ring-ring/50)
+--muted-foreground: oklch(0.52 0.06 155) / oklch(0.6 0.06 155)  — placeholder text, chevron icon, label text
+--destructive: oklch(0.55 0.25 15) / oklch(0.704 0.191 22.216) — aria-invalid border and ring
 --popover: oklch(1 0 0) / oklch(0.269 0 0)               — content panel background
 --popover-foreground: oklch(0.145 0 0) / oklch(0.985 0 0) — content panel text
---accent: oklch(0.97 0 0) / oklch(0.371 0 0)             — focused item background (focus:bg-accent)
---accent-foreground: oklch(0.205 0 0) / oklch(0.985 0 0) — focused item text
---border: oklch(0.922 0 0) / oklch(1 0 0 / 10%)          — content border, separator (bg-border)
+--accent: oklch(0.92 0.05 155) / oklch(0.26 0.05 155)             — focused item background (focus:bg-accent)
+--accent-foreground: oklch(0.32 0.1 155) / oklch(0.88 0.06 155) — focused item text
+--border: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)          — content border, separator (bg-border)
 
 ## Sub-components
 - Select                   → Root wrapper; sets data-slot="select", no visual output

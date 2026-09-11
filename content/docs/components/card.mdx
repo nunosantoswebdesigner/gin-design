@@ -1,10 +1,10 @@
----
+﻿---
 title: Card
 description: A container that groups related content and actions with a consistent visual frame.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=73-4333&t=PC39eDJ4DRaws5UP-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=73-4333&t=PC39eDJ4DRaws5UP-1
 ---
 
-import { Button } from "@/registry/new-york/button";
+import { Button } from "@/registry/mint/button";
 import {
   Card,
   CardAction,
@@ -13,10 +13,10 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/card";
+} from "@/registry/mint/card";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="card">
       <Card className="w-full max-w-sm">
         <CardHeader>
@@ -34,7 +34,7 @@ import {
     </PreviewWithCode>
   </ThemeTab>
 
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="card">
       <Card className="w-full max-w-sm">
         <CardHeader>
@@ -52,7 +52,7 @@ import {
     </PreviewWithCode>
   </ThemeTab>
 
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="card">
       <Card className="w-full max-w-sm">
         <CardHeader>
@@ -70,7 +70,7 @@ import {
     </PreviewWithCode>
   </ThemeTab>
 
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="card">
       <Card className="w-full max-w-sm">
         <CardHeader>
@@ -256,11 +256,11 @@ import { Button } from "@/components/ui/button";
 ## Specs
 
 ```md
-# New York — Card Specs
+# Mint — Card Specs
 
 ## Component
 - name: card
-- file: registry/new-york/card.tsx
+- file: registry/mint/card.tsx
 - installs to: components/ui/card.tsx
 - dependencies: none
 
@@ -278,15 +278,15 @@ No internal decoration — cards read clean and minimal.
 ## Design tokens
 --card: oklch(1 0 0)                     — card background
 --card-foreground: oklch(0.145 0 0)      — text inside card
---border: oklch(0.922 0 0)               — card border
---muted-foreground: oklch(0.556 0 0)     — CardDescription text
---radius: 0.625rem (xl = 1.5×base)       — card corner radius
+--border: oklch(0.88 0.04 155 / 60%)     — card border
+--muted-foreground: oklch(0.52 0.06 155) — CardDescription text
+--radius: 1.25rem (xl = 1.5×base)        — card corner radius
 --shadow-sm: subtle drop shadow
 
 ## Dark theme
 --card: oklch(0.205 0 0)
 --card-foreground: oklch(0.985 0 0)
---border: oklch(1 0 0 / 10%)
+--border: oklch(0.32 0.05 155 / 40%)
 
 ## Anatomy
 <Card>                    ← flex-col gap-6 rounded-xl border bg-card py-6 shadow-sm

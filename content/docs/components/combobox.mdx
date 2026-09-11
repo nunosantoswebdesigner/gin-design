@@ -1,7 +1,7 @@
----
+﻿---
 title: Combobox
 description: An autocomplete input combining a trigger button with a searchable dropdown list.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=73-4708&t=n9ZYudwlr9OrHUSJ-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=73-4708&t=n9ZYudwlr9OrHUSJ-1
 ---
 
 import { ComboboxDemo } from "@/examples/combobox";
@@ -11,22 +11,22 @@ import { ComboboxDemo } from "@/examples/combobox";
 </Callout>
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="combobox">
       <ComboboxDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="combobox">
       <ComboboxDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="combobox">
       <ComboboxDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="combobox">
       <ComboboxDemo />
     </PreviewWithCode>
@@ -247,7 +247,7 @@ import { Controller } from "react-hook-form";
 ## Specs
 
 ```md
-# New York — Combobox Specs
+# Mint — Combobox Specs
 
 ## Component
 - name: combobox
@@ -264,23 +264,24 @@ over a native select when the option list is long enough to benefit from search,
 or when options are loaded asynchronously.
 
 ## Visual identity
-The trigger uses Button variant="outline" — transparent background with a grey
-border, gaining a tinted accent background on hover. The dropdown surface uses
---popover (white in light, dark grey in dark), giving a clean floating panel feel
-consistent with new-york's rounded-md, shadow-md aesthetic. Compact row heights
-and a hairline border-b under the search input maintain density without crowding.
+The trigger uses Button variant="outline" — transparent background with a soft
+glassy green-tinted border, gaining a tinted accent background on hover. The
+dropdown surface uses --popover (white in light, dark grey in dark), giving a
+clean floating panel feel consistent with Mint's rounded-md, shadow-md
+aesthetic. Compact row heights and a hairline border-b under the search input
+maintain density without crowding.
 
 ## Design tokens
 --popover: oklch(1 0 0) / oklch(0.269 0 0)           — dropdown panel background
 --popover-foreground: oklch(0.145 0 0) / oklch(0.985 0 0) — dropdown text
---accent: oklch(0.97 0 0) / oklch(0.371 0 0)          — selected/hovered item background
---accent-foreground: oklch(0.205 0 0) / oklch(0.985 0 0)  — selected/hovered item text
---muted-foreground: oklch(0.556 0 0) / oklch(0.708 0 0)   — placeholder, search icon, group headings, shortcut text
+--accent: oklch(0.92 0.05 155) / oklch(0.26 0.05 155) — selected/hovered item background
+--accent-foreground: oklch(0.32 0.1 155) / oklch(0.88 0.06 155)  — selected/hovered item text
+--muted-foreground: oklch(0.52 0.06 155) / oklch(0.6 0.06 155)   — placeholder, search icon, group headings, shortcut text
 --foreground: oklch(0.145 0 0) / oklch(0.985 0 0)     — item text
---border: oklch(0.922 0 0) / oklch(1 0 0 / 10%)       — CommandInput bottom border, popover border
---input: oklch(0.922 0 0) / oklch(1 0 0 / 15%)        — trigger border (outline button in dark)
---ring: oklch(0.708 0 0) / oklch(0.556 0 0)           — trigger focus ring
---radius: 0.625rem                                    — panel, items, trigger corner radius
+--border: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)       — CommandInput bottom border, popover border
+--input: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)        — trigger border (outline button in dark)
+--ring: oklch(0.5 0.14 155) / oklch(0.62 0.15 155)           — trigger focus ring
+--radius: 1.25rem                                     — panel, items, trigger corner radius
 
 ## Sub-components
 Popover              → controls open/close state; accepts sounds prop for audio feedback
@@ -315,7 +316,7 @@ CommandShortcut      → right-aligned shortcut label inside a CommandItem
 - Multi-select: store string[]; keep popover open after selection; use Array.includes for Check opacity
 - Server search: set shouldFilter={false} on Command, control CommandInput value, debounce fetches
 - In forms: wrap with react-hook-form Controller — do not use register for controlled popovers
-- sounds: Popover accepts a sounds prop — ING Design exclusive that plays audio on open/close
+- sounds: Popover accepts a sounds prop — GIN Design exclusive that plays audio on open/close
 - Sub-components expose data-slot attributes for CSS targeting: "popover", "popover-trigger", "popover-content", "command", "command-input-wrapper", "command-input", "command-list", "command-empty", "command-group", "command-item", "command-separator", "command-shortcut"
 ```
 
@@ -324,6 +325,6 @@ CommandShortcut      → right-aligned shortcut label inside a CommandItem
 Install the required components:
 
 ```bash
-npx shadcn@latest add https://ing-design.vercel.app/r/popover.json
-npx shadcn@latest add https://ing-design.vercel.app/r/command.json
+npx shadcn@latest add https://gin-design.vercel.app/r/popover.json
+npx shadcn@latest add https://gin-design.vercel.app/r/command.json
 ```

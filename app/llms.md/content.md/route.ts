@@ -15,9 +15,9 @@ ${SITE.DESCRIPTION.LONG}
 
 ${AGENT_DOCS_DIRECTIVE_MARKDOWN}
 
-## What Is ING Design
+## What Is GIN Design
 
-ING Design is a custom component library and shadcn-compatible registry built by ING Infinitive. Components are distributed via the copy-owned model — you install the source code directly into your project with \`npx shadcn add\`, own it fully, and customize it without constraints or library lock-in.
+GIN Design is a custom component library and shadcn-compatible registry built by Nuno Santos. Components are distributed via the copy-owned model — you install the source code directly into your project with \`npx shadcn add\`, own it fully, and customize it without constraints or library lock-in.
 
 Components are built on Radix UI primitives for accessibility, styled with Tailwind CSS 4 using CSS variables, and documented with live previews and AI-ready spec blocks. Brand themes are applied via CSS variable overrides and are completely optional.
 
@@ -29,7 +29,7 @@ Components are built on Radix UI primitives for accessibility, styled with Tailw
 
 ## Themes
 
-Each component ships in four themes: **New York** (base), **Force8**, **My Swiss Ski**, and **My Ice Hockey**. Themes override CSS variables — no component code changes required.
+Each component ships in four themes: **Mint** (base), **Berries**, **Citrine**, and **Cinnamon**. Themes override CSS variables — no component code changes required.
 
 ## Figma Diff
 

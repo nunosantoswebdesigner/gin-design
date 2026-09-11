@@ -2,7 +2,7 @@ import type { FigmaNodeDocument } from "@/lib/figma-diff";
 
 // ─── Code side: a hand-maintained snapshot of Button's default variant ────────
 //
-// registry/new-york/button.tsx's buttonVariants (cva) resolves, for
+// registry/mint/button.tsx's buttonVariants (cva) resolves, for
 // variant="default" size="default", to:
 //   base:            gap-2 rounded-md text-sm font-medium
 //   size "default":  h-9 px-4 py-2
@@ -24,7 +24,7 @@ const remToPx = (value: string | undefined, fallbackRem: number): number => {
 /** Resolves Button's default-variant Tailwind classes into pixel values,
  * using the given theme's light CSS vars for anything that scales with the
  * theme (--spacing, --radius) — falls back to Tailwind's own defaults for
- * themes that don't override them (only My Swiss Ski / My Ice Hockey do). */
+ * themes that don't override them (all four brand themes currently do). */
 export const resolveButtonCodeTokens = (
   cssVarsLight: Record<string, string>
 ): Record<string, string> => {

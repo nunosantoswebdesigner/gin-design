@@ -1,4 +1,4 @@
-export const FALLBACK_SITE_ORIGIN = "https://ing-design.vercel.app" as const;
+export const FALLBACK_SITE_ORIGIN = "https://gin-design.vercel.app" as const;
 
 const getBaseUrl = () => {
   if (process.env.NODE_ENV !== "production") {
@@ -20,15 +20,16 @@ export const SITE = {
     TWITTER: "@nunosantos",
   },
   DESCRIPTION: {
-    LONG: "ING Design is a custom component library and shadcn registry built by ING Infinitive. It ships base components, data-driven elements (e- prefix), pre-assembled blocks (b- prefix), charts (c- prefix), and icon sets (i- prefix) — all copy-owned via npx shadcn add. Apply brand themes through CSS variable overrides, compare tokens against Figma with the built-in diff tool, and share to Discord with one click. Built with Next.js, React, Radix UI, and Tailwind CSS.",
-    SHORT: "Components, elements, blocks, charts, and icons registry by ING Infinitive",
+    LONG: "GIN Design is a custom component library and shadcn registry built by Nuno Santos. It ships base components, data-driven elements (e- prefix), pre-assembled blocks (b- prefix), charts (c- prefix), and icon sets (i- prefix) — all copy-owned via npx shadcn add. Apply brand themes through CSS variable overrides, compare tokens against Figma with the built-in diff tool, and share to Discord with one click. Built with Next.js, React, Radix UI, and Tailwind CSS.",
+    SHORT:
+      "Components, elements, blocks, charts, and icons registry by Nuno Santos",
   },
   KEYWORDS: [
     "design system",
     "component library",
     "component registry",
-    "ING Design",
-    "ING Infinitive",
+    "GIN Design",
+    "Nuno Santos",
     "shadcn",
     "shadcn registry",
     "brand themes",
@@ -47,7 +48,7 @@ export const SITE = {
     "ui components",
     "open source",
   ] as const,
-  NAME: "ING Design",
+  NAME: "GIN Design",
   OG_IMAGE: `${baseUrl}/og`,
   REGISTRY: baseUrl,
   URL: baseUrl,

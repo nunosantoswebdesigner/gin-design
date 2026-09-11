@@ -1,28 +1,28 @@
----
+﻿---
 title: Toggle
 description: A two-state button that can be pressed on or off, with sound feedback and multiple visual variants.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=79-10987
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=79-10987
 ---
 
 import { ToggleDemo } from "@/examples/toggle";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="toggle">
       <ToggleDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="toggle">
       <ToggleDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="toggle">
       <ToggleDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="toggle">
       <ToggleDemo />
     </PreviewWithCode>
@@ -94,11 +94,11 @@ import { Toggle } from "@/components/ui/toggle";
 ## Specs
 
 ```md
-# New York — Toggle Specs
+# Mint — Toggle Specs
 
 ## Component
 - name: toggle
-- file: registry/new-york/toggle.tsx
+- file: registry/mint/toggle.tsx
 - installs to: components/ui/toggle.tsx
 - dependencies: radix-ui, class-variance-authority
 - registryDependencies: none
@@ -112,18 +112,18 @@ action is immediate and visual feedback matters more than form semantics.
 ## Visual identity
 Transparent base with accent-coloured pressed state keeps the toggle
 unobtrusive until activated. Standard border radius (rounded-md) and
-medium font weight match the new-york density and seriousness.
+medium font weight match Mint's density and character.
 
 ## Design tokens
---muted: oklch(0.97 0 0) / oklch(0.269 0 0)              — hover background (default variant)
---muted-foreground: oklch(0.556 0 0) / oklch(0.708 0 0)   — hover text colour
---accent: oklch(0.97 0 0) / oklch(0.371 0 0)              — pressed background
---accent-foreground: oklch(0.205 0 0) / oklch(0.985 0 0)  — pressed text
---secondary: oklch(0.97 0 0) / oklch(0.269 0 0)           — secondary variant background
---secondary-foreground: oklch(0.205 0 0) / oklch(0.985 0 0)
---input: oklch(0.922 0 0) / oklch(1 0 0 / 15%)            — outline variant border
---ring: oklch(0.708 0 0) / oklch(0.556 0 0)               — focus ring
---destructive: oklch(0.577 0.245 27.325) / oklch(0.704 0.191 22.216) — aria-invalid ring
+--muted: oklch(0.96 0.02 155) / oklch(0.2 0.03 155)              — hover background (default variant)
+--muted-foreground: oklch(0.52 0.06 155) / oklch(0.6 0.06 155)   — hover text colour
+--accent: oklch(0.92 0.05 155) / oklch(0.26 0.05 155)              — pressed background
+--accent-foreground: oklch(0.32 0.1 155) / oklch(0.88 0.06 155)  — pressed text
+--secondary: oklch(0.95 0.04 155) / oklch(0.22 0.04 155)           — secondary variant background
+--secondary-foreground: oklch(0.32 0.1 155) / oklch(0.88 0.06 155)
+--input: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)            — outline variant border
+--ring: oklch(0.5 0.14 155) / oklch(0.62 0.15 155)               — focus ring
+--destructive: oklch(0.55 0.25 15) / oklch(0.704 0.191 22.216) — aria-invalid ring
 
 ## Variants
 - default    → transparent base, accent fill when pressed. General-purpose toolbar or standalone toggle.
@@ -146,7 +146,7 @@ medium font weight match the new-york density and seriousness.
 - aria-invalid:  border-destructive + ring-destructive/20 (ring-destructive/40 dark)
 
 ## Conventions
-- sounds: ING Design exclusive — always plays toggleOn when pressed and toggleOff when released via useFeedback; no prop required
+- sounds: GIN Design exclusive — always plays toggleOn when pressed and toggleOff when released via useFeedback; no prop required
 - Sub-components expose data-slot="toggle" for CSS targeting
 - Icon-only toggles require aria-label
 - SVG icons auto-size to 16px — do not override unless intentional

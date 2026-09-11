@@ -1,28 +1,28 @@
----
+﻿---
 title: Popover
 description: A floating panel anchored to a trigger — for non-modal overlays, forms, and contextual detail.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=76-8822&t=n9ZYudwlr9OrHUSJ-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=76-8822&t=n9ZYudwlr9OrHUSJ-1
 ---
 
 import { PopoverDemo } from "@/examples/popover";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="popover">
       <PopoverDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="popover">
       <PopoverDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="popover">
       <PopoverDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="popover">
       <PopoverDemo />
     </PreviewWithCode>
@@ -133,11 +133,11 @@ import {
 ## Specs
 
 ```md
-# New York — Popover Specs
+# Mint — Popover Specs
 
 ## Component
 - name: popover
-- file: registry/new-york/popover.tsx
+- file: registry/mint/popover.tsx
 - installs to: components/ui/popover.tsx
 - dependencies: radix-ui
 - registryDependencies: none
@@ -156,7 +156,7 @@ Default width is w-72 with p-4 padding — compact but readable.
 ## Design tokens
 --popover: oklch(1 0 0) / oklch(0.269 0 0)           — panel background
 --popover-foreground: oklch(0.145 0 0) / oklch(0.985 0 0) — panel text
---border: oklch(0.922 0 0) / oklch(1 0 0 / 10%)      — panel border
+--border: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)      — panel border
 
 ## Sub-components
 - Popover        → Root; accepts sounds prop for open/close audio feedback
@@ -178,7 +178,7 @@ Default width is w-72 with p-4 padding — compact but readable.
 - PopoverContent default width is w-72 — pass className to override
 - Use PopoverAnchor when the panel should be positioned relative to a different element than the trigger
 - Sub-components expose data-slot="popover", data-slot="popover-trigger", data-slot="popover-content", data-slot="popover-anchor" for CSS targeting
-- sounds / haptic: ING Design exclusive — plays audio (dropdownOpen / dropdownClose) on open and close via useFeedback hook
+- sounds / haptic: GIN Design exclusive — plays audio (dropdownOpen / dropdownClose) on open and close via useFeedback hook
 ```
 
 ## Installation

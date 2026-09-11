@@ -3,7 +3,7 @@ import Image from "next/image";
 import { CommandBox } from "@/components/docs/command-box";
 import { HomeCtas } from "@/components/site/home-ctas";
 import { PageTransition } from "@/components/site/page-transition";
-import { WhatsNewDialog } from "@/components/site/whats-new-dialog";
+// import { WhatsNewDialog } from "@/components/site/whats-new-dialog";
 import { ROUTES } from "@/constants/routes";
 import { BreadcrumbJsonLd } from "@/seo/json-ld";
 
@@ -14,24 +14,25 @@ export default function IndexPage() {
   return (
     <>
       <BreadcrumbJsonLd items={[{ name: "Home", path: ROUTES.HOME }]} />
-      <WhatsNewDialog />
+      {/* Hidden temporarily, see [[whats-new-dialog]] */}
+      {/* <WhatsNewDialog /> */}
       <PageTransition>
         <section className="container-wrapper relative">
           <div className="container flex flex-col items-center gap-4 py-16 text-center md:py-20 lg:py-24">
             <Image
-              alt="ING Design"
+              alt="GIN Design"
               className="mb-2 size-20"
               height={512}
               src="/logo.png"
               width={512}
             />
             <h1 className="max-w-7xl text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl from-foreground via-foreground to-foreground/65 bg-linear-to-b bg-clip-text text-transparent">
-              ING Design
+              GIN Design
             </h1>
             <p className="max-w-2xl text-lg text-muted-foreground sm:text-xl">
-              Components, elements, blocks, charts, and icons built by ING Infinitive. Install
-              directly into your project, own the code fully, and apply brand themes via CSS
-              variables.
+              Components, elements, blocks, charts, and icons built by Nuno
+              Santos. Install directly into your project, own the code fully,
+              and apply brand themes via CSS variables.
             </p>
             <CommandBox className="mt-4 w-full max-w-xl" />
             <HomeCtas className="mt-4" />

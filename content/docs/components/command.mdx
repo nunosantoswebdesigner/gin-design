@@ -1,7 +1,7 @@
----
+﻿---
 title: Command
 description: A fast, composable command palette for searching, navigating, and triggering actions.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=73-5422&t=n9ZYudwlr9OrHUSJ-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=73-5422&t=n9ZYudwlr9OrHUSJ-1
 ---
 
 import { CommandDemo } from "@/examples/command";
@@ -22,25 +22,25 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/registry/new-york/command";
+} from "@/registry/mint/command";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="command">
       <CommandDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="command">
       <CommandDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="command">
       <CommandDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="command">
       <CommandDemo />
     </PreviewWithCode>
@@ -220,11 +220,11 @@ import {
 ## Specs
 
 ```md
-# New York — Command Specs
+# Mint — Command Specs
 
 ## Component
 - name: command
-- file: registry/new-york/command.tsx
+- file: registry/mint/command.tsx
 - installs to: components/ui/command.tsx
 - dependencies: cmdk, lucide-react
 - registryDependencies: dialog
@@ -239,15 +239,15 @@ or a plain list when keyboard-first navigation and fuzzy filtering are not neede
 Popover-surface background (--popover) with matching foreground gives Command a
 floating, elevated feel. Compact row height and xs group headings keep density
 high. Selected items use the accent fill, consistent with other interactive
-surfaces in new-york.
+surfaces in Mint.
 
 ## Design tokens
 --popover: oklch(1 0 0) / oklch(0.269 0 0)           — root surface background
 --popover-foreground: oklch(0.145 0 0) / oklch(0.985 0 0) — root text
---accent: oklch(0.97 0 0) / oklch(0.371 0 0)          — selected item background
---accent-foreground: oklch(0.205 0 0) / oklch(0.985 0 0)  — selected item text
---muted-foreground: oklch(0.556 0 0) / oklch(0.708 0 0)   — group headings, placeholder, shortcut text, search icon
---border: oklch(0.922 0 0) / oklch(1 0 0 / 10%)       — CommandInput bottom border, CommandSeparator
+--accent: oklch(0.92 0.05 155) / oklch(0.26 0.05 155) — selected item background
+--accent-foreground: oklch(0.32 0.1 155) / oklch(0.88 0.06 155)  — selected item text
+--muted-foreground: oklch(0.52 0.06 155) / oklch(0.6 0.06 155)   — group headings, placeholder, shortcut text, search icon
+--border: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)       — CommandInput bottom border, CommandSeparator
 --foreground: oklch(0.145 0 0) / oklch(0.985 0 0)     — CommandGroup item text
 
 ## Sub-components

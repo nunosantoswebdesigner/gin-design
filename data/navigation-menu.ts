@@ -4,7 +4,7 @@ export const gettingStarted: {
   description: string;
 }[] = [
   {
-    description: "How to install and configure ING Design in your project.",
+    description: "How to install and configure GIN Design in your project.",
     href: "/docs/installation",
     title: "Installation",
   },

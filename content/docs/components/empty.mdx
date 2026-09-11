@@ -1,28 +1,28 @@
----
+﻿---
 title: Empty
 description: A placeholder state for when content is absent — communicates context and guides the user toward the next action.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=1186-3810&t=n9ZYudwlr9OrHUSJ-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=1186-3810&t=n9ZYudwlr9OrHUSJ-1
 ---
 
 import { EmptyDemo } from "@/examples/empty";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="empty">
       <EmptyDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="empty">
       <EmptyDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="empty">
       <EmptyDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="empty">
       <EmptyDemo />
     </PreviewWithCode>
@@ -217,15 +217,15 @@ import { Inbox } from "lucide-react";
 ## Specs
 
 ```md
-# New York — Empty Specs
+# Mint — Empty Specs
 
 ## Component
 - name: empty
-- file: registry/new-york/empty.tsx
+- file: registry/mint/empty.tsx
 - installs to: components/ui/empty.tsx
 - dependencies: none
 - registryDependencies: none
-- ING Design exclusive (not in shadcn/ui)
+- GIN Design exclusive (not in shadcn/ui)
 
 ## What is it
 A compound component for communicating the absence of content — used when a
@@ -236,14 +236,15 @@ Do not use it for loading or error states; prefer a Spinner or an alert for
 those cases.
 
 ## Visual identity
-Minimal and neutral. The icon sits in a rounded muted circle that softens the
-emptiness without drawing excessive attention. Typography is tight — semibold
-title with small muted description — keeping the message focused. No colour
-accent, so it adapts cleanly across all brand themes.
+Minimal and calm, with a soft mint tint. The icon sits in a rounded circle
+using Mint's muted green wash that softens the emptiness without drawing
+excessive attention. Typography is tight — semibold title with small muted
+description — keeping the message focused. The gentle green tone carries
+through consistently wherever Empty appears.
 
 ## Design tokens
---muted: oklch(0.97 0 0) / oklch(0.269 0 0)           — EmptyIcon background
---muted-foreground: oklch(0.556 0 0) / oklch(0.708 0 0) — EmptyIcon icon colour and EmptyDescription text
+--muted: oklch(0.96 0.02 155) / oklch(0.2 0.03 155)           — EmptyIcon background
+--muted-foreground: oklch(0.52 0.06 155) / oklch(0.6 0.06 155) — EmptyIcon icon colour and EmptyDescription text
 
 ## Sub-components
 - Empty            → root container; flex-col, items-center, justify-center, gap-3, py-12, text-center

@@ -16,7 +16,10 @@ const getRegistryItem = (name: string): RegistryItem | undefined =>
 
 const readRegistryFile = async (name: string): Promise<string | null> => {
   try {
-    return await readFile(path.join(process.cwd(), "registry/new-york", `${name}.tsx`), "utf-8");
+    return await readFile(
+      path.join(process.cwd(), "registry/mint", `${name}.tsx`),
+      "utf-8"
+    );
   } catch {
     return null;
   }
@@ -25,32 +28,36 @@ const readRegistryFile = async (name: string): Promise<string | null> => {
 // Rewrite unified `radix-ui` imports to specific @radix-ui/* packages for v0 compatibility.
 // v0 expects the older per-package imports (e.g. @radix-ui/react-slot).
 const rewriteRadixImports = (source: string): string =>
-  source.replaceAll(/import\s*\{([^}]+)\}\s*from\s*["']radix-ui["']/g, (_, named: string) => {
-    const names = named
-      .split(",")
-      .map((s) => s.trim())
-      .filter(Boolean);
-    return names
-      .map((n) => {
-        // Slot → @radix-ui/react-slot; strip namespace suffix before mapping
-        const pkg = n.replace(/\..+$/, "");
-        return `import { ${n} } from "@radix-ui/react-${pkg.toLowerCase()}"`;
-      })
-      .join("\n");
-  });
+  source.replaceAll(
+    /import\s*\{([^}]+)\}\s*from\s*["']radix-ui["']/g,
+    (_, named: string) => {
+      const names = named
+        .split(",")
+        .map((s) => s.trim())
+        .filter(Boolean);
+      return names
+        .map((n) => {
+          // Slot → @radix-ui/react-slot; strip namespace suffix before mapping
+          const pkg = n.replace(/\..+$/, "");
+          return `import { ${n} } from "@radix-ui/react-${pkg.toLowerCase()}"`;
+        })
+        .join("\n");
+    }
+  );
 
 // Recursively resolve custom registry dependencies (skips shadcn base components
-// that don't live in registry/new-york — v0 resolves those itself).
+// that don't live in registry/mint — v0 resolves those itself).
 const resolveCustomDeps = async (
   name: string,
-  visited: Set<string>,
+  visited: Set<string>
 ): Promise<{ name: string; content: string }[]> => {
   const item = getRegistryItem(name);
   if (!item) {
     return [];
   }
 
-  const deps = (item as { registryDependencies?: string[] }).registryDependencies ?? [];
+  const deps =
+    (item as { registryDependencies?: string[] }).registryDependencies ?? [];
   const results: { name: string; content: string }[] = [];
 
   for (const dep of deps) {
@@ -82,7 +89,9 @@ const extractRadixPackages = (source: string): string[] => {
 };
 
 // Include both key formats: "--primary" (modern oklch) and "primary" (v0 legacy).
-const expandCssVars = (vars: Record<string, string>): Record<string, string> => {
+const expandCssVars = (
+  vars: Record<string, string>
+): Record<string, string> => {
   const out: Record<string, string> = {};
   for (const [k, v] of Object.entries(vars)) {
     out[k] = v;
@@ -99,7 +108,11 @@ const toVars = (vars: Record<string, string>) =>
     .join("\n");
 
 // Simple demo page so v0 has something to render immediately.
-const buildDemoPage = (component: string, title: string, cssVars?: ThemeCssVars): string => {
+const buildDemoPage = (
+  component: string,
+  title: string,
+  cssVars?: ThemeCssVars
+): string => {
   const importName = title
     .split(" ")
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
@@ -268,7 +281,7 @@ export default function Page() {
 
 export const GET = async (
   _req: Request,
-  { params }: { params: Promise<{ theme: string; component: string }> },
+  { params }: { params: Promise<{ theme: string; component: string }> }
 ) => {
   const { theme, component } = await params;
 
@@ -286,13 +299,19 @@ export const GET = async (
 
   const title =
     component.charAt(0).toUpperCase() +
-    component.slice(1).replaceAll(/-([a-z])/g, (_, c: string) => ` ${c.toUpperCase()}`);
+    component
+      .slice(1)
+      .replaceAll(/-([a-z])/g, (_, c: string) => ` ${c.toUpperCase()}`);
 
   const rawCssVars =
-    themeConfig.cssVars ?? REGISTRY_THEMES.find((t) => t.id === DEFAULT_REGISTRY_THEME_ID)?.cssVars;
+    themeConfig.cssVars ??
+    REGISTRY_THEMES.find((t) => t.id === DEFAULT_REGISTRY_THEME_ID)?.cssVars;
 
   const cssVars = rawCssVars
-    ? { dark: expandCssVars(rawCssVars.dark), light: expandCssVars(rawCssVars.light) }
+    ? {
+        dark: expandCssVars(rawCssVars.dark),
+        light: expandCssVars(rawCssVars.light),
+      }
     : undefined;
 
   // Resolve custom registry deps (other local components)
@@ -304,7 +323,8 @@ export const GET = async (
   const allNpmDeps = new Set<string>();
   for (const name of [component, ...depFiles.map((f) => f.name)]) {
     const entry = getRegistryItem(name);
-    const deps = (entry as { dependencies?: string[] } | undefined)?.dependencies ?? [];
+    const deps =
+      (entry as { dependencies?: string[] } | undefined)?.dependencies ?? [];
     for (const d of deps) {
       if (d !== "radix-ui") {
         allNpmDeps.add(d);

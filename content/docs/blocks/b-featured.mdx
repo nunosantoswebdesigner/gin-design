@@ -1,30 +1,33 @@
----
+﻿---
 title: Featured
 description: A dashboard block with stat cards, an area chart, and a data table with tabs and pagination.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=1088-8221&t=SGuloiMFD7r5jFI6-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=1088-8221&t=SGuloiMFD7r5jFI6-1
 ---
 
-import { BFeaturedDemo } from "@/examples/b-featured";
+import { FeaturedBlock as MintFeaturedBlock } from "@/registry/mint/b-featured";
+import { FeaturedBlock as BerriesFeaturedBlock } from "@/registry/berries/b-featured";
+import { FeaturedBlock as CitrineFeaturedBlock } from "@/registry/citrine/b-featured";
+import { FeaturedBlock as CinnamonFeaturedBlock } from "@/registry/cinnamon/b-featured";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
-    <PreviewWithCode name="b-featured">
-      <BFeaturedDemo />
+  <ThemeTab name="mint">
+    <PreviewWithCode src="registry/mint/b-featured.tsx">
+      <MintFeaturedBlock />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
-    <PreviewWithCode name="b-featured">
-      <BFeaturedDemo />
+  <ThemeTab name="berries">
+    <PreviewWithCode src="registry/berries/b-featured.tsx">
+      <BerriesFeaturedBlock />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
-    <PreviewWithCode name="b-featured">
-      <BFeaturedDemo />
+  <ThemeTab name="citrine">
+    <PreviewWithCode src="registry/citrine/b-featured.tsx">
+      <CitrineFeaturedBlock />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
-    <PreviewWithCode name="b-featured">
-      <BFeaturedDemo />
+  <ThemeTab name="cinnamon">
+    <PreviewWithCode src="registry/cinnamon/b-featured.tsx">
+      <CinnamonFeaturedBlock />
     </PreviewWithCode>
   </ThemeTab>
 </ComponentThemeTabs>
@@ -105,11 +108,11 @@ Pass your own metrics to the stats row:
 ## Specs
 
 ```md
-# New York — Featured Block Specs
+# Mint — Featured Block Specs
 
 ## Component
 - name: b-featured
-- file: registry/new-york/b-featured.tsx
+- file: registry/mint/b-featured.tsx
 - installs to: components/ui/b-featured.tsx
 - npm dependencies: recharts, lucide-react
 - registry dependencies: card, chart, tabs, button, e-data-table
@@ -122,12 +125,13 @@ page. All three sections accept data via props so the block can be dropped in
 with any domain — athletes, users, orders, documents.
 
 ## Visual identity
-Clean and data-forward. Each section is a Card with a consistent header/body
-split. Stat cards use a two-row layout: the metric value at large type, trend
-badge (green/red) top-right, subtitle and description below. The chart uses a
-single area series with a soft gradient fill and a hairline stroke. The table
-uses minimal row dividers with no background fill — emphasis is on the data,
-not the chrome.
+Clean and data-forward, now carried in Mint's fresh green palette. Each
+section is a Card with a soft, glassy border (60% opacity) and generously
+rounded corners. Stat cards use a two-row layout: the metric value at large
+type, trend badge (green/red) top-right, subtitle and description below. The
+chart uses a single area series with a soft green gradient fill and a
+hairline stroke. The table uses minimal row dividers with no background fill
+— emphasis is on the data, not the chrome.
 
 ## Structure
 - StatCards row: 4 cards, 1 col → 2 col (sm) → 4 col (xl)
@@ -140,23 +144,23 @@ not the chrome.
 --background: oklch(1 0 0)               — page background behind the block
 --card: oklch(1 0 0)                     — card surface
 --card-foreground: oklch(0.145 0 0)      — card text
---border: oklch(0.922 0 0)               — card borders, table row dividers
+--border: oklch(0.88 0.04 155 / 60%)      — card borders, table row dividers
 --foreground: oklch(0.145 0 0)           — stat values, headings
---muted: oklch(0.97 0 0)                 — tab list background, hover rows
---muted-foreground: oklch(0.556 0 0)     — stat labels, chart axis labels
---primary: oklch(0.205 0 0)              — active tab indicator, buttons
---primary-foreground: oklch(0.985 0 0)   — text on primary backgrounds
---ring: oklch(0.708 0 0)                 — focus ring on interactive elements
---radius: 0.625rem                       — card and badge corner radius
+--muted: oklch(0.96 0.02 155)            — tab list background, hover rows
+--muted-foreground: oklch(0.52 0.06 155) — stat labels, chart axis labels
+--primary: oklch(0.5 0.14 155)           — active tab indicator, buttons
+--primary-foreground: oklch(1 0 0)       — text on primary backgrounds
+--ring: oklch(0.5 0.14 155)              — focus ring on interactive elements
+--radius: 1.25rem                        — card and badge corner radius
 
 ## Dark theme
 --background: oklch(0.145 0 0)
 --card: oklch(0.205 0 0)
 --card-foreground: oklch(0.985 0 0)
---border: oklch(1 0 0 / 10%)
+--border: oklch(0.32 0.05 155 / 40%)
 --foreground: oklch(0.985 0 0)
---muted: oklch(0.269 0 0)
---muted-foreground: oklch(0.708 0 0)
+--muted: oklch(0.2 0.03 155)
+--muted-foreground: oklch(0.6 0.06 155)
 
 ## shadcn config (components.json)
 - style: new-york

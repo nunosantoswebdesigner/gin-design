@@ -1,28 +1,28 @@
----
+﻿---
 title: Menubar
 description: A persistent horizontal menu bar with dropdown menus — checkboxes, radio groups, sub-menus, and keyboard shortcuts.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=76-8618&t=n9ZYudwlr9OrHUSJ-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=76-8618&t=n9ZYudwlr9OrHUSJ-1
 ---
 
 import { MenubarDemo } from "@/examples/menubar";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="menubar">
       <MenubarDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="menubar">
       <MenubarDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="menubar">
       <MenubarDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="menubar">
       <MenubarDemo />
     </PreviewWithCode>
@@ -152,11 +152,11 @@ import {
 ## Specs
 
 ```md
-# New York — Menubar Specs
+# Mint — Menubar Specs
 
 ## Component
 - name: menubar
-- file: registry/new-york/menubar.tsx
+- file: registry/mint/menubar.tsx
 - installs to: components/ui/menubar.tsx
 - dependencies: radix-ui, lucide-react
 - registryDependencies: none
@@ -168,21 +168,21 @@ full keyboard navigation. Use it for app-level toolbars (File, Edit, View);
 do not use it for primary site navigation — prefer a nav element instead.
 
 ## Visual identity
-Compact and understated in new-york: the bar sits on --background with a
+Compact and confident in Mint: the bar sits on --background with a
 single-pixel border and a subtle shadow-xs. Triggers and items highlight with
---accent on hover/focus, keeping the palette neutral and content-forward.
-Standard 0.625rem radius on the bar, panels, and item rows gives a
-professional, slightly rounded feel.
+a soft green --accent on hover/focus, giving the palette a fresh,
+content-forward feel. A generous 1.25rem radius on the bar, panels, and item
+rows gives a light, airy, rounded feel.
 
 ## Design tokens
 --background: oklch(1 0 0) / oklch(0.145 0 0)               — menubar root surface
---border: oklch(0.922 0 0) / oklch(1 0 0 / 10%)              — bar border and separator
---accent: oklch(0.97 0 0) / oklch(0.371 0 0)                 — trigger/item hover+focus background
---accent-foreground: oklch(0.205 0 0) / oklch(0.985 0 0)     — trigger/item hover+focus text
+--border: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)              — bar border and separator
+--accent: oklch(0.92 0.05 155) / oklch(0.26 0.05 155)                 — trigger/item hover+focus background
+--accent-foreground: oklch(0.32 0.1 155) / oklch(0.88 0.06 155)     — trigger/item hover+focus text
 --popover: oklch(1 0 0) / oklch(0.269 0 0)                   — content panel surface
 --popover-foreground: oklch(0.145 0 0) / oklch(0.985 0 0)    — content panel text
---muted-foreground: oklch(0.556 0 0) / oklch(0.708 0 0)      — shortcut text and icon default colour
---destructive: oklch(0.577 0.245 27.325) / oklch(0.704 0.191 22.216) — destructive item text
+--muted-foreground: oklch(0.52 0.06 155) / oklch(0.6 0.06 155)      — shortcut text and icon default colour
+--destructive: oklch(0.55 0.25 15) / oklch(0.704 0.191 22.216) — destructive item text
 
 ## Sub-components
 - Menubar              → Root bar; h-9 flex row rounded-md border px-1 gap-1 shadow-xs bg-background

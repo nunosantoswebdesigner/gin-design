@@ -1,28 +1,28 @@
----
+﻿---
 title: Drawer
 description: A panel that slides in from any edge of the screen — draggable on touch, dismissable by overlay click or swipe.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=74-7968&t=n9ZYudwlr9OrHUSJ-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=74-7968&t=n9ZYudwlr9OrHUSJ-1
 ---
 
 import { DrawerDemo } from "@/examples/drawer";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="drawer">
       <DrawerDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="drawer">
       <DrawerDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="drawer">
       <DrawerDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="drawer">
       <DrawerDemo />
     </PreviewWithCode>
@@ -215,11 +215,11 @@ import {
 ## Specs
 
 ```md
-# New York — Drawer Specs
+# Mint — Drawer Specs
 
 ## Component
 - name: drawer
-- file: registry/new-york/drawer.tsx
+- file: registry/mint/drawer.tsx
 - installs to: components/ui/drawer.tsx
 - dependencies: vaul
 - registryDependencies: none
@@ -233,14 +233,14 @@ mobile — consider swapping to Dialog on desktop via useMediaQuery.
 ## Visual identity
 Flat --background surface with no elevation shadow; border on the open edge
 provides separation. The bottom variant shows a muted pill drag handle.
-Rounded corners only on the open edge match the new-york 0.625rem radius feel.
+Rounded corners only on the open edge match Mint's 1.25rem radius feel.
 
 ## Design tokens
 --background: oklch(1 0 0) / oklch(0.145 0 0)          — panel fill
 --foreground: oklch(0.145 0 0) / oklch(0.985 0 0)       — DrawerTitle text
---muted: oklch(0.97 0 0) / oklch(0.269 0 0)             — drag handle pill fill
---muted-foreground: oklch(0.556 0 0) / oklch(0.708 0 0) — DrawerDescription text
---border: oklch(0.922 0 0) / oklch(1 0 0 / 10%)         — edge border on DrawerContent
+--muted: oklch(0.96 0.02 155) / oklch(0.2 0.03 155)             — drag handle pill fill
+--muted-foreground: oklch(0.52 0.06 155) / oklch(0.6 0.06 155) — DrawerDescription text
+--border: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)         — edge border on DrawerContent
 
 ## Sub-components
 - Drawer             → Vaul root; accepts direction, sounds, open, onOpenChange, dismissible, shouldScaleBackground
@@ -263,7 +263,7 @@ Rounded corners only on the open edge match the new-york 0.625rem radius feel.
 - data-[vaul-drawer-direction=left]:   DrawerContent inset-y-0, left-0, w-3/4, sm:max-w-sm, border-r
 
 ## Conventions
-- sounds: ING Design exclusive — plays drawerOpen/drawerClose audio via useFeedback hook on open/close
+- sounds: GIN Design exclusive — plays drawerOpen/drawerClose audio via useFeedback hook on open/close
 - Sub-components expose data-slot="drawer", "drawer-trigger", "drawer-portal", "drawer-overlay", "drawer-content", "drawer-header", "drawer-title", "drawer-description", "drawer-footer", "drawer-close" for CSS targeting
 - Wrap DrawerContent body in <div className="mx-auto w-full max-w-sm"> for bottom drawers to constrain width
 - Always include DrawerClose (wrapping a Button variant="outline") in DrawerFooter as the cancel action

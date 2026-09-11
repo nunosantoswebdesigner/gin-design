@@ -1,28 +1,28 @@
----
+﻿---
 title: Separator
 description: A thin visual divider between sections or inline content, supporting horizontal and vertical orientations.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=76-10176&t=n9ZYudwlr9OrHUSJ-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=76-10176&t=n9ZYudwlr9OrHUSJ-1
 ---
 
 import { SeparatorDemo } from "@/examples/separator";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="separator">
       <SeparatorDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="separator">
       <SeparatorDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="separator">
       <SeparatorDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="separator">
       <SeparatorDemo />
     </PreviewWithCode>
@@ -82,11 +82,11 @@ import { Separator } from "@/components/ui/separator";
 ## Specs
 
 ```md
-# New York — Separator Specs
+# Mint — Separator Specs
 
 ## Component
 - name: separator
-- file: registry/new-york/separator.tsx
+- file: registry/mint/separator.tsx
 - installs to: components/ui/separator.tsx
 - dependencies: radix-ui
 - registryDependencies: none
@@ -99,12 +99,12 @@ of flex or grid children — it is simpler and more performant than inserting a
 Separator between every item.
 
 ## Visual identity
-A hairline rule using the neutral `--border` colour. Fully minimal — no
-radius, no shadow, no weight — making it unobtrusive and theme-agnostic across
-all ING Design brand contexts.
+A hairline rule using Mint's soft, translucent green `--border` colour. Fully
+minimal — no radius, no shadow, no weight — keeping section breaks light and
+unobtrusive.
 
 ## Design tokens
---border: oklch(0.922 0 0) / oklch(1 0 0 / 10%)   — divider colour (light / dark)
+--border: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)   — divider colour (light / dark)
 
 ## States
 - data-[orientation=horizontal]: h-px w-full — full-width horizontal rule

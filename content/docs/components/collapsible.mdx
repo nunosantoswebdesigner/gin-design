@@ -1,28 +1,28 @@
----
+﻿---
 title: Collapsible
 description: An interactive section that expands and collapses to show or hide content.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=73-4665&t=n9ZYudwlr9OrHUSJ-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=73-4665&t=n9ZYudwlr9OrHUSJ-1
 ---
 
 import { CollapsibleDemo } from "@/examples/collapsible";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="collapsible">
       <CollapsibleDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="collapsible">
       <CollapsibleDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="collapsible">
       <CollapsibleDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="collapsible">
       <CollapsibleDemo />
     </PreviewWithCode>
@@ -139,11 +139,11 @@ const [open, setOpen] = useState(false);
 ## Specs
 
 ```md
-# New York — Collapsible Specs
+# Mint — Collapsible Specs
 
 ## Component
 - name: collapsible
-- file: registry/new-york/collapsible.tsx
+- file: registry/mint/collapsible.tsx
 - installs to: components/ui/collapsible.tsx
 - dependencies: radix-ui
 - registryDependencies: none
@@ -174,7 +174,7 @@ place inside it.
 - CollapsibleContent has no default padding or animation — add className as needed
 - For animated expand/collapse: apply overflow-hidden with a CSS max-height or height transition on CollapsibleContent
 - Do not nest Collapsible inside Accordion — they conflict on state management
-- sounds / haptic: ING Design exclusive — pass sounds to play audio feedback (expand/collapse) on interaction; powered by useFeedback hook and @/audio/core sound definitions
+- sounds / haptic: GIN Design exclusive — pass sounds to play audio feedback (expand/collapse) on interaction; powered by useFeedback hook and @/audio/core sound definitions
 - Sub-components expose data-slot="collapsible", data-slot="collapsible-trigger", and data-slot="collapsible-content" for CSS targeting
 - Controlled mode: pass open + onOpenChange; uncontrolled mode: use defaultOpen and let Radix manage state internally
 ```

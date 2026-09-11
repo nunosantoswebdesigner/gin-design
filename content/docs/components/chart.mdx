@@ -6,22 +6,22 @@ description: A Recharts wrapper with themed tooltips, legends, and CSS variable 
 import { ChartDemo } from "@/examples/chart";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="chart">
       <ChartDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="chart">
       <ChartDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="chart">
       <ChartDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="chart">
       <ChartDemo />
     </PreviewWithCode>
@@ -207,11 +207,11 @@ export function SalesChart() {
 ## Specs
 
 ```md
-# New York — Chart Specs
+# Mint — Chart Specs
 
 ## Component
 - name: chart
-- file: registry/new-york/chart.tsx
+- file: registry/mint/chart.tsx
 - installs to: components/ui/chart.tsx
 - dependencies: recharts
 - registryDependencies: none
@@ -223,17 +223,19 @@ scoped CSS custom properties. Use it whenever you need a consistently themed cha
 do not use it if you need a fully custom Recharts setup that manages its own container.
 
 ## Visual identity
-Tooltip floats on the page background with a subtle border and xl shadow, giving
-it a card-like appearance. Legend swatches use 2px-rounded squares. Axis tick text
-is rendered in --muted-foreground to keep it recessive. No color bias — series
-colors come entirely from ChartConfig, so each theme can define its own palette.
+Tooltip floats on the page background with a soft, glassy border and xl shadow,
+now with Mint's generous rounded corners, giving it a card-like appearance.
+Legend swatches use 2px-rounded squares. Axis tick text is rendered in
+--muted-foreground to keep it recessive. Series colors come entirely from
+ChartConfig, so each theme can define its own palette — the chart component
+itself carries no fixed color bias.
 
 ## Design tokens
---muted-foreground: oklch(0.556 0 0) / oklch(0.708 0 0)   — axis tick text, series labels in tooltip
---border: oklch(0.922 0 0) / oklch(1 0 0 / 10%)           — tooltip border, cartesian grid lines
+--muted-foreground: oklch(0.52 0.06 155) / oklch(0.6 0.06 155)   — axis tick text, series labels in tooltip
+--border: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%) — tooltip border, cartesian grid lines
 --background: oklch(1 0 0) / oklch(0.145 0 0)             — tooltip surface (bg-background)
 --foreground: oklch(0.145 0 0) / oklch(0.985 0 0)         — tooltip value text
---muted: oklch(0.97 0 0) / oklch(0.269 0 0)               — tooltip cursor rectangle fill
+--muted: oklch(0.96 0.02 155) / oklch(0.2 0.03 155)       — tooltip cursor rectangle fill
 
 ## Sub-components
 - ChartContainer        → root div; wraps ResponsiveContainer and provides ChartContext

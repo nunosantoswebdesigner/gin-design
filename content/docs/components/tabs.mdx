@@ -1,28 +1,28 @@
----
+﻿---
 title: Tabs
 description: A tabbed interface that displays one content panel at a time, with keyboard navigation and optional audio feedback.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=76-10755
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=76-10755
 ---
 
 import { TabsDemo } from "@/examples/tabs";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="tabs">
       <TabsDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="tabs">
       <TabsDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="tabs">
       <TabsDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="tabs">
       <TabsDemo />
     </PreviewWithCode>
@@ -109,11 +109,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 ## Specs
 
 ```md
-# New York — Tabs Specs
+# Mint — Tabs Specs
 
 ## Component
 - name: tabs
-- file: registry/new-york/tabs.tsx
+- file: registry/mint/tabs.tsx
 - installs to: components/ui/tabs.tsx
 - dependencies: radix-ui
 - registryDependencies: none
@@ -132,12 +132,12 @@ triggers) give a soft, contained feel. Compact height (h-9 list, h-[calc(100%-1p
 trigger) keeps the chrome minimal.
 
 ## Design tokens
---muted: oklch(0.97 0 0) / oklch(0.269 0 0)             — TabsList background
---muted-foreground: oklch(0.556 0 0) / oklch(0.708 0 0)  — inactive trigger text
+--muted: oklch(0.96 0.02 155) / oklch(0.2 0.03 155)             — TabsList background
+--muted-foreground: oklch(0.52 0.06 155) / oklch(0.6 0.06 155)  — inactive trigger text
 --background: oklch(1 0 0) / oklch(0.145 0 0)            — active trigger fill (light)
 --foreground: oklch(0.145 0 0) / oklch(0.985 0 0)        — active trigger text (light)
---input: oklch(0.922 0 0) / oklch(1 0 0 / 15%)           — active trigger fill (dark: bg-input/30) and border
---ring: oklch(0.708 0 0) / oklch(0.556 0 0)              — focus ring and outline
+--input: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)           — active trigger fill (dark: bg-input/30) and border
+--ring: oklch(0.5 0.14 155) / oklch(0.62 0.15 155)              — focus ring and outline
 
 ## Sub-components
 - Tabs          → Radix Tabs.Root; wraps the full compound; flex flex-col gap-2
@@ -152,7 +152,7 @@ trigger) keeps the chrome minimal.
 - disabled:             pointer-events-none opacity-50 on trigger
 
 ## Conventions
-- sounds / haptic: ING Design exclusive — plays audio or triggers haptic feedback on interaction (TabsTrigger `sound` and `haptic` props via useFeedback hook); recommended sound: "tabSwitch"
+- sounds / haptic: GIN Design exclusive — plays audio or triggers haptic feedback on interaction (TabsTrigger `sound` and `haptic` props via useFeedback hook); recommended sound: "tabSwitch"
 - Sub-components expose data-slot="tabs", data-slot="tabs-list", data-slot="tabs-trigger", data-slot="tabs-content" for CSS targeting
 - Full-width layout: add className="w-full" to TabsList and className="flex-1" to each TabsTrigger
 - Vertical orientation: set orientation="vertical" on Tabs, add flex-col to TabsList, wrap Tabs in flex-row

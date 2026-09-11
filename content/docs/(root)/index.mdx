@@ -1,19 +1,19 @@
----
+﻿---
 title: Introduction
 description: A component library for teams building with multiple brands — registry-based, Figma-connected, and built for AI workflows.
 ---
 
-**ING Design** is a component library for teams building with multiple brands — built by [ING Infinitive](https://github.com/nunosantoswebdesigner).
+**GIN Design** is a component library for teams building with multiple brands — built by [Nuno Santos](https://github.com/nunosantoswebdesigner).
 
 ## The Registry
 
 Components are not an npm package. When you install a component, the shadcn CLI copies the source file directly into your project — you own the code and can change anything, without waiting for an upstream release.
 
 ```bash
-npx shadcn add https://ing-design.vercel.app/r/button
+npx shadcn add https://gin-design.vercel.app/r/button
 ```
 
-The `/r/` path is the registry endpoint — a shadcn convention. The CLI fetches `https://ing-design.vercel.app/r/button.json`, reads the component manifest (source files, dependencies, install targets), and copies everything into your project. You never interact with that URL directly; it's what the CLI calls behind the scenes.
+The `/r/` path is the registry endpoint — a shadcn convention. The CLI fetches `https://gin-design.vercel.app/r/button.json`, reads the component manifest (source files, dependencies, install targets), and copies everything into your project. You never interact with that URL directly; it's what the CLI calls behind the scenes.
 
 Every component page shows the exact command to install it. Pick what you need, leave what you don't.
 
@@ -67,7 +67,7 @@ These follow the [llms.txt](https://llmstxt.org) convention and make the entire 
 
 ## Themes
 
-Components are built on a base theme (New York) and support multiple brand themes — each a set of CSS variable overrides. Available themes are listed in the [Themes](/docs/themes) section of the sidebar.
+Components are built on a base theme (Mint) and support multiple brand themes — each a set of CSS variable overrides. Available themes are listed in the [Themes](/docs/themes) section of the sidebar.
 
 ## What's Inside
 
@@ -112,7 +112,7 @@ How do brand themes work?
 </AccordionTrigger>
 <AccordionContent>
 
-Each brand theme is a CSS variable override. The base component (e.g. Button in New York) uses variables like `--primary` and `--radius`. A brand theme redefines those variables — sharp orange for Force8, pill-shaped blue for My Ice Hockey — and the component adapts automatically. No code duplication.
+Each brand theme is a CSS variable override. The base component (e.g. Button in Mint) uses variables like `--primary` and `--radius`. A brand theme redefines those variables — sharp red for Berries, soft warm brown for Cinnamon — and the component adapts automatically. No code duplication.
 
 </AccordionContent>
 </AccordionItem>

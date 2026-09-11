@@ -1,28 +1,28 @@
----
+﻿---
 title: Login
 description: A full-page login block with card, split, and centered layout variants.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=1097-2023&t=SGuloiMFD7r5jFI6-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=1097-2023&t=SGuloiMFD7r5jFI6-1
 ---
 
 import { BLoginDemo } from "@/examples/b-login";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="b-login">
       <BLoginDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="b-login">
       <BLoginDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="b-login">
       <BLoginDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="b-login">
       <BLoginDemo />
     </PreviewWithCode>
@@ -113,11 +113,11 @@ import { Logo } from "@/components/site/logo";
 ## Specs
 
 ```md
-# New York — Login Block Specs
+# Mint — Login Block Specs
 
 ## Component
 - name: b-login
-- file: registry/new-york/b-login.tsx
+- file: registry/mint/b-login.tsx
 - installs to: components/ui/b-login.tsx
 - dependencies: none
 - registryDependencies: button, input, label, e-auth
@@ -129,16 +129,17 @@ Use b-login for authentication screens; use individual form components for
 inline or embedded login flows.
 
 ## Visual identity
-Neutral new-york palette throughout. Card layout has a subtle rounded-xl border
-on --card background. Split layout uses --muted for the image panel. All
-interactive elements inherit their theme via composed components (Button, Input).
+Mint's fresh green palette throughout. Card layout has a subtle rounded-xl
+border on --card background, with soft glassy (60% opacity) borders. Split
+layout uses --muted for the image panel. All interactive elements inherit
+their theme via composed components (Button, Input).
 
 ## Design tokens
 --background: oklch(1 0 0) / oklch(0.145 0 0)    — page background
 --card: oklch(1 0 0) / oklch(0.205 0 0)           — card surface (card layout)
---muted: oklch(0.97 0 0) / oklch(0.269 0 0)       — image panel (split layout)
---border: oklch(0.922 0 0) / oklch(1 0 0 / 10%)   — card border
---muted-foreground: oklch(0.556 0 0) / oklch(0.708 0 0) — helper text
+--muted: oklch(0.96 0.02 155) / oklch(0.2 0.03 155)       — image panel (split layout)
+--border: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)   — card border
+--muted-foreground: oklch(0.52 0.06 155) / oklch(0.6 0.06 155) — helper text
 
 ## Sub-components
 - LoginBlock     → root; drives layout switching; data-slot="login-block" data-layout="[layout]"

@@ -1,28 +1,28 @@
----
+﻿---
 title: Context Menu
 description: A menu that appears on right-click, providing contextual actions for the target element.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=73-5633&t=n9ZYudwlr9OrHUSJ-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=73-5633&t=n9ZYudwlr9OrHUSJ-1
 ---
 
 import { ContextMenuDemo } from "@/examples/context-menu";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="context-menu">
       <ContextMenuDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="context-menu">
       <ContextMenuDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="context-menu">
       <ContextMenuDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="context-menu">
       <ContextMenuDemo />
     </PreviewWithCode>
@@ -196,11 +196,11 @@ import {
 ## Specs
 
 ```md
-# New York — Context Menu Specs
+# Mint — Context Menu Specs
 
 ## Component
 - name: context-menu
-- file: registry/new-york/context-menu.tsx
+- file: registry/mint/context-menu.tsx
 - installs to: components/ui/context-menu.tsx
 - dependencies: radix-ui, lucide-react
 - registryDependencies: none
@@ -214,16 +214,17 @@ primary navigation — prefer DropdownMenu for pointer-initiated menus.
 ## Visual identity
 Popover-surfaced panel with rounded-md corners and a 1px border. Compact item
 rows (py-1.5, text-sm) with accent-coloured hover/focus states. Matches the
-new-york neutral palette — no colour until focus or destructive variant.
+Mint palette's soft green wash — a light green tint appears only on focus or
+the destructive variant.
 
 ## Design tokens
 --popover: oklch(1 0 0) / oklch(0.269 0 0)             — menu panel background
 --popover-foreground: oklch(0.145 0 0) / oklch(0.985 0 0) — default item text
---accent: oklch(0.97 0 0) / oklch(0.371 0 0)            — hover/focus item bg
---accent-foreground: oklch(0.205 0 0) / oklch(0.985 0 0) — hover/focus item text
---muted-foreground: oklch(0.556 0 0) / oklch(0.708 0 0)  — shortcut + icon colour
---destructive: oklch(0.577 0.245 27.325) / oklch(0.704 0.191 22.216) — danger item text
---border: oklch(0.922 0 0) / oklch(1 0 0 / 10%)          — panel border + separator
+--accent: oklch(0.92 0.05 155) / oklch(0.26 0.05 155)            — hover/focus item bg
+--accent-foreground: oklch(0.32 0.1 155) / oklch(0.88 0.06 155) — hover/focus item text
+--muted-foreground: oklch(0.52 0.06 155) / oklch(0.6 0.06 155)  — shortcut + icon colour
+--destructive: oklch(0.55 0.25 15) / oklch(0.704 0.191 22.216) — danger item text
+--border: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)          — panel border + separator
 --foreground: oklch(0.145 0 0) / oklch(0.985 0 0)        — label text
 
 ## Sub-components

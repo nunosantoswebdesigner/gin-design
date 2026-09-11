@@ -1,28 +1,28 @@
----
+﻿---
 title: Input Group
 description: Composes an input with prefix and suffix addons — text, icons, or action buttons — with seamlessly shared borders.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=1188-5364&t=n9ZYudwlr9OrHUSJ-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=1188-5364&t=n9ZYudwlr9OrHUSJ-1
 ---
 
 import { InputGroupDemo } from "@/examples/input-group";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="input-group">
       <InputGroupDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="input-group">
       <InputGroupDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="input-group">
       <InputGroupDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="input-group">
       <InputGroupDemo />
     </PreviewWithCode>
@@ -154,11 +154,11 @@ import { InputGroup, InputGroupText } from "@/components/ui/input-group";
 ## Specs
 
 ```md
-# New York — Input Group Specs
+# Mint — Input Group Specs
 
 ## Component
 - name: input-group
-- file: registry/new-york/input-group.tsx
+- file: registry/mint/input-group.tsx
 - installs to: components/ui/input-group.tsx
 - dependencies: none (uses only React and cn utility)
 - registryDependencies: input, button
@@ -175,15 +175,15 @@ copy button). Do not use it as a general flex container — children must carry
 Addons use the muted surface (`--muted`) with a matching `--input` border, so
 they read as part of the field rather than separate elements. Radius is applied
 only to the outermost corners (`rounded-l-md` / `rounded-r-md`), creating a
-pill-like group with no internal gaps. The new-york default radius (0.625rem)
-keeps the group compact and professional.
+pill-like group with no internal gaps. Mint's default radius (1.25rem)
+keeps the group soft and rounded.
 
 ## Design tokens
---input: oklch(0.922 0 0) / oklch(1 0 0 / 15%)   — addon and input border colour
---muted: oklch(0.97 0 0) / oklch(0.269 0 0)       — addon background
---muted-foreground: oklch(0.556 0 0) / oklch(0.708 0 0) — addon text and icon colour
---ring: oklch(0.708 0 0) / oklch(0.556 0 0)       — focus ring on Input / Button children
---radius: 0.625rem                                 — outermost corner radius (via rounded-l-md / rounded-r-md)
+--input: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)   — addon and input border colour
+--muted: oklch(0.96 0.02 155) / oklch(0.2 0.03 155)       — addon background
+--muted-foreground: oklch(0.52 0.06 155) / oklch(0.6 0.06 155) — addon text and icon colour
+--ring: oklch(0.5 0.14 155) / oklch(0.62 0.15 155)       — focus ring on Input / Button children
+--radius: 1.25rem                                 — outermost corner radius (via rounded-l-md / rounded-r-md)
 
 ## Sub-components
 - InputGroup     → flex container; adjusts radius and negative margin on direct Input and Button children via data-slot selectors

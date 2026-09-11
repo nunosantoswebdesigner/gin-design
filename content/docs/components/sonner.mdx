@@ -6,22 +6,22 @@ description: Toast notifications powered by Sonner, themed to match your design 
 import { SonnerDemo } from "@/examples/sonner";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="sonner">
       <SonnerDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="sonner">
       <SonnerDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="sonner">
       <SonnerDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="sonner">
       <SonnerDemo />
     </PreviewWithCode>
@@ -135,11 +135,11 @@ toast.error("Save failed", {
 ## Specs
 
 ```md
-# New York — Sonner Specs
+# Mint — Sonner Specs
 
 ## Component
 - name: sonner
-- file: registry/new-york/sonner.tsx
+- file: registry/mint/sonner.tsx
 - installs to: components/ui/sonner.tsx
 - dependencies: sonner, next-themes, lucide-react
 - registryDependencies: none
@@ -155,14 +155,14 @@ that require user acknowledgement.
 ## Visual identity
 Toasts use the popover surface (--popover / --popover-foreground) and the
 shared border token, giving them the same floating-layer feel as dropdowns and
-popovers. Corner radius inherits --radius (0.625rem), keeping the look
-consistent with the rest of the new-york design system.
+popovers. Corner radius inherits --radius (1.25rem), keeping the look
+consistent with the rest of the Mint design system.
 
 ## Design tokens
 --popover: oklch(1 0 0) / oklch(0.269 0 0)                — toast background (light / dark)
 --popover-foreground: oklch(0.145 0 0) / oklch(0.985 0 0) — toast text (light / dark)
---border: oklch(0.922 0 0) / oklch(1 0 0 / 10%)           — toast border (light / dark)
---radius: 0.625rem                                         — corner radius
+--border: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)           — toast border (light / dark)
+--radius: 1.25rem                                         — corner radius
 
 ## External dependencies
 - sonner: provides Toaster component and toast() imperative API

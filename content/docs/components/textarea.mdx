@@ -1,28 +1,28 @@
----
+﻿---
 title: Textarea
 description: A multi-line text input with the same border, focus ring, and invalid state as Input.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=76-10807
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=76-10807
 ---
 
 import { TextareaDemo } from "@/examples/textarea";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="textarea">
       <TextareaDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="textarea">
       <TextareaDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="textarea">
       <TextareaDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="textarea">
       <TextareaDemo />
     </PreviewWithCode>
@@ -91,11 +91,11 @@ import { Textarea } from "@/components/ui/textarea";
 ## Specs
 
 ```md
-# New York — Textarea Specs
+# Mint — Textarea Specs
 
 ## Component
 - name: textarea
-- file: registry/new-york/textarea.tsx
+- file: registry/mint/textarea.tsx
 - installs to: components/ui/textarea.tsx
 - dependencies: none
 - registryDependencies: none
@@ -108,16 +108,16 @@ form text entry. Prefer Input when content is expected to stay on one line.
 
 ## Visual identity
 Transparent background with a subtle border gives it a lightweight, flat feel
-consistent with Input. The 0.625rem radius and 3px focus ring match all other
-form fields in new-york, ensuring visual consistency across form layouts.
+consistent with Input. The 1.25rem radius and 3px focus ring match all other
+form fields in Mint, ensuring visual consistency across form layouts.
 
 ## Design tokens
---input: oklch(0.922 0 0) / oklch(1 0 0 / 15%)                        — border colour (border-input)
---ring: oklch(0.708 0 0) / oklch(0.556 0 0)                            — focus ring (focus-visible:border-ring, focus-visible:ring-ring/50)
---destructive: oklch(0.577 0.245 27.325) / oklch(0.704 0.191 22.216)   — invalid border + ring (aria-invalid:border-destructive, aria-invalid:ring-destructive/20)
---primary: oklch(0.205 0 0) / oklch(0.922 0 0)                         — text selection background (selection:bg-primary)
---primary-foreground: oklch(0.985 0 0) / oklch(0.205 0 0)              — text selection foreground (selection:text-primary-foreground)
---muted-foreground: oklch(0.556 0 0) / oklch(0.708 0 0)                — placeholder text (placeholder:text-muted-foreground)
+--input: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)                        — border colour (border-input)
+--ring: oklch(0.5 0.14 155) / oklch(0.62 0.15 155)                            — focus ring (focus-visible:border-ring, focus-visible:ring-ring/50)
+--destructive: oklch(0.55 0.25 15) / oklch(0.704 0.191 22.216)   — invalid border + ring (aria-invalid:border-destructive, aria-invalid:ring-destructive/20)
+--primary: oklch(0.5 0.14 155) / oklch(0.62 0.15 155)                         — text selection background (selection:bg-primary)
+--primary-foreground: oklch(1 0 0) / oklch(0.1 0 0)              — text selection foreground (selection:text-primary-foreground)
+--muted-foreground: oklch(0.52 0.06 155) / oklch(0.6 0.06 155)                — placeholder text (placeholder:text-muted-foreground)
 
 ## States
 - focus-visible: border switches to --ring, 3px ring at ring/50 opacity

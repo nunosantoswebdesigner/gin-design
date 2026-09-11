@@ -1,28 +1,28 @@
----
+﻿---
 title: Dialog
 description: A modal overlay that focuses user attention on a task or message, blocking interaction with the rest of the page until dismissed.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=74-7828&t=n9ZYudwlr9OrHUSJ-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=74-7828&t=n9ZYudwlr9OrHUSJ-1
 ---
 
 import { DialogDemo } from "@/examples/dialog";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="dialog">
       <DialogDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="dialog">
       <DialogDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="dialog">
       <DialogDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="dialog">
       <DialogDemo />
     </PreviewWithCode>
@@ -167,11 +167,11 @@ import {
 ## Specs
 
 ```md
-# New York — Dialog Specs
+# Mint — Dialog Specs
 
 ## Component
 - name: dialog
-- file: registry/new-york/dialog.tsx
+- file: registry/mint/dialog.tsx
 - installs to: components/ui/dialog.tsx
 - dependencies: radix-ui, lucide-react
 - registryDependencies: none
@@ -189,13 +189,13 @@ keeps content dense and professional across all brand themes.
 
 ## Design tokens
 --background: oklch(1 0 0) / oklch(0.145 0 0)      — panel fill (bg-background)
---border: oklch(0.922 0 0) / oklch(1 0 0 / 10%)    — panel border
---muted-foreground: oklch(0.556 0 0) / oklch(0.708 0 0) — description text
---accent: oklch(0.97 0 0) / oklch(0.371 0 0)        — close button bg when dialog open (data-[state=open]:bg-accent)
---ring: oklch(0.708 0 0) / oklch(0.556 0 0)         — close button focus ring
+--border: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)    — panel border
+--muted-foreground: oklch(0.52 0.06 155) / oklch(0.6 0.06 155) — description text
+--accent: oklch(0.92 0.05 155) / oklch(0.26 0.05 155)        — close button bg when dialog open (data-[state=open]:bg-accent)
+--ring: oklch(0.5 0.14 155) / oklch(0.62 0.15 155)         — close button focus ring
 
 ## Sub-components
-- Dialog             → root; accepts sounds prop (ING Design exclusive)
+- Dialog             → root; accepts sounds prop (GIN Design exclusive)
 - DialogTrigger      → element that opens the dialog (use asChild)
 - DialogPortal       → renders content outside the current DOM subtree
 - DialogOverlay      → fixed full-screen scrim (bg-black/50) with fade animation
@@ -217,7 +217,7 @@ keeps content dense and professional across all brand themes.
 - DialogTitle is required — Radix UI throws in development if it is missing
 - DialogDescription is strongly recommended; provide it for screen reader context
 - Use showCloseButton={false} on DialogContent when the footer already contains a Cancel/Close action to avoid duplicate close affordances
-- sounds / haptic: ING Design exclusive — pass sounds={true} on Dialog to play modalOpen/modalClose audio on open and close
+- sounds / haptic: GIN Design exclusive — pass sounds={true} on Dialog to play modalOpen/modalClose audio on open and close
 - Sub-components expose data-slot="[name]" for CSS targeting: dialog, dialog-trigger, dialog-portal, dialog-overlay, dialog-content, dialog-header, dialog-footer, dialog-title, dialog-description, dialog-close
 - Default panel width: sm:max-w-lg (512px); override with className on DialogContent
 - Scrollable long content: add className="flex max-h-[80vh] flex-col" to DialogContent and overflow-y-auto to the inner body div

@@ -1,28 +1,28 @@
----
+﻿---
 title: Radio Group
 description: A set of mutually exclusive options where only one can be selected at a time.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=76-8893&t=n9ZYudwlr9OrHUSJ-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=76-8893&t=n9ZYudwlr9OrHUSJ-1
 ---
 
 import { RadioGroupDemo } from "@/examples/radio-group";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="radio-group">
       <RadioGroupDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="radio-group">
       <RadioGroupDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="radio-group">
       <RadioGroupDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="radio-group">
       <RadioGroupDemo />
     </PreviewWithCode>
@@ -145,11 +145,11 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 ## Specs
 
 ```md
-# New York — Radio Group Specs
+# Mint — Radio Group Specs
 
 ## Component
 - name: radio-group
-- file: registry/new-york/radio-group.tsx
+- file: registry/mint/radio-group.tsx
 - installs to: components/ui/radio-group.tsx
 - dependencies: radix-ui, lucide-react
 - registryDependencies: none
@@ -161,14 +161,14 @@ Prefer a Select when the list is long or space is constrained.
 
 ## Visual identity
 Minimal circular indicator: a 16px rounded-full border ring that collapses
-into a filled inner circle (8px) when selected. The neutral --input border and
---primary fill keep it on-brand across all themes without colour overrides.
+into a filled inner circle (8px) when selected. The soft, translucent
+--input border and vivid green --primary fill give it Mint's fresh, on-brand look when selected.
 
 ## Design tokens
---input: oklch(0.922 0 0) / oklch(1 0 0 / 15%)   — item border (resting)
---ring: oklch(0.708 0 0) / oklch(0.556 0 0)       — focus ring colour
---primary: oklch(0.205 0 0) / oklch(0.922 0 0)    — selected indicator fill and text colour
---destructive: oklch(0.577 0.245 27.325) / oklch(0.704 0.191 22.216) — error border and ring
+--input: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)   — item border (resting)
+--ring: oklch(0.5 0.14 155) / oklch(0.62 0.15 155)       — green focus ring colour
+--primary: oklch(0.5 0.14 155) / oklch(0.62 0.15 155)    — selected indicator fill and text colour
+--destructive: oklch(0.55 0.25 15) / oklch(0.704 0.191 22.216) — error border and ring
 
 ## Sub-components
 - RadioGroup          → Root container; default layout is grid gap-3 (vertical stack)

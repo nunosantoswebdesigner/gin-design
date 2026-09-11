@@ -1,9 +1,9 @@
----
+﻿---
 title: Documentation
-description: A technical overview of how ING Design works — registry, architecture, component authoring, docs tooling, and AI integration.
+description: A technical overview of how GIN Design works — registry, architecture, component authoring, docs tooling, and AI integration.
 ---
 
-ING Design is a component registry built on top of the [shadcn registry system](https://ui.shadcn.com/docs/registry). It is not an npm package — components are distributed as source files that are copied directly into the consuming project via the shadcn CLI. This page documents how the repository is structured, how components are authored and registered, and how the documentation site works.
+GIN Design is a component registry built on top of the [shadcn registry system](https://ui.shadcn.com/docs/registry). It is not an npm package — components are distributed as source files that are copied directly into the consuming project via the shadcn CLI. This page documents how the repository is structured, how components are authored and registered, and how the documentation site works.
 
 ## Architecture
 
@@ -29,8 +29,8 @@ The registry is defined in `registry.json` at the root of the repository. Each e
 
 ```json
 {
-  "name": "ing-design",
-  "homepage": "https://ing-design.vercel.app",
+  "name": "gin-design",
+  "homepage": "https://gin-design.vercel.app",
   "items": [
     {
       "name": "button",
@@ -40,7 +40,7 @@ The registry is defined in `registry.json` at the root of the repository. Each e
       "dependencies": ["class-variance-authority", "@radix-ui/react-slot"],
       "files": [
         {
-          "path": "registry/new-york/button.tsx",
+          "path": "registry/mint/button.tsx",
           "type": "registry:ui",
           "target": "components/ui/button.tsx"
         }
@@ -50,7 +50,7 @@ The registry is defined in `registry.json` at the root of the repository. Each e
 }
 ```
 
-When a user runs `npx shadcn add https://ing-design.vercel.app/r/button`, the CLI fetches the registry entry, resolves the file, and copies it to the `target` path inside their project. They own the file completely from that point.
+When a user runs `npx shadcn add https://gin-design.vercel.app/r/button`, the CLI fetches the registry entry, resolves the file, and copies it to the `target` path inside their project. They own the file completely from that point.
 
 The registry endpoint is served at `/r/[name].json` via `app/r/[name]/route.ts`, which reads `registry.json` and transforms the entries into the format the shadcn CLI expects.
 
@@ -69,7 +69,7 @@ Each item in the registry has a prefix that identifies its type. Components have
 
 ## Component Authoring
 
-All registry components live in `registry/new-york/`. The `new-york` directory is the shadcn style identifier — components authored here follow the New York design style.
+All registry components live in `registry/mint/` — the base/default brand theme, source of truth for every other theme. The directory name doesn't match the shadcn `style` setting (see below); it's just our default brand id.
 
 A registry component is a plain TypeScript/React file with no `"use client"` directive unless it genuinely requires browser APIs or hooks. Components that only compose JSX render as Server Components and avoid hydration issues.
 
@@ -173,7 +173,7 @@ Each MDX file has a YAML frontmatter block that declares `title`, `description`,
 </ComponentPreview>
 ```
 
-The `name` prop resolves to `registry/new-york/{name}.tsx`. The component renders the live preview alongside a source code tab that shows the registry file contents.
+The `name` prop resolves to `registry/mint/{name}.tsx`. The component renders the live preview alongside a source code tab that shows the registry file contents.
 
 ### CommandBox
 
@@ -212,7 +212,7 @@ Fetches the `.md` endpoint for the current page and copies the raw markdown to t
 Opens the page directly in Claude or ChatGPT with a pre-built prompt constructed in `components/docs-copy-page.tsx` via `getPromptUrl()`:
 
 ```
-I'm building with ING Design — a custom component library (https://ing-design.vercel.app).
+I'm building with GIN Design — a custom component library (https://gin-design.vercel.app).
 
 Active theme: **{themeLabel}**
 
@@ -316,7 +316,7 @@ All code block commands render tabs for each manager. The `CommandBox` component
 │   ├── docs-toc-footer.tsx       # TOC sidebar footer links
 │   └── ui/                       # App UI components (not registry)
 ├── content/docs/                 # MDX documentation pages
-├── registry/new-york/            # Registry component source files
+├── registry/mint/                 # Registry component source files
 ├── constants/
 │   ├── links.ts                  # External URLs (GitHub, Discord, X)
 │   └── site.ts                   # Site metadata, registry URL, tokens

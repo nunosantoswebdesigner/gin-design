@@ -1,28 +1,28 @@
----
+﻿---
 title: Data Table
 description: Sortable, filterable document table with status/section-type facets, column visibility, and pagination — built on @tanstack/react-table.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=153-7623&t=rlzgIiS9L5WQ6EwC-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=153-7623&t=rlzgIiS9L5WQ6EwC-1
 ---
 
 import { DataTableDemo } from "@/examples/e-data-table";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="e-data-table">
       <DataTableDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="e-data-table">
       <DataTableDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="e-data-table">
       <DataTableDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="e-data-table">
       <DataTableDemo />
     </PreviewWithCode>
@@ -90,7 +90,7 @@ const rows: DataTableRow[] = [
 
 ## Component
 - name: e-data-table
-- file: registry/new-york/e-data-table.tsx
+- file: registry/mint/e-data-table.tsx
 - installs to: components/ui/e-data-table.tsx
 - dependencies: @tanstack/react-table
 - registryDependencies: badge, button, card, checkbox, dropdown-menu, input, select, separator, table
@@ -103,7 +103,7 @@ Use e-data-table for structured list views with status tracking; for simpler lis
 use the plain Table component.
 
 ## Visual identity
-Neutral card surface. Status values each carry a distinct semantic colour:
+Soft mint-green card surface. Status values each carry a distinct semantic colour:
 emerald (done), muted (in-process), amber (pending), destructive/red (cancelled).
 Status icons are reused in both the table rows and the filter dropdown for
 visual consistency. The Loader2 icon animates with animate-spin for in-process rows.
@@ -146,5 +146,5 @@ Reviewer (text or Select) | actions (dropdown)
 
 ```bash
 pnpm add @tanstack/react-table
-npx shadcn@latest add https://ing-design.vercel.app/r/e-data-table.json
+npx shadcn@latest add https://gin-design.vercel.app/r/e-data-table.json
 ```

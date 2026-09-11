@@ -27,12 +27,15 @@ export const createPageMetadata = ({
   path,
   title,
 }: CreatePageMetadataOptions): Metadata => {
-  const canonical = path.startsWith(ROUTES.HOME) ? path : `${ROUTES.HOME}${path}`;
+  const canonical = path.startsWith(ROUTES.HOME)
+    ? path
+    : `${ROUTES.HOME}${path}`;
   const markdownAlternate =
     canonical === ROUTES.DOCS || canonical.startsWith(`${ROUTES.DOCS}/`)
       ? `${canonical}.md`
       : undefined;
-  const resolvedOgImage = ogImage ?? `${ROUTES.OG}${canonical === ROUTES.HOME ? "" : canonical}`;
+  const resolvedOgImage =
+    ogImage ?? `${ROUTES.OG}${canonical === ROUTES.HOME ? "" : canonical}`;
   const resolvedTitle = ogTitle ?? title;
 
   return {
@@ -110,18 +113,6 @@ export const baseMetadata: Metadata = {
         sizes: "96x96",
         type: "image/png",
         url: "/favicon-96x96.png",
-      },
-      {
-        media: "(prefers-color-scheme: light)",
-        sizes: "any",
-        type: "image/svg+xml",
-        url: "/favicon.svg",
-      },
-      {
-        media: "(prefers-color-scheme: dark)",
-        sizes: "any",
-        type: "image/svg+xml",
-        url: "/favicon-dark.svg",
       },
     ],
     shortcut: "/favicon-16x16.png",

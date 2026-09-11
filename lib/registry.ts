@@ -13,7 +13,7 @@ export const readOptionalFromRoot = async (
 };
 
 export const getRegistryUiSourceCandidates = ({ name }: { name: string }) => [
-  path.join("registry", "new-york", `${name}.tsx`),
+  path.join("registry", "mint", `${name}.tsx`),
 ];
 
 // The demo file needs "use client" to actually render inside this (Next.js)

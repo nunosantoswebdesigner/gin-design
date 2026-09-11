@@ -1,28 +1,28 @@
----
+﻿---
 title: Skeleton
 description: An animated placeholder that mimics content layout while data is loading.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=76-10492
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=76-10492
 ---
 
 import { SkeletonDemo } from "@/examples/skeleton";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="skeleton">
       <SkeletonDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="skeleton">
       <SkeletonDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="skeleton">
       <SkeletonDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="skeleton">
       <SkeletonDemo />
     </PreviewWithCode>
@@ -71,11 +71,11 @@ Match the skeleton shape to the content it replaces. Use `rounded-full` for avat
 ## Specs
 
 ```md
-# New York — Skeleton Specs
+# Mint — Skeleton Specs
 
 ## Component
 - name: skeleton
-- file: registry/new-york/skeleton.tsx
+- file: registry/mint/skeleton.tsx
 - installs to: components/ui/skeleton.tsx
 - dependencies: none
 - registryDependencies: none
@@ -88,13 +88,13 @@ when the content structure is known in advance; do not use it for actions or
 interactive states.
 
 ## Visual identity
-Renders as a muted, softly rounded block (0.375rem radius via `rounded-md`)
+Renders as a soft mint-green tinted block (0.375rem radius via `rounded-md`)
 with an `animate-pulse` fade cycle. Uses the `--accent` surface colour, giving
-a neutral, low-contrast shimmer that works across all themes without drawing
+a light, low-contrast shimmer that stays true to Mint without drawing
 attention away from real content.
 
 ## Design tokens
---accent: oklch(0.97 0 0) / oklch(0.371 0 0)   — pulse surface (light / dark)
+--accent: oklch(0.92 0.05 155) / oklch(0.26 0.05 155)   — pulse surface (light / dark)
 
 ## States
 - animate-pulse: continuous opacity fade; always active while the skeleton is mounted

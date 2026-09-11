@@ -1,28 +1,28 @@
----
+﻿---
 title: Native Select
 description: A styled native <select> element with a custom chevron, size variants, and sound feedback.
-figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/ING-design?node-id=76-8618&t=n9ZYudwlr9OrHUSJ-1
+figma: https://www.figma.com/design/6AEES9oizcs6g7MZR6LPQ3/GIN-design?node-id=76-8618&t=n9ZYudwlr9OrHUSJ-1
 ---
 
 import { NativeSelectDemo } from "@/examples/native-select";
 
 <ComponentThemeTabs>
-  <ThemeTab name="new-york">
+  <ThemeTab name="mint">
     <PreviewWithCode name="native-select">
       <NativeSelectDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="force8">
+  <ThemeTab name="berries">
     <PreviewWithCode name="native-select">
       <NativeSelectDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myswissski">
+  <ThemeTab name="citrine">
     <PreviewWithCode name="native-select">
       <NativeSelectDemo />
     </PreviewWithCode>
   </ThemeTab>
-  <ThemeTab name="myicehockey">
+  <ThemeTab name="cinnamon">
     <PreviewWithCode name="native-select">
       <NativeSelectDemo />
     </PreviewWithCode>
@@ -128,7 +128,7 @@ function FieldSelect(props: React.ComponentProps<typeof NativeSelect>) {
 
 ### NativeSelect
 
-<span className="block">Extends all native `<select>` props except `size` (replaced by ING's own size variant).</span>
+<span className="block">Extends all native `<select>` props except `size` (replaced by GIN's own size variant).</span>
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
@@ -165,11 +165,11 @@ import {
 ## Specs
 
 ```md
-# New York — Native Select Specs
+# Mint — Native Select Specs
 
 ## Component
 - name: native-select
-- file: registry/new-york/native-select.tsx
+- file: registry/mint/native-select.tsx
 - installs to: components/ui/native-select.tsx
 - dependencies: lucide-react
 - registryDependencies: none
@@ -188,12 +188,12 @@ controls. A muted, half-opacity chevron sits flush right and resizes with the
 size variant.
 
 ## Design tokens
---input: oklch(0.922 0 0) / oklch(1 0 0 / 15%)     — border colour (border-input)
---ring: oklch(0.708 0 0) / oklch(0.556 0 0)          — focus border and ring (focus-visible:border-ring, ring-ring/50)
---destructive: oklch(0.577 0.245 27.325) / oklch(0.704 0.191 22.216) — error border and ring (aria-invalid)
---primary: oklch(0.205 0 0) / oklch(0.922 0 0)       — text selection background (selection:bg-primary)
---primary-foreground: oklch(0.985 0 0) / oklch(0.205 0 0) — text selection foreground
---muted-foreground: oklch(0.556 0 0) / oklch(0.708 0 0)   — chevron icon colour
+--input: oklch(0.88 0.04 155 / 60%) / oklch(0.32 0.05 155 / 40%)     — border colour (border-input)
+--ring: oklch(0.5 0.14 155) / oklch(0.62 0.15 155)          — focus border and ring (focus-visible:border-ring, ring-ring/50)
+--destructive: oklch(0.55 0.25 15) / oklch(0.704 0.191 22.216) — error border and ring (aria-invalid)
+--primary: oklch(0.5 0.14 155) / oklch(0.62 0.15 155)       — text selection background (selection:bg-primary)
+--primary-foreground: oklch(1 0 0) / oklch(0.1 0 0) — text selection foreground
+--muted-foreground: oklch(0.52 0.06 155) / oklch(0.6 0.06 155)   — chevron icon colour
 
 ## Sub-components
 - NativeSelect         → wrapper div + `<select>` + ChevronDown icon; accepts size, onChange, and all native select props
@@ -215,7 +215,7 @@ size variant.
 
 ## Conventions
 - The wrapper div is sized w-fit by default; apply w-full on the wrapper or use a layout container to stretch the field
-- sounds: ING Design exclusive — onChange plays the "select" audio feedback via useFeedback
+- sounds: GIN Design exclusive — onChange plays the "select" audio feedback via useFeedback
 - Sub-components expose data-slot="native-select-wrapper", data-slot="native-select", data-slot="native-select-icon", data-slot="native-select-option", and data-slot="native-select-optgroup" for CSS targeting
 - Always pair with Field + FieldLabel + FieldError for accessible labelling and error messaging
 - Pass aria-invalid={!!error} and aria-describedby wired to the FieldError id to surface validation state accessibly
