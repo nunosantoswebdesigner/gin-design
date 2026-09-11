@@ -5,8 +5,8 @@
   "description": "Template — replace with your component name and description.",
   "files": [
     {
-      "path": "registry/new-york/new-component.tsx",
-      "content": "import { cn } from \"@/lib/utils\";\n\nexport interface NewComponentProps extends React.HTMLAttributes<HTMLDivElement> {\n  // Add your props here\n}\n\nconst NewComponent = ({ className, children, ...props }: NewComponentProps) => (\n  <div\n    className={cn(\"rounded-md border bg-card text-card-foreground shadow-sm\", className)}\n    {...props}\n  >\n    {children}\n  </div>\n);\n\nNewComponent.displayName = \"NewComponent\";\n\nexport { NewComponent };\nexport default NewComponent;\n",
+      "path": "registry/mint/new-component.tsx",
+      "content": "import { cn } from \"@/lib/utils\";\n\n// Add your props here\nexport type NewComponentProps = React.HTMLAttributes<HTMLDivElement>;\n\nconst NewComponent = ({ className, children, ...props }: NewComponentProps) => (\n  <div\n    className={cn(\n      \"rounded-md border bg-card text-card-foreground shadow-sm\",\n      className\n    )}\n    {...props}\n  >\n    {children}\n  </div>\n);\n\nNewComponent.displayName = \"NewComponent\";\n\nexport { NewComponent };\nexport default NewComponent;\n",
       "type": "registry:ui",
       "target": "components/ui/new-component.tsx"
     }

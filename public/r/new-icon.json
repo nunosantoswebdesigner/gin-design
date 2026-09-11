@@ -5,7 +5,7 @@
   "description": "Template — replace with your icon set name and description.",
   "files": [
     {
-      "path": "registry/new-york/new-icon.tsx",
+      "path": "registry/mint/new-icon.tsx",
       "content": "import { cn } from \"@/lib/utils\";\n\nexport type NewIconProps = React.SVGAttributes<SVGSVGElement> & {\n  size?: number;\n};\n\nconst NewIcon = ({ className, size = 24, ...props }: NewIconProps) => (\n  <svg\n    className={cn(className)}\n    data-slot=\"new-icon\"\n    fill=\"none\"\n    height={size}\n    stroke=\"currentColor\"\n    strokeLinecap=\"round\"\n    strokeLinejoin=\"round\"\n    strokeWidth={2}\n    viewBox=\"0 0 24 24\"\n    width={size}\n    xmlns=\"http://www.w3.org/2000/svg\"\n    {...props}\n  >\n    <circle cx=\"12\" cy=\"12\" r=\"9\" />\n  </svg>\n);\n\nNewIcon.displayName = \"NewIcon\";\n\nexport { NewIcon };\nexport default NewIcon;\n",
       "type": "registry:ui",
       "target": "components/ui/new-icon.tsx"

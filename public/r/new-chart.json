@@ -5,8 +5,8 @@
   "description": "Template — replace with your chart name and description.",
   "files": [
     {
-      "path": "registry/new-york/new-chart.tsx",
-      "content": "\"use client\";\n\nimport { cn } from \"@/lib/utils\";\n\nexport type NewChartProps = React.HTMLAttributes<HTMLDivElement>;\n\nconst NewChart = ({ className, children, ...props }: NewChartProps) => (\n  <div data-slot=\"new-chart\" className={cn(\"flex flex-col gap-6 p-6\", className)} {...props}>\n    {children}\n  </div>\n);\n\nNewChart.displayName = \"NewChart\";\n\nexport { NewChart };\nexport default NewChart;\n",
+      "path": "registry/mint/new-chart.tsx",
+      "content": "\"use client\";\n\nimport { cn } from \"@/lib/utils\";\n\nexport type NewChartProps = React.HTMLAttributes<HTMLDivElement>;\n\nconst NewChart = ({ className, children, ...props }: NewChartProps) => (\n  <div\n    data-slot=\"new-chart\"\n    className={cn(\"flex flex-col gap-6 p-6\", className)}\n    {...props}\n  >\n    {children}\n  </div>\n);\n\nNewChart.displayName = \"NewChart\";\n\nexport { NewChart };\nexport default NewChart;\n",
       "type": "registry:ui",
       "target": "components/ui/new-chart.tsx"
     }

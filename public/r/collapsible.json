@@ -8,8 +8,8 @@
   ],
   "files": [
     {
-      "path": "registry/new-york/collapsible.tsx",
-      "content": "\"use client\";\n\nimport * as CollapsiblePrimitive from \"@radix-ui/react-collapsible\";\n\nconst Collapsible = ({ ...props }: React.ComponentProps<typeof CollapsiblePrimitive.Root>) => (\n  <CollapsiblePrimitive.Root data-slot=\"collapsible\" {...props} />\n);\n\nconst CollapsibleTrigger = ({\n  ...props\n}: React.ComponentProps<typeof CollapsiblePrimitive.CollapsibleTrigger>) => (\n  <CollapsiblePrimitive.CollapsibleTrigger data-slot=\"collapsible-trigger\" {...props} />\n);\n\nconst CollapsibleContent = ({\n  ...props\n}: React.ComponentProps<typeof CollapsiblePrimitive.CollapsibleContent>) => (\n  <CollapsiblePrimitive.CollapsibleContent data-slot=\"collapsible-content\" {...props} />\n);\n\nexport { Collapsible, CollapsibleContent, CollapsibleTrigger };\nexport default Collapsible;\n",
+      "path": "registry/mint/collapsible.tsx",
+      "content": "\"use client\";\n\nimport * as CollapsiblePrimitive from \"@radix-ui/react-collapsible\";\n\nconst Collapsible = ({\n  ...props\n}: React.ComponentProps<typeof CollapsiblePrimitive.Root>) => (\n  <CollapsiblePrimitive.Root data-slot=\"collapsible\" {...props} />\n);\n\nconst CollapsibleTrigger = ({\n  ...props\n}: React.ComponentProps<typeof CollapsiblePrimitive.CollapsibleTrigger>) => (\n  <CollapsiblePrimitive.CollapsibleTrigger\n    data-slot=\"collapsible-trigger\"\n    {...props}\n  />\n);\n\nconst CollapsibleContent = ({\n  ...props\n}: React.ComponentProps<typeof CollapsiblePrimitive.CollapsibleContent>) => (\n  <CollapsiblePrimitive.CollapsibleContent\n    data-slot=\"collapsible-content\"\n    {...props}\n  />\n);\n\nexport { Collapsible, CollapsibleContent, CollapsibleTrigger };\nexport default Collapsible;\n",
       "type": "registry:ui",
       "target": "components/ui/collapsible.tsx"
     }

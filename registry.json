@@ -1,6 +1,6 @@
 {
-  "name": "ing-design",
-  "homepage": "https://ing-design.vercel.app",
+  "name": "gin-design",
+  "homepage": "https://gin-design.vercel.app",
   "items": [
     {
       "name": "aspect-ratio",
@@ -12,7 +12,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/aspect-ratio.tsx",
+          "path": "registry/mint/aspect-ratio.tsx",
           "type": "registry:ui",
           "target": "components/ui/aspect-ratio.tsx"
         }
@@ -74,7 +74,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/alert-dialog.tsx",
+          "path": "registry/mint/alert-dialog.tsx",
           "type": "registry:ui",
           "target": "components/ui/alert-dialog.tsx"
         }
@@ -133,7 +133,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/alert.tsx",
+          "path": "registry/mint/alert.tsx",
           "type": "registry:ui",
           "target": "components/ui/alert.tsx"
         }
@@ -196,7 +196,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/command.tsx",
+          "path": "registry/mint/command.tsx",
           "type": "registry:ui",
           "target": "components/ui/command.tsx"
         }
@@ -255,7 +255,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/collapsible.tsx",
+          "path": "registry/mint/collapsible.tsx",
           "type": "registry:ui",
           "target": "components/ui/collapsible.tsx"
         }
@@ -315,7 +315,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/checkbox.tsx",
+          "path": "registry/mint/checkbox.tsx",
           "type": "registry:ui",
           "target": "components/ui/checkbox.tsx"
         }
@@ -378,7 +378,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/carousel.tsx",
+          "path": "registry/mint/carousel.tsx",
           "type": "registry:ui",
           "target": "components/ui/carousel.tsx"
         }
@@ -434,7 +434,7 @@
       "description": "A container that groups related content and actions with a consistent visual frame.",
       "files": [
         {
-          "path": "registry/new-york/card.tsx",
+          "path": "registry/mint/card.tsx",
           "type": "registry:ui",
           "target": "components/ui/card.tsx"
         }
@@ -497,7 +497,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/calendar.tsx",
+          "path": "registry/mint/calendar.tsx",
           "type": "registry:ui",
           "target": "components/ui/calendar.tsx"
         }
@@ -556,7 +556,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/button-group.tsx",
+          "path": "registry/mint/button-group.tsx",
           "type": "registry:ui",
           "target": "components/ui/button-group.tsx"
         }
@@ -616,7 +616,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/breadcrumb.tsx",
+          "path": "registry/mint/breadcrumb.tsx",
           "type": "registry:ui",
           "target": "components/ui/breadcrumb.tsx"
         }
@@ -676,7 +676,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/badge.tsx",
+          "path": "registry/mint/badge.tsx",
           "type": "registry:ui",
           "target": "components/ui/badge.tsx"
         }
@@ -735,7 +735,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/avatar.tsx",
+          "path": "registry/mint/avatar.tsx",
           "type": "registry:ui",
           "target": "components/ui/avatar.tsx"
         }
@@ -795,7 +795,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/accordion.tsx",
+          "path": "registry/mint/accordion.tsx",
           "type": "registry:ui",
           "target": "components/ui/accordion.tsx"
         }
@@ -855,7 +855,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/button.tsx",
+          "path": "registry/mint/button.tsx",
           "type": "registry:ui",
           "target": "components/ui/button.tsx"
         }
@@ -914,7 +914,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/hover-card.tsx",
+          "path": "registry/mint/hover-card.tsx",
           "type": "registry:ui",
           "target": "components/ui/hover-card.tsx"
         }
@@ -970,7 +970,7 @@
       "description": "A form field wrapper that connects a label, control, description, and error message — eliminating manual id wiring.",
       "files": [
         {
-          "path": "registry/new-york/field.tsx",
+          "path": "registry/mint/field.tsx",
           "type": "registry:ui",
           "target": "components/ui/field.tsx"
         }
@@ -1026,7 +1026,7 @@
       "description": "A placeholder state for when content is absent — communicates context and guides the user toward the next action.",
       "files": [
         {
-          "path": "registry/new-york/empty.tsx",
+          "path": "registry/mint/empty.tsx",
           "type": "registry:ui",
           "target": "components/ui/empty.tsx"
         }
@@ -1086,7 +1086,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/dropdown-menu.tsx",
+          "path": "registry/mint/dropdown-menu.tsx",
           "type": "registry:ui",
           "target": "components/ui/dropdown-menu.tsx"
         }
@@ -1145,7 +1145,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/drawer.tsx",
+          "path": "registry/mint/drawer.tsx",
           "type": "registry:ui",
           "target": "components/ui/drawer.tsx"
         }
@@ -1205,7 +1205,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/dialog.tsx",
+          "path": "registry/mint/dialog.tsx",
           "type": "registry:ui",
           "target": "components/ui/dialog.tsx"
         }
@@ -1261,7 +1261,7 @@
       "description": "Semantic HTML table with styled rows, headers, and footer.",
       "files": [
         {
-          "path": "registry/new-york/table.tsx",
+          "path": "registry/mint/table.tsx",
           "type": "registry:ui",
           "target": "components/ui/table.tsx"
         }
@@ -1321,7 +1321,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/context-menu.tsx",
+          "path": "registry/mint/context-menu.tsx",
           "type": "registry:ui",
           "target": "components/ui/context-menu.tsx"
         }
@@ -1381,7 +1381,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/sheet.tsx",
+          "path": "registry/mint/sheet.tsx",
           "type": "registry:ui",
           "target": "components/ui/sheet.tsx"
         }
@@ -1440,7 +1440,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/separator.tsx",
+          "path": "registry/mint/separator.tsx",
           "type": "registry:ui",
           "target": "components/ui/separator.tsx"
         }
@@ -1500,7 +1500,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/select.tsx",
+          "path": "registry/mint/select.tsx",
           "type": "registry:ui",
           "target": "components/ui/select.tsx"
         }
@@ -1559,7 +1559,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/scroll-area.tsx",
+          "path": "registry/mint/scroll-area.tsx",
           "type": "registry:ui",
           "target": "components/ui/scroll-area.tsx"
         }
@@ -1619,7 +1619,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/radio-group.tsx",
+          "path": "registry/mint/radio-group.tsx",
           "type": "registry:ui",
           "target": "components/ui/radio-group.tsx"
         }
@@ -1678,7 +1678,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/progress.tsx",
+          "path": "registry/mint/progress.tsx",
           "type": "registry:ui",
           "target": "components/ui/progress.tsx"
         }
@@ -1737,7 +1737,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/popover.tsx",
+          "path": "registry/mint/popover.tsx",
           "type": "registry:ui",
           "target": "components/ui/popover.tsx"
         }
@@ -1799,7 +1799,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/pagination.tsx",
+          "path": "registry/mint/pagination.tsx",
           "type": "registry:ui",
           "target": "components/ui/pagination.tsx"
         }
@@ -1860,7 +1860,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/navigation-menu.tsx",
+          "path": "registry/mint/navigation-menu.tsx",
           "type": "registry:ui",
           "target": "components/ui/navigation-menu.tsx"
         }
@@ -1919,7 +1919,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/native-select.tsx",
+          "path": "registry/mint/native-select.tsx",
           "type": "registry:ui",
           "target": "components/ui/native-select.tsx"
         }
@@ -1979,7 +1979,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/menubar.tsx",
+          "path": "registry/mint/menubar.tsx",
           "type": "registry:ui",
           "target": "components/ui/menubar.tsx"
         }
@@ -2038,7 +2038,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/label.tsx",
+          "path": "registry/mint/label.tsx",
           "type": "registry:ui",
           "target": "components/ui/label.tsx"
         }
@@ -2094,7 +2094,7 @@
       "description": "Renders keyboard keys and shortcuts with a consistent pressed-key appearance.",
       "files": [
         {
-          "path": "registry/new-york/kbd.tsx",
+          "path": "registry/mint/kbd.tsx",
           "type": "registry:ui",
           "target": "components/ui/kbd.tsx"
         }
@@ -2153,7 +2153,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/item.tsx",
+          "path": "registry/mint/item.tsx",
           "type": "registry:ui",
           "target": "components/ui/item.tsx"
         }
@@ -2209,7 +2209,7 @@
       "description": "A single-line text field for collecting user input, with support for all HTML input types.",
       "files": [
         {
-          "path": "registry/new-york/input.tsx",
+          "path": "registry/mint/input.tsx",
           "type": "registry:ui",
           "target": "components/ui/input.tsx"
         }
@@ -2269,7 +2269,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/input-otp.tsx",
+          "path": "registry/mint/input-otp.tsx",
           "type": "registry:ui",
           "target": "components/ui/input-otp.tsx"
         }
@@ -2329,7 +2329,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/input-group.tsx",
+          "path": "registry/mint/input-group.tsx",
           "type": "registry:ui",
           "target": "components/ui/input-group.tsx"
         }
@@ -2398,7 +2398,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/sidebar.tsx",
+          "path": "registry/mint/sidebar.tsx",
           "type": "registry:ui",
           "target": "components/ui/sidebar.tsx"
         }
@@ -2454,7 +2454,7 @@
       "description": "An animated placeholder that mimics content layout while data is loading.",
       "files": [
         {
-          "path": "registry/new-york/skeleton.tsx",
+          "path": "registry/mint/skeleton.tsx",
           "type": "registry:ui",
           "target": "components/ui/skeleton.tsx"
         }
@@ -2513,7 +2513,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/slider.tsx",
+          "path": "registry/mint/slider.tsx",
           "type": "registry:ui",
           "target": "components/ui/slider.tsx"
         }
@@ -2572,7 +2572,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/spinner.tsx",
+          "path": "registry/mint/spinner.tsx",
           "type": "registry:ui",
           "target": "components/ui/spinner.tsx"
         }
@@ -2631,7 +2631,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/switch.tsx",
+          "path": "registry/mint/switch.tsx",
           "type": "registry:ui",
           "target": "components/ui/switch.tsx"
         }
@@ -2690,7 +2690,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/tabs.tsx",
+          "path": "registry/mint/tabs.tsx",
           "type": "registry:ui",
           "target": "components/ui/tabs.tsx"
         }
@@ -2746,7 +2746,7 @@
       "description": "A multi-line text input with the same border, focus ring, and invalid state as Input.",
       "files": [
         {
-          "path": "registry/new-york/textarea.tsx",
+          "path": "registry/mint/textarea.tsx",
           "type": "registry:ui",
           "target": "components/ui/textarea.tsx"
         }
@@ -2806,7 +2806,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/toggle.tsx",
+          "path": "registry/mint/toggle.tsx",
           "type": "registry:ui",
           "target": "components/ui/toggle.tsx"
         }
@@ -2868,7 +2868,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/toggle-group.tsx",
+          "path": "registry/mint/toggle-group.tsx",
           "type": "registry:ui",
           "target": "components/ui/toggle-group.tsx"
         }
@@ -2927,7 +2927,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/tooltip.tsx",
+          "path": "registry/mint/tooltip.tsx",
           "type": "registry:ui",
           "target": "components/ui/tooltip.tsx"
         }
@@ -2990,7 +2990,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/attachment.tsx",
+          "path": "registry/mint/attachment.tsx",
           "type": "registry:ui",
           "target": "components/ui/attachment.tsx"
         }
@@ -3050,7 +3050,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/bubble.tsx",
+          "path": "registry/mint/bubble.tsx",
           "type": "registry:ui",
           "target": "components/ui/bubble.tsx"
         }
@@ -3110,7 +3110,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/marker.tsx",
+          "path": "registry/mint/marker.tsx",
           "type": "registry:ui",
           "target": "components/ui/marker.tsx"
         }
@@ -3166,7 +3166,7 @@
       "description": "A layout wrapper for a chat message row with avatar, header, content, and footer.",
       "files": [
         {
-          "path": "registry/new-york/message.tsx",
+          "path": "registry/mint/message.tsx",
           "type": "registry:ui",
           "target": "components/ui/message.tsx"
         }
@@ -3229,7 +3229,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/message-scroller.tsx",
+          "path": "registry/mint/message-scroller.tsx",
           "type": "registry:ui",
           "target": "components/ui/message-scroller.tsx"
         }
@@ -3290,7 +3290,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/sonner.tsx",
+          "path": "registry/mint/sonner.tsx",
           "type": "registry:ui",
           "target": "components/ui/sonner.tsx"
         }
@@ -3350,7 +3350,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/resizable.tsx",
+          "path": "registry/mint/resizable.tsx",
           "type": "registry:ui",
           "target": "components/ui/resizable.tsx"
         }
@@ -3409,7 +3409,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/chart.tsx",
+          "path": "registry/mint/chart.tsx",
           "type": "registry:ui",
           "target": "components/ui/chart.tsx"
         }
@@ -3465,7 +3465,7 @@
       "description": "Template — replace with your component name and description.",
       "files": [
         {
-          "path": "registry/new-york/new-component.tsx",
+          "path": "registry/mint/new-component.tsx",
           "type": "registry:ui",
           "target": "components/ui/new-component.tsx"
         }
@@ -3521,7 +3521,7 @@
       "description": "Template — replace with your element name and description.",
       "files": [
         {
-          "path": "registry/new-york/new-element.tsx",
+          "path": "registry/mint/new-element.tsx",
           "type": "registry:ui",
           "target": "components/ui/new-element.tsx"
         }
@@ -3577,7 +3577,7 @@
       "description": "Template — replace with your block name and description.",
       "files": [
         {
-          "path": "registry/new-york/new-block.tsx",
+          "path": "registry/mint/new-block.tsx",
           "type": "registry:ui",
           "target": "components/ui/new-block.tsx"
         }
@@ -3633,7 +3633,7 @@
       "description": "Template — replace with your chart name and description.",
       "files": [
         {
-          "path": "registry/new-york/new-chart.tsx",
+          "path": "registry/mint/new-chart.tsx",
           "type": "registry:ui",
           "target": "components/ui/new-chart.tsx"
         }
@@ -3689,7 +3689,7 @@
       "description": "Template — replace with your icon set name and description.",
       "files": [
         {
-          "path": "registry/new-york/new-icon.tsx",
+          "path": "registry/mint/new-icon.tsx",
           "type": "registry:ui",
           "target": "components/ui/new-icon.tsx"
         }
@@ -3746,7 +3746,7 @@
       "dependencies": [],
       "files": [
         {
-          "path": "registry/new-york/e-auth.tsx",
+          "path": "registry/mint/e-auth.tsx",
           "type": "registry:ui",
           "target": "components/ui/e-auth.tsx"
         }
@@ -3809,7 +3809,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/b-login.tsx",
+          "path": "registry/mint/b-login.tsx",
           "type": "registry:ui",
           "target": "components/ui/b-login.tsx"
         }
@@ -3872,7 +3872,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/b-signup.tsx",
+          "path": "registry/mint/b-signup.tsx",
           "type": "registry:ui",
           "target": "components/ui/b-signup.tsx"
         }
@@ -3939,12 +3939,12 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/b-featured.tsx",
+          "path": "registry/mint/b-featured.tsx",
           "type": "registry:ui",
           "target": "components/ui/b-featured.tsx"
         },
         {
-          "path": "registry/new-york/page/b-featured.tsx",
+          "path": "registry/mint/page/b-featured.tsx",
           "type": "registry:page",
           "target": "app/page.tsx"
         }
@@ -4015,7 +4015,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/e-data-table.tsx",
+          "path": "registry/mint/e-data-table.tsx",
           "type": "registry:ui",
           "target": "components/ui/e-data-table.tsx"
         }
